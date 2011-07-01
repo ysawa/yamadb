@@ -26,4 +26,4 @@ group :development, :test do
   gem "launchy", "0.4.0"
   gem "guard-spork", "0.2.0"
   gem "guard-rspec", "0.2.0"
-end
+end unless ENV['VCAP_SERVICES']
