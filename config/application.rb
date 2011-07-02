@@ -42,5 +42,12 @@ module Yamadb
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+
+
+    config.generators do |g|
+      g.test_framework      :rspec, :fixture => true, :views => true, :requests => true, :routing => true, :helpers => true
+      g.fixture_replacement :fabrication
+      g.fixture_replacement :fabrication, :dir => "spec/fabricators"
+    end
   end
 end
