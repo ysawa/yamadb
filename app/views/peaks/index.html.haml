@@ -1,0 +1,21 @@
+%h1 Listing peaks
+
+%table
+  %tr
+    %th Name
+    %th Altitude
+    %th
+    %th
+    %th
+
+  - @peaks.each do |peak|
+    %tr
+      %td= peak.name
+      %td= peak.altitude
+      %td= link_to 'Show', peak
+      %td= link_to 'Edit', edit_peak_path(peak)
+      %td= link_to 'Destroy', peak, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Peak', new_peak_path

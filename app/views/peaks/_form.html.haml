@@ -1,0 +1,16 @@
+= form_for @peak do |f|
+  -if @peak.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@peak.errors.count, "error")} prohibited this peak from being saved:"
+      %ul
+        - @peak.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :altitude
+    = f.text_field :altitude
+  .actions
+    = f.submit 'Save'

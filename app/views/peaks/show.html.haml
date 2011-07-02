@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @peak.name
+%p
+  %b Altitude:
+  = @peak.altitude
+
+= link_to 'Edit', edit_peak_path(@peak)
+\|
+= link_to 'Back', peaks_path
