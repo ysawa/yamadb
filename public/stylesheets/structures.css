@@ -1,0 +1,30 @@
+#global_container {
+  width: 100%; }
+  #global_container:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  #global_container #head_container {
+    width: 100%;
+    border-bottom: 1px solid #cccccc; }
+    #global_container #head_container .inner {
+      margin: 10px; }
+      #global_container #head_container .inner h1, #global_container #head_container .inner h2 {
+        color: black;
+        font-size: 18px;
+        font-family: "Times New Roman", serif; }
+        #global_container #head_container .inner h1 a, #global_container #head_container .inner h2 a {
+          color: black;
+          text-decoration: none; }
+  #global_container #main_container {
+    float: right;
+    width: 80%; }
+    #global_container #main_container .inner {
+      margin: 10px; }
+  #global_container #side_container {
+    float: right;
+    width: 20%; }
+    #global_container #side_container .inner {
+      margin: 10px; }

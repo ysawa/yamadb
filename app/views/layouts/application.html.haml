@@ -2,9 +2,17 @@
 %html
   %head
     %title Yamadb
-    = stylesheet_link_tag "base", "application"
+    = stylesheet_link_tag "base", "structures", "application"
     = javascript_include_tag :defaults
     = csrf_meta_tag
   %body
     #global_container
-      = yield
+      #head_container
+        .inner
+          = render :partial => 'layouts/head'
+      #main_container
+        .inner
+          = yield
+      #side_container
+        .inner
+          = render :partial => "layouts/side"

@@ -1,0 +1,37 @@
+$font_family: Verdana, Arial, Helvetica, sans-serif
+$color: #393939
+$link_color: #000777
+
+@mixin clearfix
+  &:after
+    content: "."
+    display: block
+    height: 0
+    clear: both
+    visibility: hidden
+
+#global_container
+  @include clearfix
+  width: 100%
+  #head_container
+    width: 100%
+    .inner
+      margin: 10px
+      h1, h2
+        color: #000
+        font-size: 18px
+        font-family: "Times New Roman", serif
+        a
+          color: #000
+          text-decoration: none
+    border-bottom: 1px solid #ccc
+  #main_container
+    float: right
+    width: 80%
+    .inner
+      margin: 10px
+  #side_container
+    float: right
+    width: 20%
+    .inner
+      margin: 10px

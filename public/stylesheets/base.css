@@ -10,12 +10,17 @@ body, p, ol, ul, td {
 pre {
   background-color: #eeeeee;
   padding: 10px;
-  font-size: 11px; }
+  font-size: 12px; }
 
-h1 a {
-  text-decoration: none; }
-  h1 a.hover {
-    text-decoration: underline; }
+h1 {
+  color: black;
+  font-size: 14px; }
+  h1 a {
+    text-decoration: none; }
+
+h2, h3 {
+  color: black;
+  font-size: 13px; }
 
 a {
   color: #000777;
