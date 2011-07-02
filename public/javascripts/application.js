@@ -1,2 +1,7 @@
-// Place your application-specific JavaScript functions and classes here
-// This file is automatically included by javascript_include_tag :defaults
+/* DO NOT MODIFY. This file was compiled Sat, 02 Jul 2011 03:05:51 GMT from
+ * /home/ysawa/ruby/yamadb/app/coffeescripts/application.coffee
+ */
+
+(function() {
+
+}).call(this);

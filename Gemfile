@@ -6,6 +6,11 @@ gem 'haml', "3.1.2"
 gem 'haml-rails', "0.3.4"
 gem 'sass', "3.1.3"
 
+group :development do
+  gem 'therubyracer', '0.9.2'
+  gem 'barista', '1.2.1'
+end unless ENV['VCAP_SERVICES']
+
 gem "mongo", "1.3.1"
 gem "bson_ext", "1.3.1"
 gem "mongoid", "2.0.0.rc.6"
