@@ -38,7 +38,7 @@ describe ItemsController do
   describe "GET show" do
     it "assigns the requested item as @item" do
       item = Item.create! valid_attributes
-      get :show, :id => item.id.to_s
+      get :show, :id => item.code.to_s
       assigns(:item).should eq(item)
     end
   end
@@ -53,7 +53,7 @@ describe ItemsController do
   describe "GET edit" do
     it "assigns the requested item as @item" do
       item = Item.create! valid_attributes
-      get :edit, :id => item.id.to_s
+      get :edit, :id => item.code.to_s
       assigns(:item).should eq(item)
     end
   end
@@ -74,7 +74,7 @@ describe ItemsController do
 
       it "redirects to the created item" do
         post :create, :item => valid_attributes
-        response.should redirect_to(Item.last)
+        response.should redirect_to items_path
       end
     end
 
@@ -87,6 +87,7 @@ describe ItemsController do
       end
 
       it "re-renders the 'new' template" do
+        pending "NOT IMPLEMENTED ABOUT VALIDATIONS"
         # Trigger the behavior that occurs when invalid params are submitted
         Item.any_instance.stub(:save).and_return(false)
         post :create, :item => {}
@@ -104,19 +105,19 @@ describe ItemsController do
         # receives the :update_attributes message with whatever params are
         # submitted in the request.
         Item.any_instance.should_receive(:update_attributes).with({'these' => 'params'})
-        put :update, :id => item.id, :item => {'these' => 'params'}
+        put :update, :id => item.code, :item => {'these' => 'params'}
       end
 
       it "assigns the requested item as @item" do
         item = Item.create! valid_attributes
-        put :update, :id => item.id, :item => valid_attributes
+        put :update, :id => item.code, :item => valid_attributes
         assigns(:item).should eq(item)
       end
 
       it "redirects to the item" do
         item = Item.create! valid_attributes
-        put :update, :id => item.id, :item => valid_attributes
-        response.should redirect_to(item)
+        put :update, :id => item.code, :item => valid_attributes
+        response.should redirect_to items_path
       end
     end
 
@@ -125,7 +126,7 @@ describe ItemsController do
         item = Item.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Item.any_instance.stub(:save).and_return(false)
-        put :update, :id => item.id.to_s, :item => {}
+        put :update, :id => item.code.to_s, :item => {}
         assigns(:item).should eq(item)
       end
 
@@ -133,8 +134,8 @@ describe ItemsController do
         item = Item.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Item.any_instance.stub(:save).and_return(false)
-        put :update, :id => item.id.to_s, :item => {}
-        response.should render_template("edit")
+        put :update, :id => item.code.to_s, :item => {}
+        response.should redirect_to items_path
       end
     end
   end
@@ -143,13 +144,13 @@ describe ItemsController do
     it "destroys the requested item" do
       item = Item.create! valid_attributes
       expect {
-        delete :destroy, :id => item.id.to_s
+        delete :destroy, :id => item.code.to_s
       }.to change(Item, :count).by(-1)
     end
 
     it "redirects to the items list" do
       item = Item.create! valid_attributes
-      delete :destroy, :id => item.id.to_s
+      delete :destroy, :id => item.code.to_s
       response.should redirect_to(items_url)
     end
   end

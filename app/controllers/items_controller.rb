@@ -45,6 +45,6 @@ class ItemsController < ApplicationController
   def update
     @item = Item.find_by_code(params[:id])
     flash[:notice] = "Item successfully updated." if @item.update_attributes(params[:item])
-    respond_with(@item)
+    respond_with(@item, :location => items_url)
   end
 end
