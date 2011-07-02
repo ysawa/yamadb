@@ -12,5 +12,11 @@
   .field
     = f.label :altitude
     = f.text_field :altitude
+  .field
+    = f.label :location
+    = text_field_tag "peak[location][]", @peak.longitude, :size => 30
+    ,
+    = text_field_tag "peak[location][]", @peak.latitude, :size => 30
+
   .actions
     = f.submit 'Save'
