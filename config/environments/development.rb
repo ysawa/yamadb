@@ -24,3 +24,4 @@ Yamadb::Application.configure do
   config.action_dispatch.best_standards_support = :builtin
 end
 
+Haml::Template.options[:ugly] = true

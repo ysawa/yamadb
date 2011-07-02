@@ -5,3 +5,4 @@ tmp/
 public/uploads/*
 *.swp
 *.swo
+config/*.yml

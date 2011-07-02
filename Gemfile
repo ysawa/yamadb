@@ -5,6 +5,7 @@ gem 'jquery-rails', "1.0.12"
 gem 'haml', "3.1.2"
 gem 'haml-rails', "0.3.4"
 gem 'sass', "3.1.3"
+gem "amazon-ecs", "2.0.0"
 
 group :development do
   gem 'therubyracer', '0.9.2'
