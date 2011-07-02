@@ -1,0 +1,82 @@
+$font_family: Verdana, Arial, Helvetica, sans-serif
+$color: #393939
+$link_color: #000777
+
+html, body
+  background-color: #fff
+  font-family: $font_family
+
+body, p, ol, ul, td
+  font-size:   12px
+  line-height: 1.6
+  color: $color
+pre
+  background-color: #eee
+  padding: 10px
+  font-size: 11px
+h1
+  a
+    text-decoration: none
+    &.hover
+      text-decoration: underline
+a
+  color: $link_color
+  text-decoration: none
+  &:hover
+    color: $link_color
+    text-decoration: underline
+    background-color: transparent
+
+.clearfix
+  &:after
+    content: "."
+    display: block
+    height: 0
+    clear: both
+    visibility: hidden
+
+strong
+  font-weight: bold
+em
+  font-weight: bold
+  color: #f00
+
+input[type="text"], input[type="password"], input[type="search"]
+  line-height: 18px
+  font-size: 12px
+  height: 20px
+  border-width: 1px
+  vertical-align: middle
+  &.off
+    color: #999
+input[type="search"]
+  line-height: 18px
+  font-size: 14px
+  height: 22px
+  border-width: 1px
+  vertical-align: middle
+input[type="checkbox"]
+  vertical-align: middle
+  margin: 0
+input[type="radio"]
+  vertical-align: middle
+  margin: 0
+textarea
+  width: 100%
+  font-size: 12px
+  border: 1px solid $color
+select
+  vertical-align: middle
+  height: 22px
+  border: 1px solid $color
+  font-size: 12px
+input[type="submit"]
+  height: 32px
+  line-height: 24px
+  font-size: 14px
+  margin: 10px auto
+  padding: 0px 40px
+  color: $color
+  text-decoration: none
+  text-align: center
+  cursor: pointer

@@ -1,0 +1,10 @@
+!!!
+%html
+  %head
+    %title Yamadb
+    = stylesheet_link_tag "base", "application"
+    = javascript_include_tag :defaults
+    = csrf_meta_tag
+  %body
+    #global_container
+      = yield
