@@ -2,6 +2,10 @@ html, body {
   background-color: white;
   font-family: Verdana, Arial, Helvetica, sans-serif; }
 
+body {
+  margin: 0;
+  overflow-y: scroll; }
+
 body, p, ol, ul, td {
   font-size: 12px;
   line-height: 1.6;

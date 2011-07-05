@@ -17,6 +17,7 @@ Barista.configure do |c|
 
   # Disable wrapping in a closure:
   # c.bare = true
+  c.bare = true
   # ... or ...
   # c.bare!
 

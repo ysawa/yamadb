@@ -1,0 +1,11 @@
+= javascript_include_tag "http://maps.google.com/maps/api/js?sensor=false&language=ja"
+#google_map
+:javascript
+  $(function () {
+      $.each(
+        #{@peaks.collect { |peak| peak }.to_json},
+        function () {
+          yamadb.google_map.locate_peak(this.name, this.location[0], this.location[1]);
+        }
+      )
+  })

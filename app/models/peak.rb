@@ -8,11 +8,11 @@ class Peak
   GOOGLE_MAPS_API = "http://maps.google.com/maps/api/geocode/json"
 
   def latitude
-    self.location ? self.location[1] : nil
+    self.location ? self.location[0] : nil
   end
 
   def longitude
-    self.location ? self.location[0] : nil
+    self.location ? self.location[1] : nil
   end
 
   def get_location(peak_name = nil)
@@ -29,7 +29,7 @@ class Peak
       self.name = components["short_name"]
     end
     location_hash = result["geometry"]["location"]
-    self.location = [location_hash["lng"], location_hash["lat"]]
+    self.location = [location_hash["lat"], location_hash["lng"]]
     return true
   end
 end

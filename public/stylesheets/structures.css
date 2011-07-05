@@ -12,6 +12,7 @@
     #global_container #head_container .inner {
       margin: 10px; }
       #global_container #head_container .inner h1, #global_container #head_container .inner h2 {
+        margin: 10px 0;
         color: black;
         font-size: 18px;
         font-family: "Times New Roman", serif; }
