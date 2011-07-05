@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Tue, 05 Jul 2011 14:51:15 GMT from
+/* DO NOT MODIFY. This file was compiled Tue, 05 Jul 2011 15:02:33 GMT from
  * /home/ysawa/ruby/yamadb/app/coffeescripts/application.coffee
  */
 
@@ -8,9 +8,9 @@ yamadb = {
     base: null,
     initialize: function() {
       var options, position;
-      position = new google.maps.LatLng(36.3420133, 137.6477358);
+      position = new google.maps.LatLng(37.3420133, 137.6477358);
       options = {
-        zoom: 6,
+        zoom: 5,
         center: position,
         mapTypeId: google.maps.MapTypeId.TERRAIN
       };

@@ -2,9 +2,9 @@ yamadb =
   google_map:
     base: null
     initialize: ->
-      position = new google.maps.LatLng(36.3420133, 137.6477358)
+      position = new google.maps.LatLng(37.3420133, 137.6477358)
       options =
-        zoom: 6
+        zoom: 5
         center: position
         mapTypeId: google.maps.MapTypeId.TERRAIN
       this.base = new google.maps.Map(document.getElementById("google_map"), options)
