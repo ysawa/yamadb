@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Tue, 05 Jul 2011 15:02:33 GMT from
+/* DO NOT MODIFY. This file was compiled Wed, 06 Jul 2011 14:38:55 GMT from
  * /home/ysawa/ruby/yamadb/app/coffeescripts/application.coffee
  */
 
@@ -30,6 +30,7 @@ yamadb = {
 $(function() {
   if ($("#google_map").size()) {
     yamadb.google_map.initialize();
-    return $("#google_map").height($(document).height() - 110);
+    $("#google_map").height($(document).height() - 110);
   }
+  return $(".truncate").truncate();
 });
