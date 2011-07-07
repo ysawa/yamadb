@@ -12,3 +12,32 @@ $link_color: #000777
 
 #google_map
   width: 100%
+.equipment_item
+  @include clearfix
+  .name
+    width: 140px
+    float: left
+  .content
+    width: 600px
+    float: left
+  .stars
+    width: 60px
+    float: left
+
+form
+  .field
+    @include clearfix
+    input[type="text"]
+      &.equipment_item_name_field
+        display: block
+        float: left
+        width: 100px
+        margin: 0 4px 0 0
+      &.equipment_item_content_field
+        display: block
+        float: left
+        width: 400px
+        margin: 0 4px 0 0
+    .stars
+      margin: 4px 0
+      float: left

@@ -19,7 +19,7 @@ yamadb =
 $(->
   if $("#google_map").size()
     yamadb.google_map.initialize()
-    $("#google_map").height($(document).height() - 110)
-  $(".truncate").truncate();
+    $("#google_map").height($(window).height() - 110)
+  $(".truncate").truncate()
 )
 

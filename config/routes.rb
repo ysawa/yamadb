@@ -1,4 +1,8 @@
 Yamadb::Application.routes.draw do
+  resources :equipment_items
+
+  resources :equipments
+
   resources :items
   resources :peaks
   root :to => "main#index"

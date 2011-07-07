@@ -1,2 +1,38 @@
 #google_map {
   width: 100%; }
+
+.equipment_item:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+.equipment_item .name {
+  width: 140px;
+  float: left; }
+.equipment_item .content {
+  width: 600px;
+  float: left; }
+.equipment_item .stars {
+  width: 60px;
+  float: left; }
+
+form .field:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+form .field input[type="text"].equipment_item_name_field {
+  display: block;
+  float: left;
+  width: 100px;
+  margin: 0 4px 0 0; }
+form .field input[type="text"].equipment_item_content_field {
+  display: block;
+  float: left;
+  width: 400px;
+  margin: 0 4px 0 0; }
+form .field .stars {
+  margin: 4px 0;
+  float: left; }
