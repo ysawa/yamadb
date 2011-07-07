@@ -1,9 +1,20 @@
 ja:
   activemodel:
     models:
-      equipment: "装備"
-      equipment_item: "装備品"
-      peak: "山"
+      equipment: '装備'
+      equipment_item: '装備品'
+      peak: '山'
     attributes:
       equipment:
-        name: "装備名"
+        name: '装備名'
+        content: '説明'
+  operations:
+    add: '追加する'
+    add_short: '追加'
+    back: '戻る'
+    destroy: '削除する'
+    destroy_short: '削除'
+    edit: '編集する'
+    edit_short: '編集'
+    new: '作成する'
+    new_short: '作成'

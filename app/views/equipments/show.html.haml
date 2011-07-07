@@ -6,6 +6,6 @@
 - @equipment.items.ordered_by_priority.each do |equipment_item|
   = render :partial => "equipment_items/equipment_item", :object => equipment_item
 
-= link_to 'Edit', edit_equipment_path(@equipment)
+= link_to t('operations.edit'), edit_equipment_path(@equipment)
 \|
-= link_to 'Back', equipments_path
+= link_to t('operations.back'), equipments_path
