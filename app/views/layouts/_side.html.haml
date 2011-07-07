@@ -4,9 +4,6 @@
 %p
   \->
   = link_to Equipment.model_name.human, equipments_path
-%p
-  \->
-  = link_to Item.model_name.human, items_path
 
 - amazon = Amazon::Ecs.item_search_with_images("EPI", :search_index => "SportingGoods")
 - amazon.items.sample(2).each do |item|

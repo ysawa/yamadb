@@ -1,0 +1,9 @@
+ja:
+  activemodel:
+    models:
+      equipment: "装備"
+      equipment_item: "装備品"
+      peak: "山"
+    attributes:
+      equipment:
+        name: "装備名"

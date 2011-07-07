@@ -1,0 +1,172 @@
+# Japanese translations for Ruby on Rails
+# by Akira Matsuda (ronnie@dio.jp)
+# AR error messages are basically taken from Ruby-GetText-Package. Thanks to Masao Mutoh.
+
+ja:
+  date:
+    formats:
+      default: "%Y年%m月%d日"
+      form: "%Y/%m/%d"
+      short: "%m/%d"
+      long: "%Y年%m月%d日(%a)"
+      year_month: "%Y年%m月"
+
+    day_names: [日曜日, 月曜日, 火曜日, 水曜日, 木曜日, 金曜日, 土曜日]
+    abbr_day_names: [日, 月, 火, 水, 木, 金, 土]
+
+    month_names: [~, 1月, 2月, 3月, 4月, 5月, 6月, 7月, 8月, 9月, 10月, 11月, 12月]
+    abbr_month_names: [~, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+
+    order: [:year, :month, :day]
+
+  time:
+    formats:
+      default: "%Y年%m月%d日 %H:%M"
+      form: "%Y/%m/%d %H:%M:%S"
+      hour_minute: "%H:%M"
+      long: "%Y年%m月%d日(%a) %H:%M:%S"
+      short: "%m月%d日 %H:%M"
+    am: "午前"
+    pm: "午後"
+
+  support:
+    array:
+      sentence_connector: "と"
+      skip_last_comma: true
+      words_connector: "と"
+      two_words_connector: "と"
+      last_word_connector: "と"
+
+    select:
+      prompt: "選択してください。"
+
+  number:
+    currency:
+      format:
+        format: "%n%u"
+        unit: "円"
+        separator: "."
+        delimiter: ","
+        precision: 0
+    format:
+      separator: "."
+      delimiter: ","
+      precision: 3
+    human:
+      decimal_units:
+        format: "%n %u"
+        units:
+          unit: "件"
+      format:
+        delimiter: ","
+        precision: 1
+      storage_units:
+        format: "%n%u"
+        units:
+          byte: "バイト"
+          kb: "キロバイト"
+          mb: "メガバイト"
+          gb: "ギガバイト"
+          tb: "テラバイト"
+    percentage:
+      format:
+        delimiter: ""
+    precision:
+      format:
+        delimiter: ""
+
+  datetime:
+    distance_in_words:
+      half_a_minute: "30秒前後"
+      less_than_x_seconds:
+        one:   "1秒以内"
+        other: "%{count}秒以内"
+      x_seconds:
+        one:   "1秒"
+        other: "%{count}秒"
+      less_than_x_minutes:
+        one:   "1分以内"
+        other: "%{count}分以内"
+      x_minutes:
+        one:   "1分"
+        other: "%{count}分"
+      about_x_hours:
+        one:   "約1時間"
+        other: "約%{count}時間"
+      x_days:
+        one:   "1日"
+        other: "%{count}日"
+      about_x_months:
+        one:   "約1ヶ月"
+        other: "約%{count}ヶ月"
+      x_months:
+        one:   "1ヶ月"
+        other: "%{count}ヶ月"
+      about_x_years:
+        one:   "約%{count}年"
+        other: "約%{count}年"
+      over_x_years:
+        one:   "%{count}年以上"
+        other: "%{count}年以上"
+
+  errors:
+    template:
+      header:
+        one:    "入力項目にエラーが発生しました。"
+        other:  "入力項目にエラーが発生しました。"
+      body: "次の項目を確認してください。"
+
+  names:
+    corporation:
+      honorific: '%{model}様'
+    member:
+      honorific: '%{model}様'
+
+  mongoid:
+    errors:
+      messages:
+        validations: 'failed in validations'
+  activemodel:
+    errors:
+      full_messages:
+        format: "%{attribute}%{message}"
+
+      template:
+        header:
+          one:   "入力項目にエラーが発生しました。"
+          other: "入力項目に%{count}つのエラーが発生しました。"
+        body: "次の項目を確認してください。"
+
+      messages:
+        accepted: "を受諾してください。"
+        blank: "をご入力ください。"
+        carrierwave_integrity_error: 'は画像ではありません。'
+        carrierwave_processing_error: 'は適切に加工ができません。'
+        confirmation: "が一致しません。"
+        duplicated: "が重複しています。"
+        empty: "をご入力ください。"
+        equal_to: "は%{count}にしてください。"
+        even: "は偶数にしてください。"
+        exclusion: "は予約されています。"
+        expired: "が切れています。"
+        greater_than: "は%{count}より大きい値にしてください。"
+        greater_than_or_equal_to: "は%{count}以上の値にしてください。"
+        inclusion: "に不正な内容が入っています。"
+        invalid: "に不正な内容が入っています。"
+        invalid_state_number: "の変更が不正です。"
+        less_than: "は%{count}より小さい値にしてください。"
+        less_than_or_equal_to: "は%{count}以下の値にしてください。"
+        not_a_number: "は数値でご入力ください。"
+        not_an_integer: "は整数でご入力ください。"
+        not_checked: 'にチェックを入れてください。'
+        not_correct: 'が正しくありません。'
+        not_selected: 'を選択してください。'
+        not_uploaded: 'をアップロードしてください。'
+        odd: "は奇数にしてください。"
+        record_invalid: "バリデーションに失敗しました。 %{errors}"
+        taken: "はすでに登録されています。"
+        too_long: "は%{count}文字以内でご入力ください。"
+        too_short: "は%{count}文字以上でご入力ください。"
+        unchecked: "をチェックしてください。"
+        wrong_length: "は%{count}文字でご入力ください。"
+
