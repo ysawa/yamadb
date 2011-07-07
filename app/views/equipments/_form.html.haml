@@ -1,0 +1,18 @@
+= form_for @equipment do |f|
+  -if @equipment.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@equipment.errors.count, "error")} prohibited this equipment from being saved:"
+      %ul
+        - @equipment.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :content
+    = f.text_area :content, :rows => 4
+  = render :partial => "equipment_items/nested_fields", :as => :equipment_item, :collection => @equipment.items
+  = render :partial => "equipment_items/nested_fields", :as => :equipment_item, :object => EquipmentItem.new
+  .actions
+    = f.submit 'Save'

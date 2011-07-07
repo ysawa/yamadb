@@ -1,0 +1,6 @@
+.equipment_item
+  .stars
+    - 0.upto(2).each do |i|
+      = radio_button_tag "equipment_#{equipment_item.id}_star", i, i == equipment_item.priority, :class => :star, :disabled => true
+  .name= equipment_item.name
+  .content= equipment_item.content
