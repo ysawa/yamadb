@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe "items/show.html.haml" do
+describe "products/show.html.haml" do
   before(:each) do
-    @item = assign(:item, stub_model(Item,
+    @product = assign(:product, stub_model(Product,
       :code => "Code",
       :name => "Name",
       :content => "Content"

@@ -3,7 +3,7 @@ Yamadb::Application.routes.draw do
 
   resources :equipments
 
-  resources :items
+  resources :products
   resources :peaks
   root :to => "main#index"
 

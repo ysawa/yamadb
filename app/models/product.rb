@@ -1,4 +1,4 @@
-class Item
+class Product
   include Mongoid::Document
   field :code, :type => String
   field :name, :type => String
@@ -10,8 +10,8 @@ class Item
     self.code
   end
 
-  def Item.find_by_code(code)
-    Item.find(:first, :conditions => { :code => code })
+  def Product.find_by_code(code)
+    Product.find(:first, :conditions => { :code => code })
   end
 private
   def create_code
