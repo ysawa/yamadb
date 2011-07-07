@@ -6,6 +6,7 @@ class Peak
   field :altitude, :type => Integer
   index [[:location, Mongo::GEO2D]], :min => -180, :max => 180
   GOOGLE_MAPS_API = "http://maps.google.com/maps/api/geocode/json"
+  validates_with PeakValidator
 
   def latitude
     self.location ? self.location[0] : nil

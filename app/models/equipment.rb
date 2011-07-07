@@ -7,6 +7,7 @@ class Equipment
   field :season_start, :type => Integer
   embeds_many :items, :class_name => "EquipmentItem", :varidate => false
   before_save :delete_items_if_necesarry
+  validates_with EquipmentValidator
 
   def existing_items_attributes=(items_attributes)
     items_attributes.each do |item_id, attrs|

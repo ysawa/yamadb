@@ -24,7 +24,9 @@ describe EquipmentsController do
   # Equipment. As you add validations to Equipment, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    {}
+    attrs = Fabricate.build(:equipment).attributes
+    attrs.delete(:_id)
+    attrs
   end
 
   describe "GET index" do

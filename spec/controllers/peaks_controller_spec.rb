@@ -24,7 +24,10 @@ describe PeaksController do
   # Peak. As you add validations to Peak, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    {}
+    attrs = Fabricate.build(:peak).attributes
+    attrs.delete(:_id)
+    attrs
+
   end
 
   describe "GET index" do
