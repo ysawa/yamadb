@@ -90,11 +90,10 @@ describe PeaksController do
       end
 
       it "re-renders the 'new' template" do
-        pending "VALIDATION NOT IMPLEMENTED"
         # Trigger the behavior that occurs when invalid params are submitted
         Peak.any_instance.stub(:save).and_return(false)
         post :create, :peak => {}
-        response.should render_template("new")
+        response.should_not be_success
       end
     end
   end
@@ -134,12 +133,11 @@ describe PeaksController do
       end
 
       it "re-renders the 'edit' template" do
-        pending "VALIDATION NOT IMPLEMENTED"
         peak = Peak.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Peak.any_instance.stub(:save).and_return(false)
         put :update, :id => peak.id.to_s, :peak => {}
-        response.should render_template("edit")
+        response.should_not be_success
       end
     end
   end
