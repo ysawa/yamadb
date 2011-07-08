@@ -2,16 +2,14 @@
 
 %table
   %tr
-    %th Code
-    %th Name
-    %th Content
+    %th= Product.human_attribute_name('name')
+    %th= Product.human_attribute_name('content')
     %th
     %th
     %th
 
   - @products.each do |product|
     %tr
-      %td= product.code
       %td= product.name
       %td= product.content
       %td= link_to t('operations.show_short'), product

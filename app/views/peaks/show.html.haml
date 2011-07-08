@@ -3,13 +3,14 @@
 %h1
   = @peak.name
 %p
-  %b Altitude:
+  %b= Peak.human_attribute_name('altitude')
   = @peak.altitude
+  m
 %p
-  %b Latitude:
+  %b= Peak.human_attribute_name('latitude')
   = @peak.latitude
 %p
-  %b Longitude:
+  %b= Peak.human_attribute_name('longitude')
   = @peak.longitude
 
 = link_to t('operations.edit'), edit_peak_path(@peak)

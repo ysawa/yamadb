@@ -2,8 +2,8 @@
 
 %table
   %tr
-    %th Name
-    %th Altitude
+    %th= Peak.human_attribute_name('name')
+    %th= Peak.human_attribute_name('altitude')
     %th
     %th
     %th
@@ -11,7 +11,9 @@
   - @peaks.each do |peak|
     %tr
       %td= peak.name
-      %td= peak.altitude
+      %td
+        = peak.altitude
+        m
       %td= link_to t('operations.show_short'), peak
       %td= link_to t('operations.edit_short'), edit_peak_path(peak)
       %td= link_to t('operations.destroy_short'), peak, :confirm => 'Are you sure?', :method => :delete

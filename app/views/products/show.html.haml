@@ -1,13 +1,10 @@
 %p#notice= notice
 
 %p
-  %b Code:
-  = @product.code
-%p
-  %b Name:
+  %b= Product.human_attribute_name('name')
   = @product.name
 %p
-  %b Content:
+  %b= Product.human_attribute_name('content')
   = @product.content
 
 = link_to t('operations.edit'), edit_product_path(@product)

@@ -8,6 +8,12 @@ ja:
       equipment:
         name: '装備名'
         content: '説明'
+      peak:
+        altitude: '標高'
+        name: '名称'
+        latitude: '緯度'
+        location: '位置'
+        longitude: '経度'
   operations:
     add: '追加する'
     add_short: '追加'
