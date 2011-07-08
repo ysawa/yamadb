@@ -12,10 +12,10 @@
     %tr
       %td= peak.name
       %td= peak.altitude
-      %td= link_to 'Show', peak
-      %td= link_to 'Edit', edit_peak_path(peak)
-      %td= link_to 'Destroy', peak, :confirm => 'Are you sure?', :method => :delete
+      %td= link_to t('operations.show_short'), peak
+      %td= link_to t('operations.edit_short'), edit_peak_path(peak)
+      %td= link_to t('operations.destroy_short'), peak, :confirm => 'Are you sure?', :method => :delete
 
 %br
 
-= link_to 'New Peak', new_peak_path
+= link_to t('operations.new_model', :model => Peak.model_name.human), new_peak_path
