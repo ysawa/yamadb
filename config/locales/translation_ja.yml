@@ -16,5 +16,6 @@ ja:
     destroy_short: '削除'
     edit: '編集する'
     edit_short: '編集'
+    listing_models: '%{model}一覧'
     new: '作成する'
     new_short: '作成'
