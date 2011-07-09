@@ -1,11 +1,14 @@
 %p#notice= notice
 
-%p
-  %b= Product.human_attribute_name('name')
+%h1
   = @product.name
 %p
-  %b= Product.human_attribute_name('content')
   = @product.content
+%p
+  = link_to truncate(@product.href, :length => 40), @product.href
+- if picture = @product.pictures.where(:group => "MediumImage").first
+  %p
+    = render :partial => 'pictures/picture', :object => picture
 
 = link_to t('operations.edit'), edit_product_path(@product)
 \|

@@ -4,6 +4,7 @@ ja:
       equipment: '装備'
       equipment_item: '装備品'
       peak: '山頂'
+      product: '登山用品'
     attributes:
       equipment:
         name: '装備名'
@@ -14,6 +15,10 @@ ja:
         latitude: '緯度'
         location: '位置'
         longitude: '経度'
+      product:
+        content: '内容'
+        href: 'URL'
+        name: '名称'
   operations:
     add: '追加する'
     add_short: '追加'

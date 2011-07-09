@@ -1,5 +1,5 @@
 module ApplicationHelper
   def encode_unicode_entities(unicode)
-    unicode.gsub(/\&#x(\w+);/) { [$1.hex].pack('U') }
+    Product.encode_unicode_entities(unicode)
   end
 end

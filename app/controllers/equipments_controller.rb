@@ -4,12 +4,12 @@ class EquipmentsController < ApplicationController
   # POST /equipments
   def create
     @equipment = Equipment.new(params[:equipment])
+    load_equipment_items_products
     if @equipment.save
       flash[:notice] = "Equipment successfully created"
-      respond_with(@equipment, :location => equipments_url)
     else
-      respond_with(@equipment)
     end
+    respond_with(@equipment)
   end
 
   # DELETE /equipments/1
@@ -21,7 +21,8 @@ class EquipmentsController < ApplicationController
 
   # GET /equipments/1/edit
   def edit
-    respond_with(@equipment = Equipment.find(params[:id])) do |format|
+    @equipment = Equipment.find(params[:id])
+    respond_with(@equipment) do |format|
       format.html { render :action => :edit }
     end
   end
@@ -44,7 +45,16 @@ class EquipmentsController < ApplicationController
   # PUT /equipments/1
   def update
     @equipment = Equipment.find(params[:id])
-    flash[:notice] = "Equipment successfully updated." if @equipment.update_attributes(params[:equipment])
-    respond_with(@equipment, :location => equipments_url)
+    @equipment.write_attributes(params[:equipment])
+    load_equipment_items_products
+    flash[:notice] = "Equipment successfully updated." if @equipment.save
+    respond_with(@equipment)
+  end
+private
+  def load_equipment_items_products
+    @equipment.items.each do |item|
+      item.load_products
+      item.save
+    end
   end
 end

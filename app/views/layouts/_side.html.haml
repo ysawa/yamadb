@@ -4,12 +4,3 @@
 %p
   \->
   = link_to Equipment.model_name.human, equipments_path
-
-- amazon = Amazon::Ecs.item_search_with_images("EPI", :search_index => "SportingGoods")
-- amazon.items.sample(2).each do |item|
-  %p
-    - item_attributes = item.get_element('ItemAttributes')
-    - image = item.get_hash('MediumImage')
-    = link_to image_tag(image["URL"], :width => image["Width"], :height => image["Height"]), item.get("DetailPageURL")
-    %br
-    = link_to encode_unicode_entities(item_attributes.get('Title')), item.get("DetailPageURL"), :class => :truncate
