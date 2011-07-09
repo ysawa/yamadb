@@ -1,0 +1,4 @@
+= YamaDB
+
+YamaDB is a Rails apprication collecting information about mountaineering in Japan.
+The application is designed for deployment to cloudfoundry.
