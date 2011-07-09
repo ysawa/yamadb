@@ -20,6 +20,7 @@ gem "ya2yaml", "0.30"
 gem "SystemTimer", "1.2.3"
 
 gem "mini_magick", "3.3"
+gem 'twitter', '1.6.0'
 
 group :development, :test do
   gem "rspec-rails", "2.6.1"
