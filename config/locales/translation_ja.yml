@@ -3,7 +3,7 @@ ja:
     models:
       equipment: '装備'
       equipment_item: '装備品'
-      peak: '山'
+      peak: '山頂'
     attributes:
       equipment:
         name: '装備名'
