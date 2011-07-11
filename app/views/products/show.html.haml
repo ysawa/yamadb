@@ -5,7 +5,7 @@
 %p
   = @product.content
 %p
-  = link_to truncate(@product.href, :length => 40), @product.href
+  = link_to truncate(@product.href, :length => 40), @product.href if @product.href.present?
 - if picture = @product.pictures.where(:group => "MediumImage").first
   %p
     = render :partial => 'pictures/picture', :object => picture
