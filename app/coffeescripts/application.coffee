@@ -8,13 +8,22 @@ yamadb =
         center: position
         mapTypeId: google.maps.MapTypeId.TERRAIN
       this.base = new google.maps.Map(document.getElementById("google_map"), options)
-    locate_peak: (name, latitude, longitude) ->
+    locate_peak: (name, args...) ->
+      latitude = args[0]
+      longitude = args[1]
+      href = args[2]
       position = new google.maps.LatLng(latitude, longitude)
-      new google.maps.Marker(
-        position: position
+      marker = new google.maps.Marker(
+        icon: '/images/common/bullet.png'
         map: this.base
+        position: position
         title: name
       )
+      google.maps.event.addListener(
+        marker,
+        'click',
+         -> location.href = href
+      ) if href
 
 $(->
   if $("#google_map").size()

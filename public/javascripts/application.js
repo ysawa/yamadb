@@ -1,8 +1,9 @@
-/* DO NOT MODIFY. This file was compiled Wed, 06 Jul 2011 14:42:17 GMT from
+/* DO NOT MODIFY. This file was compiled Mon, 11 Jul 2011 13:24:18 GMT from
  * /home/ysawa/ruby/yamadb/app/coffeescripts/application.coffee
  */
 
 var yamadb;
+var __slice = Array.prototype.slice;
 yamadb = {
   google_map: {
     base: null,
@@ -16,14 +17,24 @@ yamadb = {
       };
       return this.base = new google.maps.Map(document.getElementById("google_map"), options);
     },
-    locate_peak: function(name, latitude, longitude) {
-      var position;
+    locate_peak: function() {
+      var args, href, latitude, longitude, marker, name, position;
+      name = arguments[0], args = 2 <= arguments.length ? __slice.call(arguments, 1) : [];
+      latitude = args[0];
+      longitude = args[1];
+      href = args[2];
       position = new google.maps.LatLng(latitude, longitude);
-      return new google.maps.Marker({
-        position: position,
+      marker = new google.maps.Marker({
+        icon: '/images/common/bullet.png',
         map: this.base,
+        position: position,
         title: name
       });
+      if (href) {
+        return google.maps.event.addListener(marker, 'click', function() {
+          return location.href = href;
+        });
+      }
     }
   }
 };
