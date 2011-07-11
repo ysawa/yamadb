@@ -11,6 +11,8 @@ class Equipment
   validates_with EquipmentValidator
 
   def existing_items_attributes=(items_attributes)
+    # WARNING: should not reload equipemnt_items
+    # TODO: fix it to be more useful
     items_attributes.each do |item_id, attrs|
       item = self.items.select { |item| item.id.to_s == item_id.to_s }.first
       item.write_attributes(attrs)
