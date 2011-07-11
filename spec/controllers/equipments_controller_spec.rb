@@ -76,7 +76,7 @@ describe EquipmentsController do
 
       it "redirects to the created equipment" do
         post :create, :equipment => valid_attributes
-        response.should redirect_to(equipments_url)
+        response.should redirect_to(Equipment.last)
       end
     end
 
@@ -106,7 +106,7 @@ describe EquipmentsController do
         # specifies that the Equipment created on the previous line
         # receives the :update_attributes message with whatever params are
         # submitted in the request.
-        Equipment.any_instance.should_receive(:update_attributes).with({'these' => 'params'})
+        Equipment.any_instance.should_receive(:write_attributes).with({'these' => 'params'})
         put :update, :id => equipment.id, :equipment => {'these' => 'params'}
       end
 
@@ -119,7 +119,7 @@ describe EquipmentsController do
       it "redirects to the equipment" do
         equipment = Equipment.create! valid_attributes
         put :update, :id => equipment.id, :equipment => valid_attributes
-        response.should redirect_to(equipments_url)
+        response.should redirect_to(Equipment.last)
       end
     end
 
