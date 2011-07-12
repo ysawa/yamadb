@@ -9,10 +9,9 @@ class Picture
 
   def Picture.new_from_amazon_xml(xml)
     picture = Picture.new
-    nokogiri = Nokogiri::XML(xml)
-    picture.href = (Nokogiri::XML(xml)/'URL').inner_text
-    picture.height = (Nokogiri::XML(xml)/'Height').inner_text
-    picture.width = (Nokogiri::XML(xml)/'Width').inner_text
+    picture.href = (xml/'URL').inner_text
+    picture.height = (xml/'Height').inner_text
+    picture.width = (xml/'Width').inner_text
     picture
   end
 
@@ -20,7 +19,8 @@ class Picture
     pictures = []
     nokogiri = Nokogiri::XML(xml)
     (nokogiri/'ImageSet').children.each do |element|
-      picture = Picture.new_from_amazon_xml(element.inner_html)
+      next if element.children.blank?
+      picture = Picture.new_from_amazon_xml(element.children)
       picture.group = element.name
       pictures << picture
     end

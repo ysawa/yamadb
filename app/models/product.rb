@@ -17,6 +17,10 @@ class Product
   before_save :update_pictures
   before_destroy :destroy_pictures
 
+  def picture(conditions = {})
+    self.pictures(conditions).first
+  end
+
   def Product.new_from_amazon_element(element)
     product = Product.find_or_initialize_by(:asin => element.get('ASIN'))
     product.api = :amazon
