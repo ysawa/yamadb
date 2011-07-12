@@ -1,0 +1,13 @@
+:javascript
+  $(function () {
+      $('ul.products li').hover(function () {
+          var flipper = $(this);
+          var image_href = flipper.attr('image_href')
+          var image = flipper.parents('div.equipment_item').find('.sub .picture img');
+          if (image_href) {
+            image.attr('src', image_href);
+          } else {
+            image.attr('src', '/images/common/no_picture.png');
+          }
+      });
+  });

@@ -4,6 +4,7 @@
     \>
   = @equipment_item.name
 = render :partial => "equipment_items/equipment_item", :object => @equipment_item
+= render :partial => "equipment_items/picture_flipper"
 
 - if @equipment
   = link_to t('operations.edit'), edit_equipment_path(@equipment)

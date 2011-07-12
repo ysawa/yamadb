@@ -4,11 +4,12 @@
   .sub
     .picture
       - if (product = equipment_item.products.first) && picture = product.picture(:group => "MediumImage")
+        - picture_href = picture ? picture.href : '/images/common/no_picture.png'
         - if abstract && @equipment
           %a{ :href => equipment_equipment_item_path(@equipment, equipment_item) }
-            = image_tag picture.href, :alt => product.name
+            = image_tag picture_href, :alt => product.name
         - else
-          = image_tag picture.href, :alt => product.name
+          = image_tag picture_href, :alt => product.name
   .main
     - if abstract && @equipment
       = render :partial => 'equipment_items/stars', :locals => { :equipment_item => equipment_item }
@@ -34,4 +35,5 @@
       %ul{ :class => 'products' + (abstract ? ' abstract' : '') }
         - products =  abstract ? 3 : 10
         - equipment_item.products.limit(products).each do |product|
-          %li= link_to truncate(product.name, :length => 60), product
+          - picture = product.picture(:group => 'MediumImage')
+          %li{ :image_href => picture ? picture.href : '' }= link_to truncate(product.name, :length => 60), product
