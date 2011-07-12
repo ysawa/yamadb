@@ -5,6 +5,7 @@ class Product
   field :asin, :type => String
   field :href, :type => String
   field :group, :type => String
+  field :language, :type => String
   field :name, :type => String
   field :content, :type => String
   field :manufacturer, :type => String
@@ -14,7 +15,7 @@ class Product
   has_and_belongs_to_many :equipment_items
   has_many :pictures, :as => :album
   validates_with ProductValidator
-  before_save :update_pictures
+  after_save :save_pictures
   before_destroy :destroy_pictures
 
   def picture(conditions = {})
@@ -55,11 +56,9 @@ private
     true
   end
 
-  def update_pictures
-    result = true
+  def save_pictures
     self.pictures.each do |picture|
-      result = false unless picture.save
+      picture.save(:validate => false)
     end
-    result
   end
 end

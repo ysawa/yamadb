@@ -6,9 +6,8 @@ class Equipment
   field :season_end, :type => Integer
   field :season_start, :type => Integer
   has_many :items, :class_name => "EquipmentItem", :varidate => false
-  before_save :update_items
-  after_save :create_items
-  before_save :destroy_items_if_necesarry
+  after_save :save_items
+  after_destroy :destroy_items
   validates_with EquipmentValidator
 
   def existing_items_attributes=(items_attributes)
@@ -27,14 +26,8 @@ class Equipment
     end
   end
 private
-  def create_items
-    result = true
-    self.items.each do |item|
-      next unless item.new?
-      item.equipment = self
-      result = false unless item.save
-    end
-    result
+  def destroy_all_items
+    self.items.destroy_all
   end
 
   def destroy_items_if_necesarry
@@ -44,12 +37,10 @@ private
     true
   end
 
-  def update_items
-    result = true
+  def save_items
     self.items.each do |item|
-      next if item.new?
-      result = false unless item.save
+      item.equipment_id = self.id
+      item.save(:validate => false)
     end
-    result
   end
 end

@@ -6,7 +6,7 @@ class EquipmentItem
   field :priority, :type => Integer
   belongs_to :equipment, :inverse_of => :items
   has_and_belongs_to_many :products
-  before_save :update_products
+  after_save :save_products
 
   def _destroy
     @_destroy
@@ -36,11 +36,9 @@ class EquipmentItem
     end
   end
 private
-  def update_products
-    result = true
+  def save_products
     self.products.each do |product|
-      result = false unless product.save
+      product.save(:validate => false)
     end
-    result
   end
 end
