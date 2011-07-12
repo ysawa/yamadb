@@ -57,6 +57,8 @@
     .equipment_item .main ul.products.abstract {
       height: 72px; }
 
+form h3.as_label {
+  margin: 0; }
 form .field:after {
   content: ".";
   display: block;
