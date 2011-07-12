@@ -9,6 +9,9 @@ ja:
       equipment:
         name: '装備名'
         content: '説明'
+      equipment_item:
+        name: '品名'
+        content: '説明'
       peak:
         altitude: '標高'
         name: '名称'
@@ -35,3 +38,8 @@ ja:
     show: '詳細を見る'
     show_short: '詳細'
     new_short: '編集'
+
+  helpers:
+    submit:
+      create: '作成'
+      update: '更新'

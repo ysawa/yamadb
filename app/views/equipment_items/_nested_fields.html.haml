@@ -1,8 +1,8 @@
 - new_or_existing = equipment_item.new? ? "new" : "existing"
 = fields_for "equipment[#{new_or_existing}_items_attributes][]", equipment_item do |f|
   .field
-    = f.text_field :name, :class => :equipment_item_name_field
-    = f.text_field :content, :class => :equipment_item_content_field
+    = f.text_field :name, :class => :equipment_item_name_field, :placeholder => EquipmentItem.human_attribute_name(:name)
+    = f.text_field :content, :class => :equipment_item_content_field, :placeholder => EquipmentItem.human_attribute_name(:content)
     .stars
       - 0.upto(2).each do |i|
         = f.radio_button :priority, i, :class => :star

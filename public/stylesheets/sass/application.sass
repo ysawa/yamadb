@@ -23,6 +23,7 @@ $link_color: #000777
     margin: 0 10px 0 0
     float: left
     .picture
+      position: relative
       width: 180px
       height: 180px
       line-height: 180px
@@ -35,6 +36,11 @@ $link_color: #000777
         bottom: 1px solid #e0e0e0
       img
         vertical-align: middle
+      .number_tag
+        position: absolute
+        line-height: 12px
+        top: 10px
+        left: 10px
   .main
     float: left
     .stars
@@ -77,7 +83,7 @@ form
       &.equipment_item_content_field
         display: block
         float: left
-        width: 400px
+        width: 540px
         margin: 0 4px 0 0
     .stars
       margin: 4px 0

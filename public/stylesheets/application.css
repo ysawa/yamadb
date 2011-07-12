@@ -11,6 +11,7 @@
   margin: 0 10px 0 0;
   float: left; }
   .equipment_item .sub .picture {
+    position: relative;
     width: 180px;
     height: 180px;
     line-height: 180px;
@@ -22,6 +23,11 @@
     border-bottom: 1px solid #e0e0e0; }
     .equipment_item .sub .picture img {
       vertical-align: middle; }
+    .equipment_item .sub .picture .number_tag {
+      position: absolute;
+      line-height: 12px;
+      top: 10px;
+      left: 10px; }
 .equipment_item .main {
   float: left; }
   .equipment_item .main .stars {
@@ -65,7 +71,7 @@ form .field input[type="text"].equipment_item_name_field {
 form .field input[type="text"].equipment_item_content_field {
   display: block;
   float: left;
-  width: 400px;
+  width: 540px;
   margin: 0 4px 0 0; }
 form .field .stars {
   margin: 4px 0;
