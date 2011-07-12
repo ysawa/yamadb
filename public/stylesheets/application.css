@@ -43,13 +43,13 @@
     height: 40px;
     width: 100%;
     overflow: hidden; }
-  .equipment .main ul.equipment_items {
+  .equipment .main ol.equipment_items {
     margin: 14px 0 0 0;
     padding: 0 0 10px 10px;
     width: 100%; }
-    .equipment .main ul.equipment_items li {
+    .equipment .main ol.equipment_items li {
       margin: 0 0 0 30px; }
-    .equipment .main ul.equipment_items.abstract {
+    .equipment .main ol.equipment_items.abstract {
       height: 72px; }
 
 .equipment_item:after {
@@ -100,13 +100,13 @@
     height: 40px;
     width: 100%;
     overflow: hidden; }
-  .equipment_item .main ul.products {
+  .equipment_item .main ol.products {
     margin: 14px 0 0 0;
     padding: 0 0 10px 10px;
     width: 100%; }
-    .equipment_item .main ul.products li {
+    .equipment_item .main ol.products li {
       margin: 0 0 0 30px; }
-    .equipment_item .main ul.products.abstract {
+    .equipment_item .main ol.products.abstract {
       height: 72px; }
 
 form h3.as_label {

@@ -32,7 +32,7 @@
       - else
         NO CONTENT
     - if equipment_item.products.present?
-      %ul{ :class => 'products' + (abstract ? ' abstract' : '') }
+      %ol{ :class => 'products' + (abstract ? ' abstract' : '') }
         - products =  abstract ? 3 : 10
         - equipment_item.products.limit(products).each do |product|
           - picture = product.picture(:group => 'MediumImage')

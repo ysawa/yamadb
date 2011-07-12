@@ -30,7 +30,7 @@
       - else
         NO CONTENT
     - if equipment.items.present?
-      %ul{ :class => 'equipment_items' + (abstract ? ' abstract' : '') }
+      %ol{ :class => 'equipment_items' + (abstract ? ' abstract' : '') }
         - equipment_items =  abstract ? 3 : 10
         - equipment.items.limit(equipment_items).each do |equipment_item|
           %li= link_to truncate(equipment_item.name, :length => 60), equipment_equipment_item_path(equipment, equipment_item)
