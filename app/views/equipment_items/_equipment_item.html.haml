@@ -3,9 +3,13 @@
   .sub
     .picture
       - if (product = equipment_item.products.first) && picture = product.picture(:group => "MediumImage")
-        %a{ :href => equipment_equipment_item_path(@equipment, equipment_item) }= image_tag picture.href, :alt => product.name
+        - if abstract && @equipment
+          %a{ :href => equipment_equipment_item_path(@equipment, equipment_item) }
+            = image_tag picture.href, :alt => product.name
+        - else
+          = image_tag picture.href, :alt => product.name
   .main
-    - if abstract
+    - if abstract && @equipment
       = render :partial => 'equipment_items/stars', :locals => { :equipment_item => equipment_item }
       .name
         - if equipment_item.name.present?
