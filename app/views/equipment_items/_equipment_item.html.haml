@@ -3,13 +3,13 @@
 .equipment_item
   .sub
     .picture
-      - if (product = equipment_item.products.first) && picture = product.picture(:group => "MediumImage")
-        - picture_href = picture ? picture.href : '/images/common/no_picture.png'
-        - if abstract && @equipment
-          %a{ :href => equipment_equipment_item_path(@equipment, equipment_item) }
-            = image_tag picture_href, :alt => product.name
-        - else
-          = image_tag picture_href, :alt => product.name
+      - (product = equipment_item.products.first) && (picture = product.picture(:group => "MediumImage"))
+      - picture_href = picture ? picture.href : '/images/common/no_picture.png'
+      - if abstract && @equipment
+        %a{ :href => equipment_equipment_item_path(@equipment, equipment_item) }
+          = image_tag picture_href, :alt => (product ? product.name : nil)
+      - else
+        = image_tag picture_href, :alt => (product ? product.name : nil)
   .main
     - if abstract && @equipment
       = render :partial => 'equipment_items/stars', :locals => { :equipment_item => equipment_item }
@@ -31,9 +31,10 @@
         = equipment_item.content
       - else
         NO CONTENT
-    - if equipment_item.products.present?
-      %ol{ :class => 'products' + (abstract ? ' abstract' : '') }
-        - products =  abstract ? 3 : 10
-        - equipment_item.products.limit(products).each do |product|
-          - picture = product.picture(:group => 'MediumImage')
-          %li{ :image_href => picture ? picture.href : '' }= link_to truncate(product.name, :length => 60), product
+    %ol{ :class => 'products' + (abstract ? ' abstract' : '') }
+      - products =  abstract ? 3 : 10
+      - equipment_item.products.limit(products).each do |product|
+        - picture = product.picture(:group => 'MediumImage')
+        %li{ :image_href => picture ? picture.href : '' }= link_to truncate(product.name, :length => 60), product.href, :target => :_blank
+      - if equipment_item.products.blank?
+        %li{ :image_href => '' } NO PRODUCT

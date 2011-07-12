@@ -31,6 +31,7 @@
 .equipment .main {
   float: left;
   width: 700px;
+  border-right: 1px solid #e0e0e0;
   border-bottom: 1px solid #e0e0e0; }
   .equipment .main .name {
     margin: 24px 0 0 0;
@@ -82,6 +83,7 @@
 .equipment_item .main {
   float: left;
   width: 700px;
+  border-right: 1px solid #e0e0e0;
   border-bottom: 1px solid #e0e0e0; }
   .equipment_item .main .stars {
     margin: 24px 0 0 0;

@@ -1,7 +1,13 @@
 !!!
 %html
   %head
-    %title Yamadb
+    %title
+      - if controller_name == 'main' && action_name == 'index'
+        YamaDB
+      - elsif (actions = I18n.t("controllers")[controller_name.to_sym]) && (subtitle = actions[action_name.to_sym])
+        #{subtitle} | YamaDB
+      - else
+        YamaDB
     = stylesheet_link_tag "base", "structures", "application"
     = stylesheet_link_tag "jquery.rating"
     = stylesheet_link_tag "jquery-ui"

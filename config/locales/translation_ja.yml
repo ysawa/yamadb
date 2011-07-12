@@ -43,3 +43,28 @@ ja:
     submit:
       create: '作成'
       update: '更新'
+
+  controllers:
+    equipments:
+      edit: '装備編集'
+      index: '装備一覧'
+      new: '新規装備'
+      show: '装備'
+    equipment_items:
+      edit: '装備品編集'
+      index: '装備品一覧'
+      new: '新規装備品'
+      show: '装備品'
+    main:
+      index: 'TOP'
+    peaks:
+      edit: '山頂編集'
+      index: '山頂一覧'
+      new: '新規山頂'
+      show: '山頂'
+    products:
+      edit: '登山用品編集'
+      index: '登山用品一覧'
+      new: '新規登山用品'
+      show: '登山用品'
+
