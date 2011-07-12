@@ -1,16 +1,16 @@
 #google_map {
   width: 100%; }
 
-.equipment:after {
+div.equipment:after {
   content: ".";
   display: block;
   height: 0;
   clear: both;
   visibility: hidden; }
-.equipment .sub {
+div.equipment .sub {
   margin: 0 10px 0 0;
   float: left; }
-  .equipment .sub .picture {
+  div.equipment .sub .picture {
     position: relative;
     width: 180px;
     height: 180px;
@@ -21,48 +21,48 @@
     text-align: center;
     border-right: 1px solid #e0e0e0;
     border-bottom: 1px solid #e0e0e0; }
-    .equipment .sub .picture img {
+    div.equipment .sub .picture img {
       vertical-align: middle; }
-    .equipment .sub .picture .number_tag {
+    div.equipment .sub .picture .number_tag {
       position: absolute;
       line-height: 12px;
       top: 10px;
       left: 10px; }
-.equipment .main {
+div.equipment .main {
   float: left;
   width: 700px;
   border-right: 1px solid #e0e0e0;
   border-bottom: 1px solid #e0e0e0; }
-  .equipment .main .name {
+  div.equipment .main .name {
     margin: 24px 0 0 0;
     font-weight: bold;
     font-size: 14px;
     line-height: 19px; }
-  .equipment .main .content {
+  div.equipment .main .content {
     margin: 14px 0 0 0;
     padding: 0 0 0 10px;
     height: 40px;
     width: 100%;
     overflow: hidden; }
-  .equipment .main ol.equipment_items {
+  div.equipment .main ol.equipment_items {
     margin: 14px 0 0 0;
     padding: 0 0 10px 10px;
     width: 100%; }
-    .equipment .main ol.equipment_items li {
+    div.equipment .main ol.equipment_items li {
       margin: 0 0 0 30px; }
-    .equipment .main ol.equipment_items.abstract {
+    div.equipment .main ol.equipment_items.abstract {
       height: 72px; }
 
-.equipment_item:after {
+div.equipment_item:after {
   content: ".";
   display: block;
   height: 0;
   clear: both;
   visibility: hidden; }
-.equipment_item .sub {
+div.equipment_item .sub {
   margin: 0 10px 0 0;
   float: left; }
-  .equipment_item .sub .picture {
+  div.equipment_item .sub .picture {
     position: relative;
     width: 180px;
     height: 180px;
@@ -73,43 +73,88 @@
     text-align: center;
     border-right: 1px solid #e0e0e0;
     border-bottom: 1px solid #e0e0e0; }
-    .equipment_item .sub .picture img {
+    div.equipment_item .sub .picture img {
       vertical-align: middle; }
-    .equipment_item .sub .picture .number_tag {
+    div.equipment_item .sub .picture .number_tag {
       position: absolute;
       line-height: 12px;
       top: 10px;
       left: 10px; }
-.equipment_item .main {
+div.equipment_item .main {
   float: left;
   width: 700px;
   border-right: 1px solid #e0e0e0;
   border-bottom: 1px solid #e0e0e0; }
-  .equipment_item .main .stars {
+  div.equipment_item .main .stars {
     margin: 24px 0 0 0;
     padding: 0 0 0 10px;
     width: 60px;
     float: left;
     line-height: 19px; }
-  .equipment_item .main .name {
+  div.equipment_item .main .name {
     margin: 24px 0 0 70px;
     font-weight: bold;
     font-size: 14px;
     line-height: 19px; }
-  .equipment_item .main .content {
+  div.equipment_item .main .content {
     margin: 14px 0 0 0;
     padding: 0 0 0 10px;
     height: 40px;
     width: 100%;
     overflow: hidden; }
-  .equipment_item .main ol.products {
+  div.equipment_item .main ol.products {
     margin: 14px 0 0 0;
     padding: 0 0 10px 10px;
     width: 100%; }
-    .equipment_item .main ol.products li {
+    div.equipment_item .main ol.products li {
       margin: 0 0 0 30px; }
-    .equipment_item .main ol.products.abstract {
+    div.equipment_item .main ol.products.abstract {
       height: 72px; }
+
+div.peak:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+div.peak .sub {
+  margin: 0 10px 0 0;
+  float: left; }
+  div.peak .sub .google_map {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    line-height: 180px;
+    margin: 5px;
+    padding: 4px;
+    vertical-align: middle;
+    text-align: center;
+    border-right: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0; }
+    div.peak .sub .google_map img {
+      vertical-align: middle; }
+    div.peak .sub .google_map .number_tag {
+      position: absolute;
+      line-height: 12px;
+      top: 10px;
+      left: 10px; }
+div.peak .main {
+  margin: 5px 0 0 0;
+  float: left;
+  width: 700px;
+  border-right: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0; }
+  div.peak .main .name {
+    margin: 19px 0 0 0;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px; }
+  div.peak .main .content {
+    margin: 14px 0 0 0;
+    padding: 0 0 0 10px;
+    height: 136px;
+    width: 100%;
+    overflow: hidden; }
 
 form h3.as_label {
   margin: 0; }

@@ -1,22 +1,6 @@
 %h1= t('operations.listing_models', :model => Peak.model_name.human)
-
-%table
-  %tr
-    %th= Peak.human_attribute_name('name')
-    %th= Peak.human_attribute_name('altitude')
-    %th
-    %th
-    %th
-
-  - @peaks.each do |peak|
-    %tr
-      %td= peak.name
-      %td
-        = peak.altitude
-        m
-      %td= link_to t('operations.show_short'), peak
-      %td= link_to t('operations.edit_short'), edit_peak_path(peak)
-      %td= link_to t('operations.destroy_short'), peak, :confirm => 'Are you sure?', :method => :delete
+- @peaks.each_with_index do |peak, i|
+  = render :partial => 'peaks/peak', :object => peak, :locals => { :abstract => true, :number => i + 1 }
 
 %br
 

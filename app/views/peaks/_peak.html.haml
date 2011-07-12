@@ -1,0 +1,34 @@
+- abstract = defined?(abstract) && abstract
+- number = defined?(number) && number
+.peak
+  .sub
+    .google_map
+      - if peak.location.present? && peak.location.size == 2
+        %a{ :href => peak_path(peak) }= image_tag "http://maps.google.com/maps/api/staticmap?center=#{peak.location[0]},#{peak.location[1]}&zoom=10&size=160x160&sensor=false"
+      - else
+        %a{ :href => peak_path(peak) }= image_tag '/images/common/no_picture.png'
+  .main
+    - if abstract
+      .name
+        - if peak.name.present?
+          - if number
+            - peak_item_name = "#{number}. #{peak.name}"
+          - else
+            - peak_item_name = peak_item.name
+        - else
+          - if number
+            - peak_item_name = "#{number}. NO NAME"
+          - else
+            - peak_item_name = "NO NAME"
+        = link_to peak_item_name, peak
+    .content
+      %p
+        %b= Peak.human_attribute_name('altitude')
+        = peak.altitude
+        m
+      %p
+        %b= Peak.human_attribute_name('latitude')
+        = peak.latitude
+      %p
+        %b= Peak.human_attribute_name('longitude')
+        = peak.longitude

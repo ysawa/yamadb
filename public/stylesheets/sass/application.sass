@@ -17,7 +17,7 @@ $link_color: #000777
 #google_map
   width: 100%
 
-.equipment
+div.equipment
   @include clearfix
   .sub
     margin: 0 10px 0 0
@@ -67,7 +67,7 @@ $link_color: #000777
       &.abstract
         height: 72px
 
-.equipment_item
+div.equipment_item
   @include clearfix
   .sub
     margin: 0 10px 0 0
@@ -122,6 +122,49 @@ $link_color: #000777
         margin: 0 0 0 30px
       &.abstract
         height: 72px
+
+div.peak
+  @include clearfix
+  .sub
+    margin: 0 10px 0 0
+    float: left
+    .google_map
+      position: relative
+      width: 180px
+      height: 180px
+      line-height: 180px
+      margin: 5px
+      padding: 4px
+      vertical-align: middle
+      text-align: center
+      border:
+        right: 1px solid #e0e0e0
+        bottom: 1px solid #e0e0e0
+      img
+        vertical-align: middle
+      .number_tag
+        position: absolute
+        line-height: 12px
+        top: 10px
+        left: 10px
+  .main
+    margin: 5px 0 0 0
+    float: left
+    width: 700px
+    border:
+      right: 1px solid #e0e0e0
+      bottom: 1px solid #e0e0e0
+    .name
+      margin: 19px 0 0 0
+      font-weight: bold
+      font-size: 14px
+      line-height: 19px
+    .content
+      margin: 14px 0 0 0
+      padding: 0 0 0 10px
+      height: 136px
+      width: 100%
+      overflow: hidden
 
 form
   h3.as_label

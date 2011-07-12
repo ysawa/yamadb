@@ -1,15 +1,6 @@
 %h1
   = @peak.name
-%p
-  %b= Peak.human_attribute_name('altitude')
-  = @peak.altitude
-  m
-%p
-  %b= Peak.human_attribute_name('latitude')
-  = @peak.latitude
-%p
-  %b= Peak.human_attribute_name('longitude')
-  = @peak.longitude
+= render :partial => 'peaks/peak', :object => @peak, :locals => { :abstract => false }
 
 = link_to t('operations.edit'), edit_peak_path(@peak)
 \|

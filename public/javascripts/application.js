@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Mon, 11 Jul 2011 13:24:18 GMT from
+/* DO NOT MODIFY. This file was compiled Tue, 12 Jul 2011 14:33:14 GMT from
  * /home/ysawa/ruby/yamadb/app/coffeescripts/application.coffee
  */
 
