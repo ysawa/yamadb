@@ -10,38 +10,49 @@ $link_color: #000777
     clear: both
     visibility: hidden
 @mixin box_shadow
-  -webkit-box-shadow: 2px 2px 3px rgba(135, 139, 144, 0.4)
-  -moz-box-shadow: 2px 2px 3px rgba(135, 139, 144, 0.4)
-  box-shadow: 2px 2px 3px rgba(135, 139, 144, 0.4)
+  -webkit-box-shadow: 3px 3px 3px rgba(135, 139, 144, 0.4)
+  -moz-box-shadow: 3px 3px 3px rgba(135, 139, 144, 0.4)
+  box-shadow: 3px 3px 3px rgba(135, 139, 144, 0.4)
 
 #google_map
   width: 100%
 
 .equipment_item
   @include clearfix
-  .picture
+  .sub
+    margin: 0 20px 0 0
     float: left
-    width: 200px
-    height: 200px
-    line-height: 200px
-    vertical-align: middle
-    text-align: center
-    img
+    .picture
+      width: 180px
+      height: 180px
+      line-height: 180px
+      margin: 5px
+      padding: 4px
       vertical-align: middle
-      padding: 9px
+      text-align: center
       border: 1px solid #f7f7f7
       @include box_shadow
-  .name
-    width: 140px
+      img
+        vertical-align: middle
+  .main
     float: left
-  .content
-    margin: 0 0 0 200px
-  .stars
-    width: 60px
-    float: left
-  ul.products
-    margin: 10px 0 0 200px
-    width: 100%
+    .stars
+      margin: 24px 0 0 0
+      width: 60px
+      float: left
+      line-height: 19px
+    .name
+      margin: 24px 0 0 60px
+      font-weight: bold
+      font-size: 14px
+      line-height: 19px
+    .content
+      margin: 14px 0 0 0
+      height: 40px
+      width: 100%
+    ul.products
+      margin: 14px 0 0 0
+      width: 100%
 
 form
   .field

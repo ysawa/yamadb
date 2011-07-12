@@ -1,21 +1,23 @@
 .equipment_item
-  .picture
-    - if (product = equipment_item.products.first) && picture = product.picture(:group => "MediumImage")
-      %a{ :href => product_path(product) }= image_tag picture.href, :alt => product.name
-  .stars
-    - 0.upto(2).each do |i|
-      = radio_button_tag "equipment_#{equipment_item.id}_star", i, i == equipment_item.priority, :class => :star, :disabled => true
-  .name
-    - if equipment_item.name.present?
-      = equipment_item.name
-    - else
-      NO NAME
-  .content
-    - if equipment_item.content.present?
-      = equipment_item.content
-    - else
-      &nbsp;
-  - if equipment_item.products.present?
-    %ul.products
-      - equipment_item.products.limit(5).each do |product|
-        %li= link_to product.name, product
+  .sub
+    .picture
+      - if (product = equipment_item.products.first) && picture = product.picture(:group => "MediumImage")
+        %a{ :href => product_path(product) }= image_tag picture.href, :alt => product.name
+  .main
+    .stars
+      - 0.upto(2).each do |i|
+        = radio_button_tag "equipment_#{equipment_item.id}_star", i, i == equipment_item.priority, :class => :star, :disabled => true
+    .name
+      - if equipment_item.name.present?
+        = equipment_item.name
+      - else
+        NO NAME
+    .content
+      - if equipment_item.content.present?
+        = truncate(equipment_item.content, :length => 100)
+      - else
+        NO CONTENT
+    - if equipment_item.products.present?
+      %ul.products
+        - equipment_item.products.limit(3).each do |product|
+          %li= link_to truncate(product.name, :length => 60), product
