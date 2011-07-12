@@ -9,20 +9,39 @@ $link_color: #000777
     height: 0
     clear: both
     visibility: hidden
+@mixin box_shadow
+  -webkit-box-shadow: 2px 2px 3px rgba(135, 139, 144, 0.4)
+  -moz-box-shadow: 2px 2px 3px rgba(135, 139, 144, 0.4)
+  box-shadow: 2px 2px 3px rgba(135, 139, 144, 0.4)
 
 #google_map
   width: 100%
+
 .equipment_item
   @include clearfix
+  .picture
+    float: left
+    width: 200px
+    height: 200px
+    line-height: 200px
+    vertical-align: middle
+    text-align: center
+    img
+      vertical-align: middle
+      padding: 9px
+      border: 1px solid #f7f7f7
+      @include box_shadow
   .name
     width: 140px
     float: left
   .content
-    width: 600px
-    float: left
+    margin: 0 0 0 200px
   .stars
     width: 60px
     float: left
+  ul.products
+    margin: 10px 0 0 200px
+    width: 100%
 
 form
   .field

@@ -18,7 +18,7 @@ class Product
   before_destroy :destroy_pictures
 
   def picture(conditions = {})
-    self.pictures(conditions).first
+    self.pictures.where(conditions).first
   end
 
   def Product.new_from_amazon_element(element)
@@ -30,6 +30,7 @@ class Product
     product.manufacturer = encode_unicode_entities(element.get('ItemAttributes/Manufacturer'))
     product.price = element.get('ItemAttributes/ListPrice/Amount')
     product.publisher = encode_unicode_entities(element.get('ItemAttributes/Publisher'))
+    product.pictures.delete_all
     product.pictures = Picture.pictures_from_amazon_xml(element.get('ImageSets'))
     product
   end

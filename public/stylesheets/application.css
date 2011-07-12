@@ -7,15 +7,31 @@
   height: 0;
   clear: both;
   visibility: hidden; }
+.equipment_item .picture {
+  float: left;
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  vertical-align: middle;
+  text-align: center; }
+  .equipment_item .picture img {
+    vertical-align: middle;
+    padding: 9px;
+    border: 1px solid #f7f7f7;
+    -webkit-box-shadow: 2px 2px 3px rgba(135, 139, 144, 0.4);
+    -moz-box-shadow: 2px 2px 3px rgba(135, 139, 144, 0.4);
+    box-shadow: 2px 2px 3px rgba(135, 139, 144, 0.4); }
 .equipment_item .name {
   width: 140px;
   float: left; }
 .equipment_item .content {
-  width: 600px;
-  float: left; }
+  margin: 0 0 0 200px; }
 .equipment_item .stars {
   width: 60px;
   float: left; }
+.equipment_item ul.products {
+  margin: 10px 0 0 200px;
+  width: 100%; }
 
 form .field:after {
   content: ".";
