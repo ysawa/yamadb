@@ -13,6 +13,7 @@ describe EquipmentItemsController do
 
     it "routes to #show" do
       get("/equipment_items/1").should route_to("equipment_items#show", :id => "1")
+      get("/equipments/1/equipment_items/2").should route_to("equipment_items#show", :equipment_id => '1', :id => "2")
     end
 
     it "routes to #edit" do

@@ -20,7 +20,7 @@ $link_color: #000777
 .equipment_item
   @include clearfix
   .sub
-    margin: 0 20px 0 0
+    margin: 0 10px 0 0
     float: left
     .picture
       width: 180px
@@ -30,29 +30,40 @@ $link_color: #000777
       padding: 4px
       vertical-align: middle
       text-align: center
-      border: 1px solid #f7f7f7
-      @include box_shadow
+      border:
+        right: 1px solid #e0e0e0
+        bottom: 1px solid #e0e0e0
       img
         vertical-align: middle
   .main
     float: left
     .stars
       margin: 24px 0 0 0
+      padding: 0 0 0 10px
       width: 60px
       float: left
       line-height: 19px
     .name
-      margin: 24px 0 0 60px
+      margin: 24px 0 0 70px
       font-weight: bold
       font-size: 14px
       line-height: 19px
     .content
       margin: 14px 0 0 0
+      padding: 0 0 0 10px
       height: 40px
       width: 100%
+      overflow: hidden
     ul.products
       margin: 14px 0 0 0
+      padding: 0 0 10px 10px
       width: 100%
+      border:
+        bottom: 1px solid #e0e0e0
+      li
+        margin: 0 0 0 30px
+      &.abstract
+        height: 72px
 
 form
   .field

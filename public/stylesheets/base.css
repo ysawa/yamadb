@@ -18,12 +18,14 @@ pre {
 
 h1 {
   color: black;
+  margin: 10px 0;
   font-size: 14px; }
   h1 a {
     text-decoration: none; }
 
 h2, h3 {
   color: black;
+  margin: 10px 0;
   font-size: 13px; }
 
 a {

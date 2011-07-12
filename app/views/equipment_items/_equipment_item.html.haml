@@ -1,23 +1,24 @@
+- abstract = defined?(abstract) && abstract
 .equipment_item
   .sub
     .picture
       - if (product = equipment_item.products.first) && picture = product.picture(:group => "MediumImage")
-        %a{ :href => product_path(product) }= image_tag picture.href, :alt => product.name
+        %a{ :href => equipment_equipment_item_path(@equipment, equipment_item) }= image_tag picture.href, :alt => product.name
   .main
-    .stars
-      - 0.upto(2).each do |i|
-        = radio_button_tag "equipment_#{equipment_item.id}_star", i, i == equipment_item.priority, :class => :star, :disabled => true
-    .name
-      - if equipment_item.name.present?
-        = equipment_item.name
-      - else
-        NO NAME
+    - if abstract
+      = render :partial => 'equipment_items/stars', :locals => { :equipment_item => equipment_item }
+      .name
+        - if equipment_item.name.present?
+          = link_to equipment_item.name, equipment_equipment_item_path(@equipment, equipment_item)
+        - else
+          = link_to 'NO NAME', equipment_equipment_item_path(@equipment, equipment_item)
     .content
       - if equipment_item.content.present?
-        = truncate(equipment_item.content, :length => 100)
+        = equipment_item.content
       - else
         NO CONTENT
     - if equipment_item.products.present?
-      %ul.products
-        - equipment_item.products.limit(3).each do |product|
+      %ul{ :class => 'products' + (abstract ? ' abstract' : '') }
+        - number =  abstract ? 3 : 10
+        - equipment_item.products.limit(number).each do |product|
           %li= link_to truncate(product.name, :length => 60), product

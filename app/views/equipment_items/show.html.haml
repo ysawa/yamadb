@@ -1,0 +1,11 @@
+%h1
+  - if @equipment
+    = link_to @equipment.name, @equipment
+    \>
+  = @equipment_item.name
+= render :partial => "equipment_items/equipment_item", :object => @equipment_item
+
+- if @equipment
+  = link_to t('operations.edit'), edit_equipment_path(@equipment)
+  \|
+  = link_to t('operations.back'), @equipment

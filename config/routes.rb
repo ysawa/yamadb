@@ -1,7 +1,9 @@
 Yamadb::Application.routes.draw do
   resources :equipment_items
 
-  resources :equipments
+  resources :equipments do
+    resources :equipment_items
+  end
 
   resources :products
   resources :peaks

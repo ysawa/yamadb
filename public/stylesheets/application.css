@@ -8,7 +8,7 @@
   clear: both;
   visibility: hidden; }
 .equipment_item .sub {
-  margin: 0 20px 0 0;
+  margin: 0 10px 0 0;
   float: left; }
   .equipment_item .sub .picture {
     width: 180px;
@@ -18,31 +18,38 @@
     padding: 4px;
     vertical-align: middle;
     text-align: center;
-    border: 1px solid #f7f7f7;
-    -webkit-box-shadow: 3px 3px 3px rgba(135, 139, 144, 0.4);
-    -moz-box-shadow: 3px 3px 3px rgba(135, 139, 144, 0.4);
-    box-shadow: 3px 3px 3px rgba(135, 139, 144, 0.4); }
+    border-right: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0; }
     .equipment_item .sub .picture img {
       vertical-align: middle; }
 .equipment_item .main {
   float: left; }
   .equipment_item .main .stars {
     margin: 24px 0 0 0;
+    padding: 0 0 0 10px;
     width: 60px;
     float: left;
     line-height: 19px; }
   .equipment_item .main .name {
-    margin: 24px 0 0 60px;
+    margin: 24px 0 0 70px;
     font-weight: bold;
     font-size: 14px;
     line-height: 19px; }
   .equipment_item .main .content {
     margin: 14px 0 0 0;
+    padding: 0 0 0 10px;
     height: 40px;
-    width: 100%; }
+    width: 100%;
+    overflow: hidden; }
   .equipment_item .main ul.products {
     margin: 14px 0 0 0;
-    width: 100%; }
+    padding: 0 0 10px 10px;
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0; }
+    .equipment_item .main ul.products li {
+      margin: 0 0 0 30px; }
+    .equipment_item .main ul.products.abstract {
+      height: 72px; }
 
 form .field:after {
   content: ".";
