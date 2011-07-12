@@ -1,20 +1,7 @@
 %h1= t('operations.listing_models', :model => Equipment.model_name.human)
 
-%table
-  %tr
-    %th= Equipment.human_attribute_name('name')
-    %th= Equipment.human_attribute_name('content')
-    %th
-    %th
-    %th
-
-  - @equipments.each do |equipment|
-    %tr
-      %td= equipment.name
-      %td= equipment.content
-      %td= link_to t('operations.show_short'), equipment
-      %td= link_to t('operations.edit_short'), edit_equipment_path(equipment)
-      %td= link_to t('operations.destroy_short'), equipment, :confirm => 'Are you sure?', :method => :delete
+- @equipments.each_with_index do |equipment, i|
+  = render :partial => 'equipments/equipment', :object => equipment, :locals => { :abstract => true, :number => i + 1 }
 
 %br
 

@@ -52,9 +52,8 @@ class EquipmentsController < ApplicationController
   end
 private
   def load_equipment_items_products
-    @equipment.items.each do |item|
-      item.load_products
-      item.save
+    @equipment.items.each do |equipment_item|
+      equipment_item.load_products
     end
   end
 end

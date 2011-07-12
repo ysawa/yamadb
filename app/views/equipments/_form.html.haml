@@ -14,7 +14,7 @@
     = f.text_area :content, :rows => 4
 
   %h3.as_label= EquipmentItem.model_name.human
-  = render :partial => "equipment_items/nested_fields", :as => :equipment_item, :collection => @equipment.items.ordered_by_priority
+  = render :partial => "equipment_items/nested_fields", :as => :equipment_item, :collection => @equipment.items
   = render :partial => 'equipment_items/nested_fields', :as => :equipment_item, :object => EquipmentItem.new(:priority => 2) if @equipment.items.blank?
   = link_to t('operations.add'), "#", :class => "add"
   :javascript

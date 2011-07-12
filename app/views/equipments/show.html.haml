@@ -1,7 +1,7 @@
 %h1= @equipment.name
 %p
   = @equipment.content
-- @equipment.items.ordered_by_priority.each_with_index do |equipment_item, i|
+- @equipment.items.each_with_index do |equipment_item, i|
   = render :partial => "equipment_items/equipment_item", :object => equipment_item, :locals => { :abstract => true, :number => i + 1 }
 
 = link_to t('operations.edit'), edit_equipment_path(@equipment)

@@ -1,0 +1,36 @@
+- abstract = defined?(abstract) && abstract
+- number = defined?(number) && number
+.equipment
+  .sub
+    .picture
+      - equipment_item = equipment.items.first
+      - if equipment_item && (product = equipment_item.products.first) && picture = product.picture(:group => "MediumImage")
+        - if abstract
+          %a{ :href => equipment_path(equipment) }
+            = image_tag picture.href, :alt => equipment.name
+        - else
+          = image_tag picture.href, :alt => equipment.name
+  .main
+    - if abstract
+      .name
+        - if equipment.name.present?
+          - if number
+            - equipment_item_name = "#{number}. #{equipment.name}"
+          - else
+            - equipment_item_name = equipment_item.name
+        - else
+          - if number
+            - equipment_item_name = "#{number}. NO NAME"
+          - else
+            - equipment_item_name = "NO NAME"
+        = link_to equipment_item_name, equipment
+    .content
+      - if equipment.content.present?
+        = equipment.content
+      - else
+        NO CONTENT
+    - if equipment.items.present?
+      %ul{ :class => 'equipment_items' + (abstract ? ' abstract' : '') }
+        - equipment_items =  abstract ? 3 : 10
+        - equipment.items.limit(equipment_items).each do |equipment_item|
+          %li= link_to truncate(equipment_item.name, :length => 60), equipment_equipment_item_path(equipment, equipment_item)
