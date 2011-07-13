@@ -3,5 +3,9 @@
   = render :partial => 'peaks/peak', :object => peak, :locals => { :abstract => true, :number => i + 1 }
 
 %br
+%h2
+  = t('operations.new_model', :model => Peak.model_name.human)
 
-= link_to t('operations.new_model', :model => Peak.model_name.human), new_peak_path
+= form_for Peak.new, :url => new_peak_path, :html => { :method => :get } do |f|
+  = f.text_field :name, :placeholder => Peak.human_attribute_name(:name)
+  = f.submit t('operations.new')

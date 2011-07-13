@@ -35,7 +35,7 @@ class PeaksController < ApplicationController
   # GET /peaks/new
   def new
     @peak = Peak.new
-    @peak.get_location(params[:peak_name]) if params[:peak_name]
+    @peak.get_location(params[:peak][:name]) if params[:peak] && params[:peak][:name]
     respond_with(@peak)
   end
 
