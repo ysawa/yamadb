@@ -144,17 +144,41 @@ div.peak .main {
   width: 700px;
   border-right: 1px solid #e0e0e0;
   border-bottom: 1px solid #e0e0e0; }
-  div.peak .main .name {
+  div.peak .main > .name {
     margin: 19px 0 0 0;
     font-weight: bold;
     font-size: 14px;
     line-height: 19px; }
-  div.peak .main .content {
-    margin: 14px 0 0 0;
+  div.peak .main > .content {
+    margin: 14px 10px 0 0;
     padding: 0 0 0 10px;
-    height: 136px;
-    width: 100%;
     overflow: hidden; }
+    div.peak .main > .content.abstract {
+      height: 136px; }
+
+div.tweet {
+  width: 100%;
+  margin: 0 0 10px; }
+  div.tweet:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  div.tweet > .icon {
+    float: left;
+    width: 48px;
+    height: 48px;
+    padding: 0 12px 0 0; }
+    div.tweet > .icon img {
+      display: block;
+      width: 48px;
+      height: 48px; }
+  div.tweet > .name {
+    font-weight: bold;
+    margin: 0 0 0 60px; }
+  div.tweet p {
+    margin: 0 0 0 60px; }
 
 form h3.as_label {
   margin: 0; }

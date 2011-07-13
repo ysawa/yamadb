@@ -154,17 +154,36 @@ div.peak
     border:
       right: 1px solid #e0e0e0
       bottom: 1px solid #e0e0e0
-    .name
+    & > .name
       margin: 19px 0 0 0
       font-weight: bold
       font-size: 14px
       line-height: 19px
-    .content
-      margin: 14px 0 0 0
+    & > .content
+      margin: 14px 10px 0 0
       padding: 0 0 0 10px
-      height: 136px
-      width: 100%
       overflow: hidden
+      &.abstract
+        height: 136px
+
+div.tweet
+  width: 100%
+  margin: 0 0 10px
+  @include clearfix
+  & > .icon
+    float: left
+    width: 48px
+    height: 48px
+    padding: 0 12px 0 0
+    img
+      display: block
+      width: 48px
+      height: 48px
+  & > .name
+    font-weight: bold
+    margin: 0 0 0 60px
+  p
+    margin: 0 0 0 60px
 
 form
   h3.as_label

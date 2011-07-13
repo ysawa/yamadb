@@ -1,5 +1,6 @@
 class PeaksController < ApplicationController
   respond_to :html
+  before_filter :initialize_twitter_search, :only => [:show]
 
   # POST /peaks
   def create
@@ -40,7 +41,9 @@ class PeaksController < ApplicationController
 
   # GET /peaks/1
   def show
-    respond_with(@peak = Peak.find(params[:id]))
+    @peak = Peak.find(params[:id])
+    @twitter_search.containing(@peak.name)
+    respond_with(@peak)
   end
 
   # PUT /peaks/1

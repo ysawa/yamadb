@@ -4,9 +4,13 @@
   .sub
     .google_map
       - if peak.location.present? && peak.location.size == 2
-        %a{ :href => peak_path(peak) }= image_tag "http://maps.google.com/maps/api/staticmap?center=#{peak.location[0]},#{peak.location[1]}&zoom=10&size=160x160&sensor=false"
+        - image = image_tag "http://maps.google.com/maps/api/staticmap?center=#{peak.location[0]},#{peak.location[1]}&zoom=10&size=160x160&sensor=false"
       - else
-        %a{ :href => peak_path(peak) }= image_tag '/images/common/no_picture.png'
+        - image = image_tag '/images/common/no_picture.png'
+      - if abstract
+        %a{ :href => peak_path(peak) }= image
+      - else
+        = image
   .main
     - if abstract
       .name
@@ -21,14 +25,24 @@
           - else
             - peak_item_name = "NO NAME"
         = link_to peak_item_name, peak
-    .content
+    %div{ :class => 'content' + (abstract ? ' abstract' : '') }
       %p
-        %b= Peak.human_attribute_name('altitude')
-        = peak.altitude
-        m
+        %strong= Peak.human_attribute_name('altitude')
+        - if peak.altitude
+          #{peak.altitude}m
       %p
-        %b= Peak.human_attribute_name('latitude')
-        = peak.latitude
+        %strong= Peak.human_attribute_name('latitude')
+        = number_with_precision(peak.latitude, :precision => 2)
       %p
-        %b= Peak.human_attribute_name('longitude')
-        = peak.longitude
+        %strong= Peak.human_attribute_name('longitude')
+        = number_with_precision(peak.longitude, :precision => 2)
+      - unless abstract
+        - @twitter_search.each do |tweet|
+          - href = "http://twitter.com/#!/#{tweet.from_user}"
+          .tweet{ :id => tweet.id }
+            .icon
+              = link_to image_tag(tweet.profile_image_url), href, :target => :_blank
+            .name
+              = link_to "@#{tweet.from_user}", href, :target => :_blank
+            %p
+              = htmlify tweet.text
