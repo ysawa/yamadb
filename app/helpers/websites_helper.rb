@@ -5,17 +5,21 @@ module WebsitesHelper
     if latitude && longitude
       "http://www.google.co.jp/maps?z=11&ll=#{latitude},#{longitude}&t=h"
     else
-      "http://www.google.co.jp/"
+      'http://www.google.co.jp/maps'
     end
   end
 
   def watchizu_url(options = {})
-    latitude = options[:latitude]
-    longitude = options[:longitude]
-    if latitude && longitude
-      "http://watchizu.gsi.go.jp/watchizu.html?longitude=#{longitude}&latitude=#{latitude}"
+    if options[:latitude] && options[:longitude]
+      latitude = { :sum => options[:latitude].to_f, :degree => options[:latitude].to_i }
+      latitude[:minute] = ((latitude[:sum] - latitude[:degree]) * 60).to_i
+      latitude[:second] = ((((latitude[:sum] - latitude[:degree]) * 60) - latitude[:minute]) * 60).to_i
+      longitude = { :sum => options[:longitude].to_f, :degree => options[:longitude].to_i }
+      longitude[:minute] = ((longitude[:sum] - longitude[:degree]) * 60).to_i
+      longitude[:second] = ((((longitude[:sum] - longitude[:degree]) * 60) - longitude[:minute]) * 60).to_i
+      "http://watchizux.gsi.go.jp/watchizu.html?b=#{latitude[:degree]}#{latitude[:minute]}#{latitude[:second]}&l=#{longitude[:degree]}#{longitude[:minute]}#{longitude[:second]}"
     else
-      "http://watchizu.gsi.go.jp/"
+      'http://watchizux.gsi.go.jp/watchizu.html'
     end
   end
 end
