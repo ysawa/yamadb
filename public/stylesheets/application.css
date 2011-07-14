@@ -163,6 +163,25 @@ div.peak .main {
     overflow: hidden; }
     div.peak .main > .content.abstract {
       height: 136px; }
+    div.peak .main > .content .weathers {
+      margin: 0 0 10px; }
+      div.peak .main > .content .weathers:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden; }
+      div.peak .main > .content .weathers .weather {
+        margin: 0 10px 0 0;
+        width: 60px;
+        float: left; }
+        div.peak .main > .content .weathers .weather .date {
+          text-align: center;
+          width: 60px; }
+        div.peak .main > .content .weathers .weather .icon {
+          text-align: center;
+          width: 60px;
+          height: 50px; }
 
 div.tweet {
   width: 100%;

@@ -1,4 +1,6 @@
 %h1
+  = link_to Peak.model_name.human, peaks_path
+  \>
   = @peak.name
 = render :partial => 'peaks/peak', :object => @peak, :locals => { :abstract => false }
 

@@ -45,6 +45,14 @@ ja:
       create: '作成'
       update: '更新'
 
+  websites:
+    google_map: 'Google マップ'
+    twitter: 'Twitter'
+    watchizu: 'ウオッちず'
+
+  information:
+    map: '地図'
+
   controllers:
     equipments:
       edit: '装備編集'

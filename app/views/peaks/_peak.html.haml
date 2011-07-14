@@ -31,12 +31,21 @@
         - if peak.altitude
           #{peak.altitude}m
       %p
-        %strong= Peak.human_attribute_name('latitude')
-        = number_with_precision(peak.latitude, :precision => 2)
-      %p
-        %strong= Peak.human_attribute_name('longitude')
-        = number_with_precision(peak.longitude, :precision => 2)
+        %strong= t('information.map')
+        = link_to t('websites.google_map'), google_map_url(:latitude => peak.latitude, :longitude => peak.longitude), :target => :_blank
+        = link_to t('websites.watchizu'), watchizu_url(:latitude => peak.latitude, :longitude => peak.longitude), :target => :_blank
+      .weathers
+        - WeatherForecast.find_this_week(peak.latitude, peak.longitude).each do |weather|
+          .weather
+            .icon= image_tag WeatherForecast.icon_url(weather.condition)
+            .date= l weather.at.to_date, :format => :weather
       - unless abstract
+        %p
+          %strong= Peak.human_attribute_name('latitude')
+          = number_with_precision(peak.latitude, :precision => 2)
+        %p
+          %strong= Peak.human_attribute_name('longitude')
+          = number_with_precision(peak.longitude, :precision => 2)
         - @twitter_search.each do |tweet|
           - href = "http://twitter.com/#!/#{tweet.from_user}"
           .tweet{ :id => tweet.id }
