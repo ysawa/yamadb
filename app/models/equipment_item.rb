@@ -38,7 +38,7 @@ class EquipmentItem
 private
   def save_products
     self.products.each do |product|
-      product.save(:validate => false)
+      product.save(:validate => false) if product.changed?
     end
   end
 end

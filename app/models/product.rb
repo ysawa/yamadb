@@ -58,7 +58,7 @@ private
 
   def save_pictures
     self.pictures.each do |picture|
-      picture.save(:validate => false)
+      picture.save(:validate => false) if picture.changed?
     end
   end
 end

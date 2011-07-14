@@ -40,7 +40,7 @@ private
   def save_items
     self.items.each do |item|
       item.equipment_id = self.id
-      item.save(:validate => false)
+      item.save(:validate => false) if item.changed?
     end
   end
 end
