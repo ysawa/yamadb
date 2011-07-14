@@ -25,10 +25,8 @@ class Peak
     json = ActiveSupport::JSON.decode(response.body)
     return nil unless json["status"] == "OK"
     result = json["results"].first
-    if self.name.blank?
-      components = result["address_components"].first
-      self.name = components["short_name"]
-    end
+    components = result["address_components"].first
+    self.name = components["short_name"]
     location_hash = result["geometry"]["location"]
     self.location = [location_hash["lat"], location_hash["lng"]]
     return true

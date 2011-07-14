@@ -1,5 +1,6 @@
 #google_map {
-  width: 100%; }
+  width: 100%;
+  height: 600px; }
 
 div.equipment:after {
   content: ".";
@@ -138,6 +139,10 @@ div.peak .sub {
       line-height: 12px;
       top: 10px;
       left: 10px; }
+    div.peak .sub .google_map #google_map {
+      line-height: 18px;
+      width: 100%;
+      height: 100%; }
 div.peak .main {
   margin: 5px 0 0 0;
   float: left;
@@ -145,10 +150,13 @@ div.peak .main {
   border-right: 1px solid #e0e0e0;
   border-bottom: 1px solid #e0e0e0; }
   div.peak .main > .name {
-    margin: 19px 0 0 0;
+    margin: 19px 0 0 10px;
     font-weight: bold;
     font-size: 14px;
     line-height: 19px; }
+    div.peak .main > .name a#search_peak_again_link {
+      vertical-align: bottom;
+      font-size: 12px; }
   div.peak .main > .content {
     margin: 14px 10px 0 0;
     padding: 0 0 0 10px;

@@ -1,3 +1,4 @@
+= google_map_include_tag
 = form_for @peak do |f|
   -if @peak.errors.any?
     #error_explanation
@@ -6,18 +7,51 @@
         - @peak.errors.full_messages.each do |msg|
           %li= msg
 
-  .field
-    = f.label :name
-    = f.text_field :name
-  .field
-    = f.label :altitude
-    = f.text_field :altitude
-    m
-  .field
-    = f.label :location
-    = text_field_tag "peak[location][]", @peak.latitude, :size => 30
-    ,
-    = text_field_tag "peak[location][]", @peak.longitude, :size => 30
+  .peak
+    .sub
+      .google_map
+        #google_map
+    .main
+      .name
+        = f.label :name
+        = f.text_field :name, :placeholder => Peak.human_attribute_name(:name)
+        = link_to t('operations.search_peak_again'), '#', :id => 'search_peak_again_link'
+      .content
+        %p
+          = f.label :altitude
+          = f.text_field :altitude
+          m
+        %p
+          = f.label :latitude
+          = text_field_tag "peak[location][]", @peak.latitude, :size => 30, :id => 'peak_latitude'
+        %p
+          = f.label :longitude
+          = text_field_tag "peak[location][]", @peak.longitude, :size => 30, :id => 'peak_longitude'
 
   .actions
     = f.submit
+:javascript
+  $(function () {
+      $('#peak_latitude, #peak_longitude').change(function () {
+          var latitude, longitude;
+          latitude = $('#peak_latitude').val();
+          longitude = $('#peak_longitude').val();
+          var position = yamadb.google_map.position(latitude, longitude);
+          if (position) {
+            yamadb.google_map.markers[0].setPosition(position);
+            yamadb.google_map.map.setCenter(position);
+          }
+      });
+      $('#search_peak_again_link').live('click', function () {
+          window.location = '/peaks/#{@peak.new? ? 'new' : "#{@peak.id}/edit" }?peak[name]=' + $('#peak_name').val();
+          return false;
+      });
+      var latitude, longitude;
+      latitude = '#{@peak.latitude}';
+      longitude = '#{@peak.longitude}';
+      var position = yamadb.google_map.position(latitude, longitude);
+      if (position) {
+        yamadb.google_map.locate_peak('#{@peak.name || 'NO NAME'}', latitude, longitude);
+        yamadb.google_map.map.setCenter(position);
+      }
+  })

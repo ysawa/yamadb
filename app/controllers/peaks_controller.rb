@@ -22,7 +22,9 @@ class PeaksController < ApplicationController
 
   # GET /peaks/1/edit
   def edit
-    respond_with(@peak = Peak.find(params[:id])) do |format|
+    @peak = Peak.find(params[:id])
+    @peak.get_location(params[:peak][:name]) if params[:peak] && params[:peak][:name]
+    respond_with(@peak) do |format|
       format.html { render :action => :edit }
     end
   end

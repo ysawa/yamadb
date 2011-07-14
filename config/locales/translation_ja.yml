@@ -37,6 +37,7 @@ ja:
     new_short: '作成'
     show: '詳細を見る'
     show_short: '詳細'
+    search_peak_again: '名前で再検索'
     new_short: '編集'
 
   helpers:
