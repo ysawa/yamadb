@@ -41,6 +41,9 @@
             .date= l weather.at.to_date, :format => :weather
       - unless abstract
         %p
+          %strong= Map.model_name.human
+          = peak.map.name if peak.map
+        %p
           %strong= Peak.human_attribute_name('latitude')
           = number_with_precision(peak.latitude, :precision => 2)
         %p

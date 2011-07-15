@@ -3,6 +3,7 @@ ja:
     models:
       equipment: '装備'
       equipment_item: '装備品'
+      map: '地形図'
       peak: '山頂'
       product: '登山用品'
     attributes:
@@ -12,6 +13,8 @@ ja:
       equipment_item:
         name: '品名'
         content: '説明'
+      map:
+        name: '地形図名'
       peak:
         altitude: '標高'
         name: '名称'
