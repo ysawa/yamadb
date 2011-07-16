@@ -27,7 +27,8 @@
         = link_to peak_item_name, peak
     %div{ :class => 'content' + (abstract ? ' abstract' : '') }
       - unless abstract
-        %h2= t('information.peak')
+        %h2
+          = t('information.peak')
       %p
         %strong= Peak.human_attribute_name('altitude')
         - if peak.altitude
@@ -38,9 +39,21 @@
         = link_to t('websites.watchizu'), watchizu_url(:latitude => peak.latitude, :longitude => peak.longitude), :target => :_blank
       - unless abstract
         %p
-          %strong= WeatherForecast.model_name.human
-          (#{t('information.source')}:
-          #{link_to 'wunderground.com', wunderground_url, :target => :_blank})
+          %strong= Map.model_name.human
+          = peak.map.name if peak.map
+        %p
+          %strong= Peak.human_attribute_name('latitude')
+          = number_with_precision(peak.latitude, :precision => 2)
+        %p
+          %strong= Peak.human_attribute_name('longitude')
+          = number_with_precision(peak.longitude, :precision => 2)
+
+      - unless abstract
+        %h2
+          = WeatherForecast.model_name.human
+          %span.source
+            (#{t('information.source')}:
+            #{link_to 'wunderground.com', wunderground_url, :target => :_blank})
       .weathers
         - WeatherForecast.find_this_week(peak.latitude, peak.longitude).each do |weather|
           .weather
@@ -52,15 +65,6 @@
                 = image_tag WeatherForecast.icon_url(condition), :class => :normal
             .date= l weather.at.to_date, :format => :weather
       - unless abstract
-        %p
-          %strong= Map.model_name.human
-          = peak.map.name if peak.map
-        %p
-          %strong= Peak.human_attribute_name('latitude')
-          = number_with_precision(peak.latitude, :precision => 2)
-        %p
-          %strong= Peak.human_attribute_name('longitude')
-          = number_with_precision(peak.longitude, :precision => 2)
         %h2= t('information.twitter')
         - @twitter_search.each do |tweet|
           - href = "http://twitter.com/#!/#{tweet.from_user}"

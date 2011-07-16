@@ -162,9 +162,15 @@ div.peak .main {
     padding: 0 0 0 10px;
     overflow: hidden; }
     div.peak .main > .content > h2 {
-      margin: 0 10px 10px 0;
+      margin: 30px 10px 10px 0;
       padding: 0 0 2px;
       border-bottom: 1px solid #f0f0f0; }
+      div.peak .main > .content > h2 span.source {
+        font-size: 11px;
+        float: right;
+        font-weight: normal; }
+      div.peak .main > .content > h2:first-child {
+        margin: 0 10px 10px 0; }
     div.peak .main > .content.abstract {
       height: 136px; }
     div.peak .main > .content .weathers {
