@@ -9,6 +9,17 @@ module WebsitesHelper
     end
   end
 
+  def link_to_source(href)
+    header = t('information.source')
+    name = href.gsub(/((http|https):\/\/|www\.|\/$)/, '')
+    link = link_to name, href, :target => :_blank
+    content_tag :span, raw("(#{header}: #{link})"), :class => :source
+  end
+
+  def twitter_url
+    'http://twitter.com/'
+  end
+
   def watchizu_url(options = {})
     if options[:latitude] && options[:longitude]
       latitude = { :sum => options[:latitude].to_f, :degree => options[:latitude].to_i }
