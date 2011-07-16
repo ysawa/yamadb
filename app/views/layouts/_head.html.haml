@@ -4,5 +4,8 @@
 - else
   %h2
     = link_to "YamaDB", root_path
+#locales
+  - Yamadb::LOCALES.each do |locale|
+    = link_to image_tag("/images/locales/#{locale}.png"), { :locale => locale }
 %p#abstract
   To trek or climb Japanese mountains more safely,

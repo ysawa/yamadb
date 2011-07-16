@@ -19,6 +19,8 @@
         #global_container #head_container .inner h1 a, #global_container #head_container .inner h2 a {
           color: black;
           text-decoration: none; }
+      #global_container #head_container .inner #locales {
+        float: right; }
       #global_container #head_container .inner p#abstract {
         margin: 0; }
   #global_container #main_container {
