@@ -4,8 +4,9 @@ ja:
       equipment: '装備'
       equipment_item: '装備品'
       map: '地形図'
-      peak: '山頂'
+      peak: '日本の山'
       product: '登山用品'
+      weather_forecast: '天気予報'
     attributes:
       equipment:
         name: '装備名'
@@ -55,6 +56,7 @@ ja:
 
   information:
     map: '地図'
+    source: '情報源'
 
   controllers:
     equipments:

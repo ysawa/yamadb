@@ -22,4 +22,8 @@ module WebsitesHelper
       'http://watchizux.gsi.go.jp/watchizu.html'
     end
   end
+
+  def wunderground_url
+    'http://www.wunderground.com'
+  end
 end

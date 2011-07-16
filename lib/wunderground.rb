@@ -10,7 +10,7 @@ module Wunderground
   end
 
   def icon_url(condition)
-    "http://icons-ecast.wxug.com/i/c/g/#{condition}.gif"
+    "http://icons-ecast.wxug.com/i/c/k/#{condition}.gif"
   end
 
   def parse_weather_forecasts_xml(xml, options = {})
