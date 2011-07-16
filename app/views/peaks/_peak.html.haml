@@ -26,6 +26,8 @@
             - peak_item_name = "NO NAME"
         = link_to peak_item_name, peak
     %div{ :class => 'content' + (abstract ? ' abstract' : '') }
+      - unless abstract
+        %h2= t('information.peak')
       %p
         %strong= Peak.human_attribute_name('altitude')
         - if peak.altitude
@@ -59,6 +61,7 @@
         %p
           %strong= Peak.human_attribute_name('longitude')
           = number_with_precision(peak.longitude, :precision => 2)
+        %h2= t('information.twitter')
         - @twitter_search.each do |tweet|
           - href = "http://twitter.com/#!/#{tweet.from_user}"
           .tweet{ :id => tweet.id }
