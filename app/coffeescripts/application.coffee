@@ -1,4 +1,15 @@
 yamadb =
+  form:
+    disable_submission_by_enter: ->
+     text_fields = $('input:text')
+     if $.browser.mozilla
+       $(text_fields).keypress(this.false_if_entering)
+     else
+       $(text_fields).keydown(this.false_if_entering)
+    false_if_entering: (event) ->
+      if event.keyCode == 13
+        event.preventDefault
+        return false
   google_map:
     map: null
     initialize: ->

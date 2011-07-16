@@ -54,4 +54,5 @@
         yamadb.google_map.locate_peak('#{@peak.name || 'NO NAME'}', latitude, longitude);
         yamadb.google_map.map.setCenter(position);
       }
+      yamadb.form.disable_submission_by_enter();
   })

@@ -1,10 +1,27 @@
-/* DO NOT MODIFY. This file was compiled Thu, 14 Jul 2011 06:17:00 GMT from
+/* DO NOT MODIFY. This file was compiled Sat, 16 Jul 2011 10:17:57 GMT from
  * /home/ysawa/ruby/yamadb/app/coffeescripts/application.coffee
  */
 
 var yamadb;
 var __slice = Array.prototype.slice;
 yamadb = {
+  form: {
+    disable_submission_by_enter: function() {
+      var text_fields;
+      text_fields = $('input:text');
+      if ($.browser.mozilla) {
+        return $(text_fields).keypress(this.false_if_entering);
+      } else {
+        return $(text_fields).keydown(this.false_if_entering);
+      }
+    },
+    false_if_entering: function(event) {
+      if (event.keyCode === 13) {
+        event.preventDefault;
+        return false;
+      }
+    }
+  },
   google_map: {
     map: null,
     initialize: function() {
