@@ -1,3 +1,8 @@
+#main_container > .inner > h2 {
+  margin: 30px 0 10px; }
+  #main_container > .inner > h2:first-child {
+    margin: 0 0 10px; }
+
 #google_map {
   width: 500px;
   height: 500px; }

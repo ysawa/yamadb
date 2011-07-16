@@ -1,2 +1,9 @@
-%h2 Peaks in Japan
-= render :partial => "peaks/google_map"
+%h2= Peak.model_name.human
+- @peaks.each_with_index do |peak, i|
+  = render :partial => 'peaks/peak', :object => peak, :locals => { :abstract => true, :number => i + 1 }
+
+%h2= Equipment.model_name.human
+
+- @equipments.each_with_index do |equipment, i|
+  = render :partial => 'equipments/equipment', :object => equipment, :locals => { :abstract => true, :number => i + 1 }
+
