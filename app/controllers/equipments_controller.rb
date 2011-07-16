@@ -53,7 +53,7 @@ class EquipmentsController < ApplicationController
 private
   def load_equipment_items_products
     @equipment.items.each do |equipment_item|
-      equipment_item.load_products
+      equipment_item.load_products if equipment_item.name_changed?
     end
   end
 end

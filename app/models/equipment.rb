@@ -6,6 +6,7 @@ class Equipment
   field :season_end, :type => Integer
   field :season_start, :type => Integer
   has_many :items, :class_name => "EquipmentItem", :varidate => false
+  after_save :destroy_items_if_necesarry
   after_save :save_items
   after_destroy :destroy_all_items
   validates_with EquipmentValidator

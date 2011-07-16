@@ -1,4 +1,7 @@
-%h1= @equipment.name
+%h1
+  = link_to Equipment.model_name.human, equipments_path
+  \>
+  = @equipment.name
 %p
   = @equipment.content
 - @equipment.items.each_with_index do |equipment_item, i|

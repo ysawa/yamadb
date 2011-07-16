@@ -5,11 +5,12 @@
     .picture
       - equipment_item = equipment.items.first
       - if equipment_item && (product = equipment_item.products.first) && picture = product.picture(:group => "MediumImage")
+        - attrs = { :alt => equipment.name, :height => picture.height, :width => picture.width }
         - if abstract
           %a{ :href => equipment_path(equipment) }
-            = image_tag picture.href, :alt => equipment.name
+            = image_tag picture.href, attrs
         - else
-          = image_tag picture.href, :alt => equipment.name
+          = image_tag picture.href, attrs
   .main
     - if abstract
       .name

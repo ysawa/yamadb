@@ -33,3 +33,12 @@
     width: 20%; }
     #global_container #side_container .inner {
       margin: 10px; }
+  #global_container #foot_container {
+    clear: both;
+    width: 100%;
+    padding: 30px 0 0; }
+    #global_container #foot_container .inner {
+      padding: 20px 0;
+      border-top: 1px solid #cccccc; }
+      #global_container #foot_container .inner #credit {
+        text-align: center; }
