@@ -13,4 +13,20 @@ describe Product do
       product.pictures.should_not be_blank
     end
   end
+
+  describe 'Product.books' do
+    it 'cannot get sporting goods' do
+      sporting_good = Fabricate(:product)
+      books = Product.books
+      books.should_not include sporting_good
+    end
+  end
+
+  describe 'Product.sporting_goods' do
+    it 'can get sporting goods' do
+      sporting_good = Fabricate(:product)
+      sporting_goods = Product.sporting_goods
+      sporting_goods.should include sporting_good
+    end
+  end
 end

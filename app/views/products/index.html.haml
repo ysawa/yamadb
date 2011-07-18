@@ -1,5 +1,6 @@
 %h1= t('operations.listing_models', :model => Product.model_name.human)
 
+= paginate(@products)
 %table
   %tr
     %th= Product.human_attribute_name('name')
@@ -11,6 +12,7 @@
       %td= link_to(product.name || 'NO TITLE', product)
       %td= link_to t('operations.edit_short'), edit_product_path(product)
       %td= link_to t('operations.destroy_short'), product, :confirm => 'Are you sure?', :method => :delete
+= paginate(@products)
 
 %br
 

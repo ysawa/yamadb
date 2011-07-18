@@ -28,7 +28,13 @@ class ProductsController < ApplicationController
 
   # GET /products
   def index
-    respond_with(@products = Product.all)
+    if params[:group] =~ /^(sporting_goods|books)$/
+      @products = Product.send(params[:group])
+    else
+      @products = Product.all
+    end
+    @products = @products.page(params[:page]).per(10)
+    respond_with(@products)
   end
 
   # GET /products/new
