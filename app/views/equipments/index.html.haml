@@ -1,7 +1,9 @@
 %h1= t('operations.listing_models', :model => Equipment.model_name.human)
 
+= paginate @equipments
 - @equipments.each_with_index do |equipment, i|
   = render :partial => 'equipments/equipment', :object => equipment, :locals => { :abstract => true, :number => i + 1 }
+= paginate @equipments
 
 %br
 

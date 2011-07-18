@@ -15,7 +15,7 @@ end unless ENV['VCAP_SERVICES']
 gem 'mongo', '1.3.1'
 gem 'bson_ext', '1.3.1'
 gem 'mongoid', '2.0.0.rc.6'
-gem 'will_paginate', '~> 3.0.pre2'
+gem 'kaminari', '~> 0.12.4'
 gem 'ya2yaml', '0.30'
 gem 'SystemTimer', '1.2.3'
 

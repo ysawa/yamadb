@@ -28,7 +28,8 @@ class EquipmentsController < ApplicationController
 
   # GET /equipments
   def index
-    respond_with(@equipments = Equipment.all)
+    @equipments = Equipment.all.page(params[:page]).per(5)
+    respond_with(@equipments)
   end
 
   # GET /equipments/new

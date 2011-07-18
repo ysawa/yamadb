@@ -85,3 +85,10 @@ ja:
       new: '新規登山用品'
       show: '登山用品'
 
+  views:
+    pagination:
+      first: '&lt;&lt;'
+      previous: '&lt;'
+      last: '&gt;&gt;'
+      next: '&gt;'
+      truncate: '&hellip;'

@@ -31,7 +31,8 @@ class PeaksController < ApplicationController
 
   # GET /peaks
   def index
-    respond_with(@peaks = Peak.all)
+    @peaks = Peak.all.page(params[:page]).per(5)
+    respond_with(@peaks)
   end
 
   # GET /peaks/new
