@@ -13,18 +13,19 @@
     = f.label :content
     = f.text_area :content, :rows => 4
 
-  %h3.as_label= EquipmentItem.model_name.human
-  = render :partial => "equipment_items/nested_fields", :as => :equipment_item, :collection => @equipment.items
-  = render :partial => 'equipment_items/nested_fields', :as => :equipment_item, :object => EquipmentItem.new(:priority => 2) if @equipment.items.blank?
-  = link_to t('operations.add'), "#", :class => "add"
-  :javascript
-    $(function () {
-        $('.add').bind("click", function () {
-            $('.add').before("#{escape_javascript(render :partial => 'equipment_items/nested_fields', :as => :equipment_item, :object => EquipmentItem.new(:priority => 2))}");
-            $('.field:last .star').rating();
-            return false;
-        })
-        yamadb.form.disable_submission_by_enter();
-    })
+  - if @equipment.persisted?
+    %h3.as_label= EquipmentItem.model_name.human
+    = render :partial => "equipment_items/nested_fields", :as => :equipment_item, :collection => @equipment.items
+    = render :partial => 'equipment_items/nested_fields', :as => :equipment_item, :object => EquipmentItem.new(:priority => 2) if @equipment.items.blank?
+    = link_to t('operations.add'), "#", :class => "add"
+    :javascript
+      $(function () {
+          $('.add').bind("click", function () {
+              $('.add').before("#{escape_javascript(render :partial => 'equipment_items/nested_fields', :as => :equipment_item, :object => EquipmentItem.new(:priority => 2))}");
+              $('.field:last .star').rating();
+              return false;
+          })
+          yamadb.form.disable_submission_by_enter();
+      })
   .actions
     = f.submit
