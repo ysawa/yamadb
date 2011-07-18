@@ -4,7 +4,6 @@ class EquipmentsController < ApplicationController
   # POST /equipments
   def create
     @equipment = Equipment.new(params[:equipment])
-    load_equipment_items_products
     if @equipment.save
       flash[:notice] = "Equipment successfully created"
     else
