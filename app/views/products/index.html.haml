@@ -5,12 +5,10 @@
     %th= Product.human_attribute_name('name')
     %th
     %th
-    %th
 
   - @products.each do |product|
     %tr
-      %td= product.name
-      %td= link_to t('operations.show_short'), product
+      %td= link_to(product.name || 'NO TITLE', product)
       %td= link_to t('operations.edit_short'), edit_product_path(product)
       %td= link_to t('operations.destroy_short'), product, :confirm => 'Are you sure?', :method => :delete
 
