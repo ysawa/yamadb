@@ -23,6 +23,15 @@ class Peak
     end
   end
 
+  def location?
+    loc = read_attribute(:location)
+    if loc and loc.size == 2
+      true
+    else
+      false
+    end
+  end
+
   def longitude
     self.location ? self.location[1] : nil
   end
@@ -44,7 +53,7 @@ class Peak
   end
 private
   def find_map_if_necessary
-    if (self.map_id.blank? || location_changed?) && location.present? && location.size == 2
+    if (self.map_id.blank? || self.location_changed?) && self.location?
       self.map = Map.find_by_degrees(location[0], location[1])
     end
   end
