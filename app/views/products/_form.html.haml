@@ -1,9 +1,9 @@
-= form_for @product do |f|
-  -if @product.errors.any?
+= form_for product do |f|
+  -if product.errors.any?
     #error_explanation
-      %h2= "#{pluralize(@product.errors.count, "error")} prohibited this item from being saved:"
+      %h2= "#{pluralize(product.errors.count, "error")} prohibited this item from being saved:"
       %ul
-        - @product.errors.full_messages.each do |msg|
+        - product.errors.full_messages.each do |msg|
           %li= msg
 
   .field

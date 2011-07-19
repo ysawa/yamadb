@@ -4,28 +4,28 @@
     %title
       - if controller_name == 'main' && action_name == 'index'
         YamaDB
-      - elsif (actions = I18n.t("controllers")[controller_name.to_sym]) && (subtitle = actions[action_name.to_sym])
+      - elsif (actions = I18n.t('controllers')[controller_name.to_sym]) && (subtitle = actions[action_name.to_sym])
         #{subtitle} | YamaDB
       - else
         YamaDB
-    = stylesheet_link_tag "base", "structures", "application"
-    = stylesheet_link_tag "jquery.rating"
-    = stylesheet_link_tag "jquery-ui"
+    = stylesheet_link_tag 'base', 'structures', 'application'
+    = stylesheet_link_tag 'jquery.rating'
+    = stylesheet_link_tag 'jquery-ui'
     = javascript_include_tag :defaults
     = javascript_include_tag 'jquery.rating.min'
-    = javascript_include_tag "jquery.truncate.min"
+    = javascript_include_tag 'jquery.truncate.min'
     = csrf_meta_tag
   %body
     #global_container
       #head_container
         .inner
-          = render :partial => 'layouts/head'
+          = render 'layouts/head'
       #main_container
         .inner
           = yield
       #side_container
         .inner
-          = render :partial => "layouts/side"
+          = render 'layouts/side'
       #foot_container
         .inner
-          = render :partial => "layouts/foot"
+          = render 'layouts/foot'

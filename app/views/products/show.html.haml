@@ -3,10 +3,10 @@
 %p
   = @product.content
 %p
-  = link_to truncate(@product.href, :length => 40), @product.href if @product.href.present?
-- if picture = @product.pictures.where(:group => "MediumImage").first
+  = link_to truncate(@product.href, :length => 40), @product.href if @product.href?
+- if picture = @product.picture(:group => "MediumImage")
   %p
-    = render :partial => 'pictures/picture', :object => picture
+    = render picture
 
 = link_to t('operations.edit'), edit_product_path(@product)
 \|

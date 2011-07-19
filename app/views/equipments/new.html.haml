@@ -1,5 +1,5 @@
 %h1= t('operations.new_model', :model => Equipment.model_name.human)
 
-= render 'form'
+= render 'form', :equipment => @equipment
 
 = link_to t('operations.back'), equipments_path

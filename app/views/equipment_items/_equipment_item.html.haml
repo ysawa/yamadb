@@ -5,27 +5,27 @@
     .picture
       - (product = equipment_item.products.first) && (picture = product.picture(:group => "MediumImage"))
       - picture_href = picture ? picture.href : '/images/common/no_picture.png'
-      - if abstract && @equipment
-        %a{ :href => equipment_equipment_item_path(@equipment, equipment_item) }
+      - if abstract && equipment
+        %a{ :href => equipment_equipment_item_path(equipment, equipment_item) }
           = image_tag picture_href, :alt => (product ? product.name : nil)
       - else
         = image_tag picture_href, :alt => (product ? product.name : nil)
   .main
-    - if abstract && @equipment
-      = render :partial => 'equipment_items/stars', :locals => { :equipment_item => equipment_item }
+    - if abstract && equipment
+      = render 'equipment_items/stars', :equipment_item => equipment_item
       .name
         - if equipment_item.name.present?
           - if number
             - equipment_item_name = "#{number}. #{equipment_item.name}"
           - else
             - equipment_item_name = equipment_item.name
-          = link_to equipment_item_name, equipment_equipment_item_path(@equipment, equipment_item)
+          = link_to equipment_item_name, equipment_equipment_item_path(equipment, equipment_item)
         - else
           - if number
             - equipment_item_name = "#{number}. NO NAME"
           - else
             - equipment_item_name = "NO NAME"
-          = link_to equipment_item_name, equipment_equipment_item_path(@equipment, equipment_item)
+          = link_to equipment_item_name, equipment_equipment_item_path(equipment, equipment_item)
     .content
       - if equipment_item.content.present?
         = equipment_item.content

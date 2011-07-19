@@ -1,6 +1,6 @@
 %h1= t('operations.editing_model', :model => Peak.model_name.human)
 
-= render 'form'
+= render 'form', :peak => @peak
 
 = link_to t('operations.show'), @peak
 \|

@@ -1,6 +1,7 @@
 class PeaksController < ApplicationController
   respond_to :html
   before_filter :initialize_twitter_search, :only => [:show]
+  before_filter :find_peak, :only => [:destroy, :edit, :show, :update]
 
   # POST /peaks
   def create
@@ -15,17 +16,15 @@ class PeaksController < ApplicationController
 
   # DELETE /peaks/1
   def destroy
-    @peak = Peak.find(params[:id])
     flash[:notice] = "Peak successfully destroyed." if @peak.destroy
     respond_with(@peak, :location => peaks_url)
   end
 
   # GET /peaks/1/edit
   def edit
-    @peak = Peak.find(params[:id])
     @peak.get_location(params[:peak][:name]) if params[:peak] && params[:peak][:name]
     respond_with(@peak) do |format|
-      format.html { render :action => :edit }
+      format.html { render :edit }
     end
   end
 
@@ -44,15 +43,17 @@ class PeaksController < ApplicationController
 
   # GET /peaks/1
   def show
-    @peak = Peak.find(params[:id])
     @twitter_search.containing(@peak.name)
     respond_with(@peak)
   end
 
   # PUT /peaks/1
   def update
-    @peak = Peak.find(params[:id])
     flash[:notice] = "Peak successfully updated." if @peak.update_attributes(params[:peak])
     respond_with(@peak, :location => peaks_path)
+  end
+private
+  def find_peak
+    @peak = Peak.find(params[:id])
   end
 end

@@ -3,7 +3,7 @@
 :javascript
   $(function () {
       $.each(
-        #{@peaks.collect { |peak| peak }.to_json},
+        #{peaks.collect { |peak| peak }.to_json},
         function () {
           yamadb.google_map.locate_peak(this.name, this.location[0], this.location[1], "/peaks/" + this._id);
         }

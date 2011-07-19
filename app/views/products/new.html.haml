@@ -1,5 +1,5 @@
 %h1= t('operations.new_model', :model => Product.model_name.human)
 
-= render 'form'
+= render 'form', :product => @product
 
 = link_to t('operations.back'), products_path

@@ -2,7 +2,7 @@
 
 = paginate @equipments
 - @equipments.each_with_index do |equipment, i|
-  = render :partial => 'equipments/equipment', :object => equipment, :locals => { :abstract => true, :number => i + 1 }
+  = render 'equipments/equipment', :equipment => equipment, :abstract => true, :number => i + 1
 = paginate @equipments
 
 %br

@@ -5,8 +5,8 @@
 %p
   = @equipment.content
 - @equipment.items.each_with_index do |equipment_item, i|
-  = render :partial => "equipment_items/equipment_item", :object => equipment_item, :locals => { :abstract => true, :number => i + 1 }
-= render :partial => "equipment_items/picture_flipper"
+  = render equipment_item, :equipment => @equipment, :abstract => true, :number => i + 1
+= render 'equipment_items/picture_flipper'
 
 = link_to t('operations.edit'), edit_equipment_path(@equipment)
 \|

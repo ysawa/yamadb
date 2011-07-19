@@ -1,9 +1,9 @@
-= form_for @equipment do |f|
-  -if @equipment.errors.any?
+= form_for equipment do |f|
+  -if equipment.errors.any?
     #error_explanation
-      %h2= "#{pluralize(@equipment.errors.count, "error")} prohibited this equipment from being saved:"
+      %h2= "#{pluralize(equipment.errors.count, "error")} prohibited this equipment from being saved:"
       %ul
-        - @equipment.errors.full_messages.each do |msg|
+        - equipment.errors.full_messages.each do |msg|
           %li= msg
 
   .field
@@ -13,15 +13,15 @@
     = f.label :content
     = f.text_area :content, :rows => 4
 
-  - if @equipment.persisted?
+  - if equipment.persisted?
     %h3.as_label= EquipmentItem.model_name.human
-    = render :partial => "equipment_items/nested_fields", :as => :equipment_item, :collection => @equipment.items
-    = render :partial => 'equipment_items/nested_fields', :as => :equipment_item, :object => EquipmentItem.new(:priority => 2) if @equipment.items.blank?
-    = link_to t('operations.add'), "#", :class => "add"
+    = render :partial => 'equipment_items/nested_fields', :as => :equipment_item, :collection => equipment.items
+    = render 'equipment_items/nested_fields', :equipment_item => EquipmentItem.new(:priority => 2) if equipment.items.blank?
+    = link_to t('operations.add'), '#', :class => 'add'
     :javascript
       $(function () {
           $('.add').bind("click", function () {
-              $('.add').before("#{escape_javascript(render :partial => 'equipment_items/nested_fields', :as => :equipment_item, :object => EquipmentItem.new(:priority => 2))}");
+              $('.add').before("#{escape_javascript(render 'equipment_items/nested_fields', :equipment_item => EquipmentItem.new(:priority => 2))}");
               $('.field:last .star').rating();
               return false;
           })
