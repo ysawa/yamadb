@@ -2,7 +2,7 @@
   = link_to Peak.model_name.human, peaks_path
   \>
   = @peak.name
-= render @peak, :abstract => false
+= render @peak, :abstract => false, :twitter_search => @twitter_search
 
 = link_to t('operations.edit'), edit_peak_path(@peak)
 \|

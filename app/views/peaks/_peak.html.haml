@@ -65,15 +65,16 @@
                 = image_tag WeatherForecast.icon_url(condition), :class => :normal
             .date= l weather.at.to_date, :format => :weather
       - unless abstract
-        %h2
-          = t('information.twitter')
-          = link_to_source(twitter_url)
-        - defined?(twitter_search) && twitter_search.each do |tweet|
-          - href = "http://twitter.com/#!/#{tweet.from_user}"
-          .tweet{ :id => tweet.id }
-            .icon
-              = link_to image_tag(tweet.profile_image_url), href, :target => :_blank
-            .name
-              = link_to "@#{tweet.from_user}", href, :target => :_blank
-            %p
-              = htmlify tweet.text
+        -if  defined?(twitter_search) && twitter_search
+          %h2
+            = t('information.twitter')
+            = link_to_source(twitter_url)
+          - twitter_search.each do |tweet|
+            - href = "http://twitter.com/#!/#{tweet.from_user}"
+            .tweet{ :id => tweet.id }
+              .icon
+                = link_to image_tag(tweet.profile_image_url), href, :target => :_blank
+              .name
+                = link_to "@#{tweet.from_user}", href, :target => :_blank
+              %p
+                = htmlify tweet.text
