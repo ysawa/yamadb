@@ -50,6 +50,7 @@ module Yamadb
       g.test_framework      :rspec, :fixture => true, :views => true, :requests => true, :routing => true, :helpers => true
       g.fixture_replacement :fabrication
       g.fixture_replacement :fabrication, :dir => "spec/fabricators"
+      g.helper false
     end
   end
 end
