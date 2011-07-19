@@ -1,5 +1,6 @@
 .bundle
 db/*.sqlite3
+lib/ipadic
 log/*.log
 tmp/
 public/uploads/*
