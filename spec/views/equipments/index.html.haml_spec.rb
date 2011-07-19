@@ -2,16 +2,8 @@ require 'spec_helper'
 
 describe "equipments/index.html.haml" do
   before(:each) do
-    assign(:equipments, [
-      stub_model(Equipment,
-        :name => "Name",
-        :content => "MyText"
-      ),
-      stub_model(Equipment,
-        :name => "Name",
-        :content => "MyText"
-      )
-    ])
+    @equipment = Fabricate(:equipment)
+    assign(:equipments, Equipment.all.page(1))
   end
 
   it "renders a list of equipments" do

@@ -68,7 +68,7 @@
         %h2
           = t('information.twitter')
           = link_to_source(twitter_url)
-        - @twitter_search.each do |tweet|
+        - @twitter_search && @twitter_search.each do |tweet|
           - href = "http://twitter.com/#!/#{tweet.from_user}"
           .tweet{ :id => tweet.id }
             .icon
