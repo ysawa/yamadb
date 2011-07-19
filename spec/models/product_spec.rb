@@ -15,18 +15,28 @@ describe Product do
   end
 
   describe 'Product.books' do
-    it 'cannot get sporting goods' do
-      sporting_good = Fabricate(:product)
+    before do
+      @book = Fabricate(:book)
+      @sporting_good = Fabricate(:sporting_good)
+    end
+
+    it 'gives sporting goods, not sporting goods' do
       books = Product.books
-      books.should_not include sporting_good
+      books.should include @book
+      books.should_not include @sporting_good
     end
   end
 
   describe 'Product.sporting_goods' do
-    it 'can get sporting goods' do
-      sporting_good = Fabricate(:product)
+    before do
+      @book = Fabricate(:book)
+      @sporting_good = Fabricate(:sporting_good)
+    end
+
+    it 'gives sporting goods, not books' do
       sporting_goods = Product.sporting_goods
-      sporting_goods.should include sporting_good
+      sporting_goods.should include @sporting_good
+      sporting_goods.should_not include @book
     end
   end
 end
