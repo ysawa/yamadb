@@ -62,13 +62,13 @@ label {
 .field {
   margin: 0 0 10px; }
 
-input[type="text"], input[type="password"], input[type="search"] {
+input[type="text"], input[type="email"], input[type="password"], input[type="search"] {
   line-height: 18px;
   font-size: 12px;
   height: 20px;
   border: 1px solid #e0e0e0;
   vertical-align: middle; }
-  input[type="text"].off, input[type="password"].off, input[type="search"].off {
+  input[type="text"].off, input[type="email"].off, input[type="password"].off, input[type="search"].off {
     color: #999999; }
 
 input[type="search"] {

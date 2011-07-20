@@ -23,6 +23,9 @@ gem 'mini_magick', '3.3'
 gem 'twitter', '1.6.0'
 gem 'igo-ruby', '~> 0.1.5'
 
+gem 'omniauth', '~> 0.2.6'
+gem 'devise', '~> 1.4.2'
+
 group :development, :test do
   gem 'rspec-rails', '2.6.1'
   gem 'steak', '2.0.0'

@@ -1,4 +1,6 @@
 Yamadb::Application.routes.draw do
+  devise_for :users
+
   resources :equipment_items
 
   resources :equipments do

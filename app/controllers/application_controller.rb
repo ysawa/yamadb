@@ -3,15 +3,15 @@ class ApplicationController < ActionController::Base
 
   before_filter :set_locale
 
+protected
+  def initialize_twitter_search
+    @twitter_search = Twitter::Search.new
+  end
+
   def set_locale
     I18n.locale = params[:locale] || session[:locale] || extract_locale_from_accept_language_header || :ja
     session[:locale] = I18n.locale
     logger.debug "* Locale set to '#{I18n.locale}'" if Rails.env.development?
-  end
-
-protected
-  def initialize_twitter_search
-    @twitter_search = Twitter::Search.new
   end
 private
   def extract_locale_from_accept_language_header

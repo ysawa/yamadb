@@ -10,6 +10,7 @@
     width: 100%;
     border-bottom: 1px solid #cccccc; }
     #global_container #head_container .inner {
+      position: relative;
       margin: 10px; }
       #global_container #head_container .inner h1, #global_container #head_container .inner h2 {
         margin: 10px 0 0;
@@ -19,8 +20,14 @@
         #global_container #head_container .inner h1 a, #global_container #head_container .inner h2 a {
           color: black;
           text-decoration: none; }
+      #global_container #head_container .inner #sign_up_or_in {
+        position: absolute;
+        top: 0;
+        right: 0px; }
       #global_container #head_container .inner #locales {
-        float: right; }
+        position: absolute;
+        top: 24px;
+        right: 0px; }
       #global_container #head_container .inner p#abstract {
         margin: 0; }
   #global_container #main_container {

@@ -1,5 +1,6 @@
 class PeaksController < ApplicationController
   respond_to :html
+  before_filter :authenticate_user!, :only =>[:create, :destroy, :edit, :new, :update]
   before_filter :initialize_twitter_search, :only => [:show]
   before_filter :find_peak, :only => [:destroy, :edit, :show, :update]
 

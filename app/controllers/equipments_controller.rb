@@ -1,5 +1,6 @@
 class EquipmentsController < ApplicationController
   respond_to :html
+  before_filter :authenticate_user!, :only =>[:create, :destroy, :edit, :new, :update]
   before_filter :find_equipment, :only => [:destroy, :edit, :show, :update]
 
   # POST /equipments
