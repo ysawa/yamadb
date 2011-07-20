@@ -31,6 +31,7 @@ ja:
         email: 'メールアドレス'
         password: 'パスワード'
         password_confirmation: 'パスワード確認'
+        remember_me: 'ログイン状態を保持'
   operations:
     add: '追加する'
     add_short: '追加'
