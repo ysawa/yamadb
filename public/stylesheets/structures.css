@@ -22,8 +22,13 @@
           text-decoration: none; }
       #global_container #head_container .inner #sign_up_or_in {
         position: absolute;
-        top: 0;
+        top: 0px;
         right: 0px; }
+      #global_container #head_container .inner #notice {
+        position: absolute;
+        display: none;
+        top: 0px;
+        right: 200px; }
       #global_container #head_container .inner #locales {
         position: absolute;
         top: 24px;

@@ -6,6 +6,7 @@
     = link_to "YamaDB", root_path
 %p#abstract
   To trek or climb Japanese mountains more safely,
+#notice= notice
 #sign_up_or_in
   - if user_signed_in?
     = link_to 'Sign Out', destroy_user_session_path, :method => :delete

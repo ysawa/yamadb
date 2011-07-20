@@ -47,9 +47,19 @@ yamadb =
         new google.maps.LatLng latitude, longitude
       else
         null
+  notice:
+    past: localStorage['notice'] ? ''
+    show_if_necessary: ->
+      html = $('#notice').html()
+      if html and (html != this.past)
+        this.now = localStorage['notice'] = html
+      if this.now
+        $('#notice').hide 'highlight', {}, 2000
+    now: ''
 $(->
   if $("#google_map").size() and typeof(google) != 'undefined'
     yamadb.google_map.initialize()
   $(".truncate").truncate()
+  yamadb.notice.show_if_necessary()
 )
 

@@ -1,8 +1,8 @@
-/* DO NOT MODIFY. This file was compiled Sat, 16 Jul 2011 10:17:57 GMT from
+/* DO NOT MODIFY. This file was compiled Wed, 20 Jul 2011 09:10:13 GMT from
  * /home/ysawa/ruby/yamadb/app/coffeescripts/application.coffee
  */
 
-var yamadb;
+var yamadb, _ref;
 var __slice = Array.prototype.slice;
 yamadb = {
   form: {
@@ -68,11 +68,26 @@ yamadb = {
         return null;
       }
     }
+  },
+  notice: {
+    past: (_ref = localStorage['notice']) != null ? _ref : '',
+    show_if_necessary: function() {
+      var html;
+      html = $('#notice').html();
+      if (html && (html !== this.past)) {
+        this.now = localStorage['notice'] = html;
+      }
+      if (this.now) {
+        return $('#notice').hide('highlight', {}, 2000);
+      }
+    },
+    now: ''
   }
 };
 $(function() {
   if ($("#google_map").size() && typeof google !== 'undefined') {
     yamadb.google_map.initialize();
   }
-  return $(".truncate").truncate();
+  $(".truncate").truncate();
+  return yamadb.notice.show_if_necessary();
 });
