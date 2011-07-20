@@ -39,6 +39,8 @@ a {
     color: #000777;
     text-decoration: underline;
     background-color: transparent; }
+  a img {
+    border-width: 0px; }
 
 .clearfix:after {
   content: ".";
