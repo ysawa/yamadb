@@ -3,9 +3,10 @@
 ja:
   errors:
     messages:
-      not_found: "は見つかりませんでした。"
-      already_confirmed: "は既に登録済みです。"
-      not_locked: "はログイン可能です。"
+      not_found: 'は見つかりませんでした。'
+      already_confirmed: 'は既に登録済みです。'
+      not_locked: 'はログイン可能です。'
+      not_saved: 'は保存できませんでした。'
 
   devise:
     failure:

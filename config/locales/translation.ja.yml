@@ -6,6 +6,7 @@ ja:
       map: '地形図'
       peak: '日本の山'
       product: '登山用品'
+      user: 'ユーザー'
       weather_forecast: '天気予報'
     attributes:
       equipment:
@@ -26,6 +27,10 @@ ja:
         content: '内容'
         href: 'URL'
         name: '名称'
+      user:
+        email: 'メールアドレス'
+        password: 'パスワード'
+        password_confirmation: 'パスワード確認'
   operations:
     add: '追加する'
     add_short: '追加'
