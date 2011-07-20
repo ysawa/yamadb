@@ -12,9 +12,8 @@ protected
     I18n.locale = params[:locale] || session[:locale] || extract_locale_from_accept_language_header || :ja
     if session[:locale] && session[:locale] != I18n.locale
       flash.now[:notice] = t('notices.language_changed', :language => t("locales.#{session[:locale]}"))
-    else
-      session[:locale] = I18n.locale
     end
+    session[:locale] = I18n.locale
     logger.debug "* Locale set to '#{I18n.locale}'" if Rails.env.development?
   end
 private
