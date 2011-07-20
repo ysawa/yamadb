@@ -14,6 +14,13 @@ en:
 
   views:
     pagination:
-      previous: "&lt; Previous"
-      next: "Next &gt;"
-      truncate: "&hellip;”
+      previous: '&lt; Previous'
+      next: 'Next &gt;'
+      truncate: '&hellip;'
+
+  notices:
+    language_changed: 'Language was changed to %{language}.'
+
+  locales:
+    en: 'English'
+    ja: 'Japanese'

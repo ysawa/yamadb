@@ -97,3 +97,10 @@ ja:
       last: '&gt;&gt;'
       next: '&gt;'
       truncate: '&hellip;'
+
+  notices:
+    language_changed: '言語を%{language}に変更しました。'
+
+  locales:
+    en: '英語'
+    ja: '日本語'
