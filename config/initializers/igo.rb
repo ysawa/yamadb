@@ -5,7 +5,7 @@ module Yamadb
   module Igo
     class InvalidArgument < StandardError; end
 
-    IGNORE = ['!']
+    IGNORE = []
 
     @@ipadic = File.join(Rails.root, 'lib/ipadic')
     @@tagger = ::Igo::Tagger.new(@@ipadic) if File.exists?(@@ipadic)
