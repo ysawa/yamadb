@@ -19,5 +19,8 @@
     = link_to t('operations.sign_in'), new_user_session_path
 #locales
   - Yamadb::LOCALES.each do |locale|
-    = link_to image_tag("/images/locales/#{locale}.png"), { :locale => locale }
-
+    = link_to image_tag("/images/locales/#{locale}.png"), params.merge(:locale => locale)
+#search_form
+  = form_tag({ :controller => :peaks, :action => :index }, :method => :get) do
+    = text_field_tag :query, params[:query], :type => :search
+    = submit_tag translate_button('Search')

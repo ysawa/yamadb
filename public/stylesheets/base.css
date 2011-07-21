@@ -71,11 +71,9 @@ input[type="text"], input[type="email"], input[type="password"], input[type="sea
     color: #999999; }
 
 input[type="search"] {
-  line-height: 18px;
   font-size: 14px;
   height: 22px;
-  border-width: 1px;
-  vertical-align: middle; }
+  -webkit-appearance: none; }
 
 input[type="checkbox"] {
   vertical-align: middle;

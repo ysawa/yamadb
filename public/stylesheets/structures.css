@@ -39,6 +39,12 @@
         position: absolute;
         top: 24px;
         right: 0px; }
+      #global_container #head_container .inner #search_form {
+        position: absolute;
+        top: 24px;
+        right: 90px; }
+        #global_container #head_container .inner #search_form input[type="submit"] {
+          padding: 2px 20px; }
       #global_container #head_container .inner p#abstract {
         margin: 0; }
   #global_container #main_container {

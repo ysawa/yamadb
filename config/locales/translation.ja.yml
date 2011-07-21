@@ -56,6 +56,7 @@ ja:
   buttons:
     change_my_password: 'パスワードを変更する'
     send_me_reset_password_instructions: 'パスワード再発行手続きメールを再送'
+    search: '検索する'
     sign_in: 'ログイン'
     sign_up: '登録する'
     resend_confirmation_instructions: '本登録手続きメールを再送'
