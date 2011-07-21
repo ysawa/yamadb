@@ -17,8 +17,4 @@ module ApplicationHelper
     end
     raw html
   end
-
-  def localized_button(key)
-    t("helpers.button.#{key}")
-  end
 end

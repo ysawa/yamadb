@@ -10,5 +10,5 @@
   .field
     = f.label :password_confirmation
     = f.password_field :password_confirmation
-  .actions= f.submit localized_button(:sign_up)
+  .actions= f.submit translate_button('Sign up')
 = render :partial => "devise/shared/links"

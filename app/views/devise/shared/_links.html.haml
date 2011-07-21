@@ -3,11 +3,11 @@
 - if devise_mapping.registerable? && controller_name != 'registrations'
   %p= link_to t('operations.sign_up'), new_registration_path(resource_name)
 - if devise_mapping.recoverable? && controller_name != 'passwords'
-  %p= link_to t('questions.forgot_your_password'), new_password_path(resource_name)
+  %p= link_to translate_question('Forgot your password?'), new_password_path(resource_name)
 - if devise_mapping.confirmable? && controller_name != 'confirmations'
-  %p= link_to t('questions.didnt_receive_confirmation_instructions'), new_confirmation_path(resource_name)
+  %p= link_to translate_question("Did'nt receive confirmation instructions?"), new_confirmation_path(resource_name)
 - if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks'
-  %p= link_to t('questions.didnt_receive_unlock_instructions'), new_unlock_path(resource_name)
+  %p= link_to translate_question("did'nt receive unlock instructions?"), new_unlock_path(resource_name)
 - if devise_mapping.omniauthable?
   - resource_class.omniauth_providers.each do |provider|
     %p= link_to "Sign in with #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider)

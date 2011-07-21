@@ -27,8 +27,13 @@
       #global_container #head_container .inner #notice {
         position: absolute;
         display: none;
+        font-weight: bold;
+        width: 100%;
+        text-align: center;
         top: 0px;
-        right: 200px; }
+        color: lime; }
+        #global_container #head_container .inner #notice span.alert {
+          color: red; }
       #global_container #head_container .inner #locales {
         position: absolute;
         top: 24px;

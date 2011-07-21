@@ -54,7 +54,7 @@ yamadb =
       if html and (html != this.past)
         this.now = localStorage['notice'] = html
       if this.now
-        $('#notice').hide 'highlight', {}, 2000
+        $('#notice').show().animate { opacity: 0 }, 5000
     now: ''
 $(->
   if $("#google_map").size() and typeof(google) != 'undefined'

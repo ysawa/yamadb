@@ -53,15 +53,20 @@ ja:
     sign_up: 'ユーザー登録'
     new_short: '編集'
 
+  buttons:
+    change_my_password: 'パスワードを変更する'
+    send_me_reset_password_instructions: 'パスワード再発行手続きメールを再送'
+    sign_in: 'ログイン'
+    sign_up: '登録する'
+    resend_confirmation_instructions: '本登録手続きメールを再送'
+    resend_unlock_instructions: 'ロック解除の案内を送信'
+
   questions:
-    didnt_receive_confirmation_instructions: '本登録手続きのメールが届かない'
-    didnt_receive_unlock_instructions: 'ロックを解除する方法の書かれたメールが届かない'
-    forgot_your_password: 'パスワードを忘れた'
+    did_nt_receive_confirmation_instructions_: '本登録手続きのメールが届かない'
+    did_nt_receive_unlock_instructions_: 'ロックを解除する方法の書かれたメールが届かない'
+    forgot_your_password_: 'パスワードを忘れた'
 
   helpers:
-    button:
-      sign_in: 'ログイン'
-      sign_up: '登録する'
     submit:
       create: '作成'
       update: '更新'

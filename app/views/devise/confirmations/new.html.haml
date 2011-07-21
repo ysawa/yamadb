@@ -4,5 +4,5 @@
   .field
     = f.label :email
     = f.email_field :email
-  .actions= f.submit "Resend confirmation instructions"
+  .actions= f.submit translate_button('Resend confirmation instructions')
 = render :partial => "devise/shared/links"

@@ -8,5 +8,5 @@
   .field
     = f.label :password_confirmation, "Confirm new password"
     = f.password_field :password_confirmation
-  .actions= f.submit "Change my password"
+  .actions= f.submit translate_button('Change my password')
 = render :partial => "devise/shared/links"

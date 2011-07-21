@@ -1,8 +1,8 @@
-%h1 Forgot your password?
+%h1= translate_question('Forgot your password?')
 = form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f|
   = devise_error_messages!
   .field
     = f.label :email
     = f.email_field :email
-  .actions= f.submit "Send me reset password instructions"
+  .actions= f.submit translate_button('Send me reset password instructions')
 = render :partial => "devise/shared/links"
