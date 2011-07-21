@@ -13,13 +13,14 @@ module Yamadb
     def keywords(*strings)
       result = []
       strings.each do |string|
+        next if string.blank?
         case string
         when Array
           text = string.join(' ')
         when String
           text = string
         else
-          raise InvalidArgument
+          raise InvalidArgument, string
         end
         parse(text).each do |tag|
           next unless tag.feature =~ /(名詞|形容詞|形容動詞|[^助]動詞)/

@@ -1,13 +1,15 @@
 class Peak
   include Mongoid::Document
   include Mongoid::Timestamps
-  field :name, :type => String
-  field :location, :type => Array
   field :altitude, :type => Integer
+  field :location, :type => Array
+  field :name, :type => String
+  field :keywords, :type => Array
   index [[:location, Mongo::GEO2D]], :min => -180, :max => 180
   GOOGLE_MAPS_API = "http://maps.google.com/maps/api/geocode/json"
   validates_with PeakValidator
   belongs_to :map
+  before_save :update_keywords
   before_save :find_map_if_necessary
 
   def latitude
@@ -50,6 +52,10 @@ class Peak
     location_hash = result["geometry"]["location"]
     self.location = [location_hash["lat"], location_hash["lng"]]
     return true
+  end
+
+  def update_keywords
+    self.keywords = Yamadb::Igo.keywords(self.name)
   end
 private
   def find_map_if_necessary
