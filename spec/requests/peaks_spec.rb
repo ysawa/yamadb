@@ -2,10 +2,18 @@ require 'spec_helper'
 
 describe "Peaks" do
   describe "GET /peaks" do
-    it "works! (now write some real specs)" do
-      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      get peaks_path
-      response.status.should be(200)
+    it 'shows list of peaks' do
+      @peak = Fabricate(:peak)
+      visit peaks_path
+      page.should have_content(@peak.name)
+    end
+  end
+
+  describe "GET /peaks/1" do
+    it 'shows list of peaks' do
+      @peak = Fabricate(:peak)
+      visit peak_path(@peak)
+      page.should have_content(@peak.name)
     end
   end
 end
