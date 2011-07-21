@@ -28,7 +28,7 @@ gem 'devise', '~> 1.4.2'
 
 group :development, :test do
   gem 'rspec-rails', '2.6.1'
-  gem 'spork', '0.9.0.rc8'
+  gem 'spork', '0.9.0.rc9'
   gem 'capybara', '1.0.0'
   gem 'fabrication', '0.9.5'
   gem 'rb-fsevent', '0.4.0'

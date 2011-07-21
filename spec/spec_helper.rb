@@ -44,6 +44,10 @@ RSpec.configure do |config|
     FileUtils.rm_rf(tmp_directory) if File.directory?(tmp_directory)
   end
 
+  # To test features using authentication
+  config.include Devise::TestHelpers, :type => :controller
+  config.include DeviseAuthenticationHelper, :type => :controller
+
   # == Mock Framework
   #
   # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:
