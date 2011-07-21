@@ -13,6 +13,9 @@ en:
   information:
 
   controllers:
+    users:
+      confirmation:
+        new: 'Resend confirmation instructions'
 
   views:
     pagination:

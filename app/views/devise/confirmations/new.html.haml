@@ -1,4 +1,4 @@
-%h1 Resend confirmation instructions
+%h1= t('controllers.users.confirmation.new')
 = form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post }) do |f|
   = devise_error_messages!
   .field

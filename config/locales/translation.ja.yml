@@ -106,6 +106,9 @@ ja:
       index: '登山用品一覧'
       new: '新規登山用品'
       show: '登山用品'
+    users:
+      confirmation:
+        new: '本登録手続きメールの再送'
 
   views:
     pagination:
