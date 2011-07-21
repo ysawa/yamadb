@@ -3,8 +3,33 @@
 # You can create ipadic directory, if you see http://igo.sourceforge.jp/index.html
 module Yamadb
   module Igo
+    class InvalidArgument < StandardError; end
+
+    IGNORE = ['!']
+
     @@ipadic = File.join(Rails.root, 'lib/ipadic')
     @@tagger = ::Igo::Tagger.new(@@ipadic) if File.exists?(@@ipadic)
+
+    def keywords(*strings)
+      result = []
+      strings.each do |string|
+        case string
+        when Array
+          text = string.join(' ')
+        when String
+          text = string
+        else
+          raise InvalidArgument
+        end
+        parse(text).each do |tag|
+          next unless tag.feature =~ /(名詞|形容詞|形容動詞|[^助]動詞)/
+          next if IGNORE.include?(tag.surface)
+          next if tag.surface =~ /^[[:punct:]]+$/
+          result << tag.surface
+        end
+      end
+      result.uniq
+    end
     def parse(string)
       @@tagger ? @@tagger.parse(string) : []
     end
@@ -12,6 +37,6 @@ module Yamadb
     def wakati(string)
       @@tagger ? @@tagger.wakati(string) : []
     end
-    module_function :parse, :wakati
+    module_function :keywords, :parse, :wakati
   end
 end
