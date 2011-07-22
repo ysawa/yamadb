@@ -1,6 +1,8 @@
 en:
   operations:
+    listing_models: 'Listing %{model} items'
     new: 'New'
+    new_model: 'New %{model}'
     search_peak_again: 'search peak again'
 
   helpers:

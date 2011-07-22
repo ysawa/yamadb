@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Wed, 20 Jul 2011 14:33:30 GMT from
+/* DO NOT MODIFY. This file was compiled Thu, 21 Jul 2011 12:18:39 GMT from
  * /home/ysawa/ruby/yamadb/app/coffeescripts/application.coffee
  */
 
@@ -78,9 +78,7 @@ yamadb = {
         this.now = localStorage['notice'] = html;
       }
       if (this.now) {
-        return $('#notice').show().animate({
-          opacity: 0
-        }, 5000);
+        return $('#notice').show().fadeOut(5000);
       }
     },
     now: ''
