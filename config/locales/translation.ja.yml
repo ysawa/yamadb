@@ -20,6 +20,7 @@ ja:
       peak:
         altitude: '標高'
         name: '名称'
+        near: '近隣の山'
         latitude: '緯度'
         location: '位置'
         longitude: '経度'

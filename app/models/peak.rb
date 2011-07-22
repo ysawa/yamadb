@@ -12,6 +12,22 @@ class Peak
   before_save :update_keywords
   before_save :find_map_if_necessary
 
+  def get_location(peak_name = nil)
+    peak_name ||= self.name
+    return nil if peak_name.blank?
+    href = GOOGLE_MAPS_API + "?address=" + peak_name + "&sensor=false&language=ja"
+    response = Net::HTTP.get_response(URI.parse(URI.encode(href)))
+    return nil unless response.kind_of? Net::HTTPSuccess
+    json = ActiveSupport::JSON.decode(response.body)
+    return nil unless json["status"] == "OK"
+    result = json["results"].first
+    components = result["address_components"].first
+    self.name = components["short_name"]
+    location_hash = result["geometry"]["location"]
+    self.location = [location_hash["lat"], location_hash["lng"]]
+    return true
+  end
+
   def latitude
     self.location ? self.location[0] : nil
   end
@@ -38,20 +54,8 @@ class Peak
     self.location ? self.location[1] : nil
   end
 
-  def get_location(peak_name = nil)
-    peak_name ||= self.name
-    return nil if peak_name.blank?
-    href = GOOGLE_MAPS_API + "?address=" + peak_name + "&sensor=false&language=ja"
-    response = Net::HTTP.get_response(URI.parse(URI.encode(href)))
-    return nil unless response.kind_of? Net::HTTPSuccess
-    json = ActiveSupport::JSON.decode(response.body)
-    return nil unless json["status"] == "OK"
-    result = json["results"].first
-    components = result["address_components"].first
-    self.name = components["short_name"]
-    location_hash = result["geometry"]["location"]
-    self.location = [location_hash["lat"], location_hash["lng"]]
-    return true
+  def near
+    Peak.where(:_id.ne => self.id, :location.near => self.location)
   end
 
   def update_keywords
