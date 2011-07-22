@@ -3,10 +3,10 @@
   = devise_error_messages!
   = f.hidden_field :reset_password_token
   .field
-    = f.label :password, "New password"
+    = f.label :password, 'New password'
     = f.password_field :password
   .field
-    = f.label :password_confirmation, "Confirm new password"
+    = f.label :password_confirmation, 'Confirm new password'
     = f.password_field :password_confirmation
   .actions= f.submit translate_button('Change my password')
-= render :partial => "devise/shared/links"
+= render 'devise/shared/links'
