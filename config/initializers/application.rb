@@ -15,4 +15,16 @@ module Yamadb
     end
     module_function *function_names
   end
+  module Protocol
+    @@protocols = ::Yamadb::SYSTEM['protocols']
+
+    def default
+      @@protocols['default']
+    end
+
+    def secure
+      Rails.env.development? ? @@protocols['default'] : @@protocols['secure']
+    end
+    module_function :default, :secure
+  end
 end

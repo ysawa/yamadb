@@ -1,5 +1,5 @@
 %h1= t('operations.sign_up')
-= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+= form_for(resource, :as => resource_name, :url => registration_url(resource_name)) do |f|
   = devise_error_messages!
   .field
     = f.label :email

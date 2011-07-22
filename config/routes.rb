@@ -1,5 +1,7 @@
 Yamadb::Application.routes.draw do
-  devise_for :users
+  constraints :protocol => Yamadb::Protocol.secure do
+    devise_for :users
+  end
 
   resources :equipment_items
 

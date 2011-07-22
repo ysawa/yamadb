@@ -13,3 +13,6 @@ mailer:
     :password: '********'
     :authentication: 'plain'
     :enable_starttls_auto: true
+protocols:
+  default: 'http'
+  secure: 'https'

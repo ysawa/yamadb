@@ -1,6 +1,6 @@
 %h1
   Edit #{resource_name.to_s.humanize}
-= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
+= form_for(resource, :as => resource_name, :url => registration_url(resource_name), :html => { :method => :put }) do |f|
   = devise_error_messages!
   .field
     = f.label :email
@@ -19,5 +19,5 @@
   .actions= f.submit
 %h3 Cancel my account
 %p
-  Unhappy? #{link_to "Cancel my account", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete}.
+  Unhappy? #{link_to "Cancel my account", registration_url(resource_name), :confirm => "Are you sure?", :method => :delete}.
 = link_to "Back", :back
