@@ -19,15 +19,20 @@ pre {
 h1 {
   color: black;
   margin: 0 0 10px;
-  font-size: 14px; }
+  font-size: 17px; }
   h1 a {
     text-decoration: none; }
 
 h2, h3 {
   color: black;
   margin: 0 0 10px;
-  font-weight: bold;
-  font-size: 13px; }
+  font-weight: bold; }
+
+h2 {
+  font-size: 17px; }
+
+h3 {
+  font-size: 15px; }
 
 p {
   margin: 0 0 10px; }
