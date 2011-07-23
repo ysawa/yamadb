@@ -16,7 +16,7 @@
   - if equipment.persisted?
     %h3.as_label= EquipmentItem.model_name.human
     - equipment.items.each do |equipment_item|
-    = render 'equipment_items/nested_fields', :equipment_item => equipment_item
+      = render 'equipment_items/nested_fields', :equipment_item => equipment_item
     = render 'equipment_items/nested_fields', :equipment_item => EquipmentItem.new(:priority => 2) if equipment.items.blank?
     = link_to t('operations.add'), '#', :class => 'add'
     :javascript
