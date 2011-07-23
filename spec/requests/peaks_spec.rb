@@ -1,5 +1,5 @@
 require 'spec_helper'
-
+#TODO mock Wunderground's response
 describe "Peaks" do
   describe "GET /peaks" do
     it 'shows list of peaks' do

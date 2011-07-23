@@ -8,6 +8,7 @@ Fabricator(:user) do
   email 'yoshihirosawa@gmail.com'
   last_sign_in_at 'Thu Jul 21 07:37:36 UTC 2011'
   last_sign_in_ip '127.0.0.1'
+  name 'user'
   password 'abcdef'
   password_confirmation 'abcdef'
   sign_in_count 1
