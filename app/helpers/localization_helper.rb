@@ -1,5 +1,5 @@
 module LocalizationHelper
-  %w(button question).each do |scope|
+  %w(button operation question).each do |scope|
     module_eval <<-EOS
       def translate_#{scope}(sentence)
         translate_english_sentence('#{scope}', sentence)

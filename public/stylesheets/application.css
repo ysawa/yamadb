@@ -8,6 +8,14 @@
   height: 500px; }
 
 /* Form Parts */
+body div#error_explanation h2, body div#error_explanation ul {
+  color: #ff2222;
+  margin: 0 0 10px; }
+body div#error_explanation ul {
+  padding: 0 0 0 20px; }
+  body div#error_explanation ul li {
+    color: #ff2222; }
+
 .field {
   margin: 0 0 10px; }
 

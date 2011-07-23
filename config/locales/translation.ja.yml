@@ -29,7 +29,9 @@ ja:
         href: 'URL'
         name: '名称'
       user:
+        current_password: '現在のパスワード'
         email: 'メールアドレス'
+        name: 'ユーザー名'
         password: 'パスワード'
         password_confirmation: 'パスワード確認'
         remember_me: 'ログイン状態を保持'
@@ -37,6 +39,9 @@ ja:
     add: '追加する'
     add_short: '追加'
     back: '戻る'
+    cancel_my_account: 'アカウントを削除する'
+    configure: '設定する'
+    configure_short: '設定'
     destroy: '削除する'
     destroy_short: '削除'
     edit: '編集する'
@@ -64,6 +69,7 @@ ja:
     resend_unlock_instructions: 'ロック解除の案内を送信'
 
   questions:
+    are_you_sure_: '本当に実行しますか?'
     did_nt_receive_confirmation_instructions_: '本登録手続きのメールが届かない'
     did_nt_receive_unlock_instructions_: 'ロックを解除する方法の書かれたメールが届かない'
     forgot_your_password_: 'パスワードを忘れた'

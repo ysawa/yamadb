@@ -12,6 +12,8 @@
   = notice
 #sign_up_or_in
   - if user_signed_in?
+    = link_to t('operations.configure_short'), edit_user_registration_url
+    \|
     = link_to t('operations.sign_out'), destroy_user_session_url, :method => :delete
   - else
     = link_to t('operations.sign_up'), new_user_registration_url

@@ -1,23 +1,24 @@
 %h1
-  Edit #{resource_name.to_s.humanize}
+  = t('operations.configure')
 = form_for(resource, :as => resource_name, :url => registration_url(resource_name), :html => { :method => :put }) do |f|
   = devise_error_messages!
+  .field
+    = f.label :name
+    = f.text_field :name
   .field
     = f.label :email
     = f.email_field :email
   .field
     = f.label :password
-    %i (leave blank if you don't want to change it)
     = f.password_field :password
   .field
     = f.label :password_confirmation
     = f.password_field :password_confirmation
   .field
     = f.label :current_password
-    %i (we need your current password to confirm your changes)
     = f.password_field :current_password
   .actions= f.submit
-%h3 Cancel my account
+%h3= translate_operation('Cancel my account')
 %p
-  Unhappy? #{link_to 'Cancel my account', registration_url(resource_name), :confirm => 'Are you sure?', :method => :delete}.
-= link_to 'Back', :back
+  = link_to translate_operation('Cancel my account'), registration_url(resource_name), :confirm => translate_question('Are you sure?'), :method => :delete
+= link_to translate_operation('Back'), :back
