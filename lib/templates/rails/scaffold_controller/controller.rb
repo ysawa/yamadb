@@ -22,7 +22,7 @@ class <%= controller_class_name %>Controller < ApplicationController
   # GET <%= route_url %>/1/edit
   def edit
     respond_with(@<%= singular_table_name %>) do |format|
-      format.html { render :action => :edit }
+      format.html { render :edit }
     end
   end
 
