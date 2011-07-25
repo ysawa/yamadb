@@ -1,4 +1,4 @@
-%h1= t '.title'
+%h1= t 'operations.new_model', :model => <%= singular_name.classify %>.model_name.human
 = render 'form', :<%= singular_name %> => @<%= singular_name %>
 %p
   = link_to t('operations.back'), <%= plural_name %>_path
