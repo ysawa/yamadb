@@ -18,7 +18,8 @@
     = f.label :current_password
     = f.password_field :current_password
   .actions= f.submit
-%h3= translate_operation('Cancel my account')
-%p
-  = link_to translate_operation('Cancel my account'), registration_url(resource_name), :confirm => translate_question('Are you sure?'), :method => :delete
+.etc
+  %h3= translate_operation('Cancel my account')
+  %p
+    = link_to translate_operation('Cancel my account'), registration_url(resource_name), :confirm => translate_question('Are you sure?'), :method => :delete
 = link_to translate_operation('Back'), :back

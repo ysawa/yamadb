@@ -22,6 +22,32 @@ body div#error_explanation ul {
 .actions {
   margin: 0 0 10px; }
 
+form h3.as_label {
+  margin: 0; }
+form .field:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+form .field input[type="text"].equipment_item_name_field {
+  display: block;
+  float: left;
+  width: 100px;
+  margin: 0 4px 0 0; }
+form .field input[type="text"].equipment_item_content_field {
+  display: block;
+  float: left;
+  width: 540px;
+  margin: 0 4px 0 0; }
+form .field .stars {
+  margin: 4px 0;
+  float: left; }
+
+form#user_new label.user_remember_me {
+  display: inline;
+  font-weight: normal; }
+
 div.equipment:after {
   content: ".";
   display: block;
@@ -247,28 +273,7 @@ div.tweet {
   div.tweet p {
     margin: 0 0 0 60px; }
 
-form h3.as_label {
-  margin: 0; }
-form .field:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden; }
-form .field input[type="text"].equipment_item_name_field {
-  display: block;
-  float: left;
-  width: 100px;
-  margin: 0 4px 0 0; }
-form .field input[type="text"].equipment_item_content_field {
-  display: block;
-  float: left;
-  width: 540px;
-  margin: 0 4px 0 0; }
-form .field .stars {
-  margin: 4px 0;
-  float: left; }
-
-form#user_new label.user_remember_me {
-  display: inline;
-  font-weight: normal; }
+div.etc {
+  width: 900px;
+  margin: 30px 0 20px 0;
+  border-bottom: 1px solid #e0e0e0; }
