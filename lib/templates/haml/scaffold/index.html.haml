@@ -18,4 +18,4 @@
         %td.action= link_to t('operations.edit'), edit_<%= singular_name %>_path(<%= singular_name %>)
         %td.action= link_to t('operations.destroy'), <%= singular_name %>, :confirm => t('information.are_you_sure'), :method => :delete
 
-%p= link_to t('operations.new_<%= singular_name %>'), new_<%= singular_name %>_path
+%p= link_to t('operations.new_model', :model => <%= singular_name.classify %>.model_name.human), new_<%= singular_name %>_path
