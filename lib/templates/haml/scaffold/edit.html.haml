@@ -1,0 +1,6 @@
+%h1= t 'operations.edit_model', :model => <%= singular_name.classify %>.model_name.human
+= render 'form', :<%= singular_name %> => @<%= singular_name %>
+%p
+  = link_to t('operations.show'), <%= singular_name %>_path(@<%= singular_name %>)
+  \|
+  = link_to t('operations.back'), <%= plural_name %>_path

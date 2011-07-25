@@ -1,0 +1,4 @@
+%h1= t '.title'
+= render 'form', :<%= singular_name %> => @<%= singular_name %>
+%p
+  = link_to t('operations.back'), <%= plural_name %>_path
