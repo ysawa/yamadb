@@ -1,0 +1,29 @@
+%h1= t 'operations.listing_models', :model => Tweet.model_name.human
+
+%table
+  %thead
+    %tr
+      %th= Tweet.human_attribute_name :from_user
+      %th= Tweet.human_attribute_name :to_user
+      %th= Tweet.human_attribute_name :source
+      %th= Tweet.human_attribute_name :locale
+      %th= Tweet.human_attribute_name :location
+      %th= Tweet.human_attribute_name :content
+      %th= Tweet.human_attribute_name :profile_image_url
+      %th{:colspan => 3}
+
+  %tbody
+    - for tweet in @tweets
+      %tr{ :class => cycle(:odd, :even) }
+        %td= tweet.from_user
+        %td= tweet.to_user
+        %td= tweet.source
+        %td= tweet.locale
+        %td= tweet.location
+        %td= tweet.content
+        %td= tweet.profile_image_url
+        %td.action= link_to t('operations.show'), tweet
+        %td.action= link_to t('operations.edit'), edit_tweet_path(tweet)
+        %td.action= link_to t('operations.destroy'), tweet, :confirm => t('information.are_you_sure'), :method => :delete
+
+%p= link_to t('operations.new_model', :model => Tweet.model_name.human), new_tweet_path

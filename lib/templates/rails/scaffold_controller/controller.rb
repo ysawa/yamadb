@@ -5,12 +5,8 @@ class <%= controller_class_name %>Controller < ApplicationController
   # POST <%= route_url %>
   def create
     @<%= singular_table_name %> = <%= orm_class.build(class_name, "params[:#{singular_table_name}]") %>
-    if @<%= singular_table_name %>.save
-      flash[:notice] = "<%= class_name %> successfully created"
-      respond_with(@<%= singular_table_name %>, :location => <%= plural_table_name %>_url)
-    else
-      respond_with(@<%= singular_table_name %>)
-    end
+    flash[:notice] = "<%= class_name %> successfully created" if @<%= singular_table_name %>.save
+    respond_with(@<%= singular_table_name %>)
   end
 
   # DELETE <%= route_url %>/1

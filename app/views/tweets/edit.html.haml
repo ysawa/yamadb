@@ -1,0 +1,6 @@
+%h1= t 'operations.edit_model', :model => Tweet.model_name.human
+= render 'form', :tweet => @tweet
+%p
+  = link_to t('operations.show'), tweet_path(@tweet)
+  \|
+  = link_to t('operations.back'), tweets_path

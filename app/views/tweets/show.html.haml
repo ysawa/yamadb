@@ -1,0 +1,28 @@
+%h1= Tweet.model_name.human
+%dl
+  %dt= Tweet.human_attribute_name :from_user
+  %dd= @tweet.from_user
+  %dt= Tweet.human_attribute_name :from_user_id
+  %dd= @tweet.from_user_id
+  %dt= Tweet.human_attribute_name :tweet_id
+  %dd= @tweet.tweet_id
+  %dt= Tweet.human_attribute_name :to_user
+  %dd= @tweet.to_user
+  %dt= Tweet.human_attribute_name :to_user_id
+  %dd= @tweet.to_user_id
+  %dt= Tweet.human_attribute_name :source
+  %dd= @tweet.source
+  %dt= Tweet.human_attribute_name :locale
+  %dd= @tweet.locale
+  %dt= Tweet.human_attribute_name :location
+  %dd= @tweet.location
+  %dt= Tweet.human_attribute_name :content
+  %dd= @tweet.content
+  %dt= Tweet.human_attribute_name :profile_image_url
+  %dd= @tweet.profile_image_url
+
+%p
+  = link_to t('edit'), edit_tweet_path(@tweet)
+  \|
+  = link_to t('back'), tweets_path
+

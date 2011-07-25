@@ -1,4 +1,6 @@
 Yamadb::Application.routes.draw do
+  resources :tweets
+
   constraints :protocol => Yamadb::Protocol.secure do
     devise_for :users
   end

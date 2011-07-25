@@ -1,0 +1,38 @@
+= form_for(tweet) do |f|
+  - if tweet.errors.any?
+    #error_explanation
+      %ul
+        - tweet.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :from_user
+    = f.text_field :from_user
+  .field
+    = f.label :from_user_id
+    = f.text_field :from_user_id
+  .field
+    = f.label :tweet_id
+    = f.text_field :tweet_id
+  .field
+    = f.label :to_user
+    = f.text_field :to_user
+  .field
+    = f.label :to_user_id
+    = f.text_field :to_user_id
+  .field
+    = f.label :source
+    = f.text_field :source
+  .field
+    = f.label :locale
+    = f.text_field :locale
+  .field
+    = f.label :location
+    = f.text_field :location
+  .field
+    = f.label :content
+    = f.text_field :content
+  .field
+    = f.label :profile_image_url
+    = f.text_field :profile_image_url
+  .actions
+    = f.submit
