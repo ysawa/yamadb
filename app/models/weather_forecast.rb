@@ -15,9 +15,8 @@ class WeatherForecast
     end
 
     def find_this_week(latitude, longitude)
-      if (forecasts = find_latest_of_this_week(latitude, longitude)).present?
-        return forecasts
-      end
+      forecasts = find_latest_of_this_week(latitude, longitude)
+      return forecasts if forecasts.present?
       forecasts = Wunderground.get_weather_forecasts(latitude, longitude)
       result = []
       forecasts.each do |forecast|
