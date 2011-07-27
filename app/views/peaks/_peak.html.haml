@@ -51,8 +51,8 @@
       - unless abstract
         %p
           %strong= Peak.human_attribute_name('near')
-          - peak.near.limit(5).each do |peak|
-            = link_to peak.name, peak
+          - peak.near.limit(5).each do |near_peak|
+            = link_to near_peak.name, near_peak
         %h2
           = WeatherForecast.model_name.human
           = link_to_source(wunderground_url)
@@ -69,11 +69,12 @@
                 = image_tag WeatherForecast.icon_url(condition), :class => :normal
             .date= l weather.at.to_date, :format => :weather
       - unless abstract
-        -if  defined?(twitter_search) && twitter_search
+        - tweets = Tweet.search(peak.name)
+        - if tweets.present?
           %h2
             = t('information.twitter')
             = link_to_source(twitter_url)
-          - twitter_search.each do |tweet|
+          - tweets.each do |tweet|
             - href = "http://twitter.com/#!/#{tweet.from_user}"
             .tweet{ :id => tweet.id }
               .icon
@@ -81,4 +82,7 @@
               .name
                 = link_to "@#{tweet.from_user}", href, :target => :_blank
               %p
-                = htmlify tweet.text
+                = htmlify tweet.content
+                \(
+                = l tweet.tweeted_at
+                \)

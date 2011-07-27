@@ -1,5 +1,11 @@
 require 'spec_helper'
 
 describe Tweet do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe 'method' do
+    before do
+      @tweet = Fabricate(:tweet)
+    end
+    it 'from_user_url' do
+    end
+  end
 end

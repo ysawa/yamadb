@@ -30,7 +30,7 @@ if Yamadb.cloud_foundry?
       "host"     => conn_info['hostname'],
       "port"     => conn_info['port'].to_i,
 
-      "autocreate_indexes"     => true,
+      "autocreate_indexes"     => false,
       "allow_dynamic_fields"   => true,
       "include_root_in_json"   => false,
       "parameterize_keys"      => true,
@@ -81,3 +81,6 @@ class << Integer
     end
   end
 end
+
+load File.join(Rails.root,'Rakefile')
+Rake::Task['db:mongoid:create_indexes'].invoke

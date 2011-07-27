@@ -1,7 +1,6 @@
 class PeaksController < ApplicationController
   respond_to :html
   before_filter :authenticate_user!, :only =>[:create, :destroy, :edit, :new, :update]
-  before_filter :initialize_twitter_search, :only => [:show]
   before_filter :find_peak, :only => [:destroy, :edit, :show, :update]
 
   # POST /peaks
@@ -49,7 +48,6 @@ class PeaksController < ApplicationController
 
   # GET /peaks/1
   def show
-    @twitter_search.containing(@peak.name)
     respond_with(@peak)
   end
 
