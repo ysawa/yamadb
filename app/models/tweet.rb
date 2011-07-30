@@ -53,7 +53,6 @@ class Tweet
     end
 
     def search_from_twitter(keyword)
-      tweets = []
       Twitter::Search.new.containing(keyword).each do |tweet_hash|
         tweet = Tweet.find_or_initialize_by(:tweet_id => tweet_hash.id)
         if tweet.new?
@@ -68,7 +67,9 @@ class Tweet
         end
         tweets << tweet
       end
-      tweets
+      return tweets
+    rescue
+      return []
     end
 
     def user_url(user_name)
