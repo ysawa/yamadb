@@ -20,11 +20,11 @@ class Tweet
   before_save :update_keywords
 
   def from_user_url
-    Tweet.user_url(self.from_user)
+    Tweet.user_url(self.from_user) if self.from_user
   end
 
   def to_user_url
-    Tweet.user_url(self.to_user)
+    Tweet.user_url(self.to_user) if self.to_user
   end
 
   def tweet_url

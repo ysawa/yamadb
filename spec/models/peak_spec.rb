@@ -8,6 +8,14 @@ describe Peak do
     end
   end
 
+  describe 'keywords' do
+    it 'can be generated' do
+      peak = Fabricate.build(:peak)
+      peak.save
+      peak.keywords.should_not be_blank
+    end
+  end
+
   describe 'validate' do
     before do
       @peak = Fabricate(:peak, :name => '槍ヶ岳')
