@@ -27,6 +27,7 @@ gem 'omniauth', '~> 0.2.6'
 gem 'devise', '~> 1.4.2'
 
 group :development, :test do
+  gem 'fakeweb', '1.3.0'
   gem 'rspec-rails', '2.6.1'
   gem 'spork', '0.9.0.rc9'
   gem 'capybara', '1.0.0'

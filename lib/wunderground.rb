@@ -26,5 +26,9 @@ module Wunderground
     end
     forecasts
   end
+
+  def weather_forecasts_url
+  end
+
   module_function :get_weather_forecasts, :icon_url, :parse_weather_forecasts_xml
 end

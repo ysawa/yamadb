@@ -1,7 +1,10 @@
 require 'spec_helper'
+include FakeWebHelper
 
 describe "peaks/show.html.haml" do
   before(:each) do
+    fake_search_twitter
+    fake_wunderground_forecast
     @peak = Fabricate(:peak)
     assign(:peak, @peak)
   end

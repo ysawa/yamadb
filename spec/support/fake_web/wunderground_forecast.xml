@@ -1,0 +1,706 @@
+<?xml version="1.0" ?>
+<forecast>
+	<termsofservice link="http://www.wunderground.com/members/tos.asp#api" />
+	<txt_forecast>
+  <date>9:00 AM JST</date>
+  <number></number>
+		<forecastday>
+		<period>0</period>
+		<icon>chancerain</icon>
+		<icons>
+		<icon_set name="Default">
+		<icon_url>http://icons-ecast.wxug.com/i/c/a/chancerain.gif</icon_url>
+		</icon_set>
+		<icon_set name="Smiley">
+		<icon_url>http://icons-ecast.wxug.com/i/c/b/chancerain.gif</icon_url>
+		</icon_set>
+		<icon_set name="Generic">
+		<icon_url>http://icons-ecast.wxug.com/i/c/c/chancerain.gif</icon_url>
+		</icon_set>
+		<icon_set name="Old School">
+		<icon_url>http://icons-ecast.wxug.com/i/c/d/chancerain.gif</icon_url>
+		</icon_set>
+		<icon_set name="Cartoon">
+		<icon_url>http://icons-ecast.wxug.com/i/c/e/chancerain.gif</icon_url>
+		</icon_set>
+		<icon_set name="Mobile">
+		<icon_url>http://icons-ecast.wxug.com/i/c/f/chancerain.gif</icon_url>
+		</icon_set>
+		<icon_set name="Simple">
+		<icon_url>http://icons-ecast.wxug.com/i/c/g/chancerain.gif</icon_url>
+		</icon_set>
+		<icon_set name="Contemporary">
+		<icon_url>http://icons-ecast.wxug.com/i/c/h/chancerain.gif</icon_url>
+		</icon_set>
+		<icon_set name="Helen">
+		<icon_url>http://icons-ecast.wxug.com/i/c/i/chancerain.gif</icon_url>
+		</icon_set>
+		<icon_set name="Incredible">
+		<icon_url>http://icons-ecast.wxug.com/i/c/k/chancerain.gif</icon_url>
+		</icon_set>
+		</icons>
+		<title>July 29, 2011</title>
+		<fcttext>Chance of Rain. High 23&amp;deg;C (73&amp;deg;F). Winds 10 kph NW</fcttext>
+		<pop>30</pop>
+		</forecastday>
+		<forecastday>
+		<period>1</period>
+		<icon>tstorms</icon>
+		<icons>
+		<icon_set name="Default">
+		<icon_url>http://icons-ecast.wxug.com/i/c/a/tstorms.gif</icon_url>
+		</icon_set>
+		<icon_set name="Smiley">
+		<icon_url>http://icons-ecast.wxug.com/i/c/b/tstorms.gif</icon_url>
+		</icon_set>
+		<icon_set name="Generic">
+		<icon_url>http://icons-ecast.wxug.com/i/c/c/tstorms.gif</icon_url>
+		</icon_set>
+		<icon_set name="Old School">
+		<icon_url>http://icons-ecast.wxug.com/i/c/d/tstorms.gif</icon_url>
+		</icon_set>
+		<icon_set name="Cartoon">
+		<icon_url>http://icons-ecast.wxug.com/i/c/e/tstorms.gif</icon_url>
+		</icon_set>
+		<icon_set name="Mobile">
+		<icon_url>http://icons-ecast.wxug.com/i/c/f/tstorms.gif</icon_url>
+		</icon_set>
+		<icon_set name="Simple">
+		<icon_url>http://icons-ecast.wxug.com/i/c/g/tstorms.gif</icon_url>
+		</icon_set>
+		<icon_set name="Contemporary">
+		<icon_url>http://icons-ecast.wxug.com/i/c/h/tstorms.gif</icon_url>
+		</icon_set>
+		<icon_set name="Helen">
+		<icon_url>http://icons-ecast.wxug.com/i/c/i/tstorms.gif</icon_url>
+		</icon_set>
+		<icon_set name="Incredible">
+		<icon_url>http://icons-ecast.wxug.com/i/c/k/tstorms.gif</icon_url>
+		</icon_set>
+		</icons>
+		<title>July 30, 2011</title>
+		<fcttext>Thunderstorm. High 23&amp;deg;C (73&amp;deg;F). Winds 7 kph North</fcttext>
+		<pop>60</pop>
+		</forecastday>
+		<forecastday>
+		<period>2</period>
+		<icon>chancetstorms</icon>
+		<icons>
+		<icon_set name="Default">
+		<icon_url>http://icons-ecast.wxug.com/i/c/a/chancetstorms.gif</icon_url>
+		</icon_set>
+		<icon_set name="Smiley">
+		<icon_url>http://icons-ecast.wxug.com/i/c/b/chancetstorms.gif</icon_url>
+		</icon_set>
+		<icon_set name="Generic">
+		<icon_url>http://icons-ecast.wxug.com/i/c/c/chancetstorms.gif</icon_url>
+		</icon_set>
+		<icon_set name="Old School">
+		<icon_url>http://icons-ecast.wxug.com/i/c/d/chancetstorms.gif</icon_url>
+		</icon_set>
+		<icon_set name="Cartoon">
+		<icon_url>http://icons-ecast.wxug.com/i/c/e/chancetstorms.gif</icon_url>
+		</icon_set>
+		<icon_set name="Mobile">
+		<icon_url>http://icons-ecast.wxug.com/i/c/f/chancetstorms.gif</icon_url>
+		</icon_set>
+		<icon_set name="Simple">
+		<icon_url>http://icons-ecast.wxug.com/i/c/g/chancetstorms.gif</icon_url>
+		</icon_set>
+		<icon_set name="Contemporary">
+		<icon_url>http://icons-ecast.wxug.com/i/c/h/chancetstorms.gif</icon_url>
+		</icon_set>
+		<icon_set name="Helen">
+		<icon_url>http://icons-ecast.wxug.com/i/c/i/chancetstorms.gif</icon_url>
+		</icon_set>
+		<icon_set name="Incredible">
+		<icon_url>http://icons-ecast.wxug.com/i/c/k/chancetstorms.gif</icon_url>
+		</icon_set>
+		</icons>
+		<title>July 31, 2011</title>
+		<fcttext>Chance of a Thunderstorm. High 22&amp;deg;C (71&amp;deg;F). Winds 7 kph ESE</fcttext>
+		<pop>30</pop>
+		</forecastday>
+		<forecastday>
+		<period>3</period>
+		<icon>chancerain</icon>
+		<icons>
+		<icon_set name="Default">
+		<icon_url>http://icons-ecast.wxug.com/i/c/a/chancerain.gif</icon_url>
+		</icon_set>
+		<icon_set name="Smiley">
+		<icon_url>http://icons-ecast.wxug.com/i/c/b/chancerain.gif</icon_url>
+		</icon_set>
+		<icon_set name="Generic">
+		<icon_url>http://icons-ecast.wxug.com/i/c/c/chancerain.gif</icon_url>
+		</icon_set>
+		<icon_set name="Old School">
+		<icon_url>http://icons-ecast.wxug.com/i/c/d/chancerain.gif</icon_url>
+		</icon_set>
+		<icon_set name="Cartoon">
+		<icon_url>http://icons-ecast.wxug.com/i/c/e/chancerain.gif</icon_url>
+		</icon_set>
+		<icon_set name="Mobile">
+		<icon_url>http://icons-ecast.wxug.com/i/c/f/chancerain.gif</icon_url>
+		</icon_set>
+		<icon_set name="Simple">
+		<icon_url>http://icons-ecast.wxug.com/i/c/g/chancerain.gif</icon_url>
+		</icon_set>
+		<icon_set name="Contemporary">
+		<icon_url>http://icons-ecast.wxug.com/i/c/h/chancerain.gif</icon_url>
+		</icon_set>
+		<icon_set name="Helen">
+		<icon_url>http://icons-ecast.wxug.com/i/c/i/chancerain.gif</icon_url>
+		</icon_set>
+		<icon_set name="Incredible">
+		<icon_url>http://icons-ecast.wxug.com/i/c/k/chancerain.gif</icon_url>
+		</icon_set>
+		</icons>
+		<title>August 1, 2011</title>
+		<fcttext>Chance of Rain. High 23&amp;deg;C (73&amp;deg;F). Winds 7 kph ESE</fcttext>
+		<pop>30</pop>
+		</forecastday>
+		<forecastday>
+		<period>4</period>
+		<icon>chancerain</icon>
+		<icons>
+		<icon_set name="Default">
+		<icon_url>http://icons-ecast.wxug.com/i/c/a/chancerain.gif</icon_url>
+		</icon_set>
+		<icon_set name="Smiley">
+		<icon_url>http://icons-ecast.wxug.com/i/c/b/chancerain.gif</icon_url>
+		</icon_set>
+		<icon_set name="Generic">
+		<icon_url>http://icons-ecast.wxug.com/i/c/c/chancerain.gif</icon_url>
+		</icon_set>
+		<icon_set name="Old School">
+		<icon_url>http://icons-ecast.wxug.com/i/c/d/chancerain.gif</icon_url>
+		</icon_set>
+		<icon_set name="Cartoon">
+		<icon_url>http://icons-ecast.wxug.com/i/c/e/chancerain.gif</icon_url>
+		</icon_set>
+		<icon_set name="Mobile">
+		<icon_url>http://icons-ecast.wxug.com/i/c/f/chancerain.gif</icon_url>
+		</icon_set>
+		<icon_set name="Simple">
+		<icon_url>http://icons-ecast.wxug.com/i/c/g/chancerain.gif</icon_url>
+		</icon_set>
+		<icon_set name="Contemporary">
+		<icon_url>http://icons-ecast.wxug.com/i/c/h/chancerain.gif</icon_url>
+		</icon_set>
+		<icon_set name="Helen">
+		<icon_url>http://icons-ecast.wxug.com/i/c/i/chancerain.gif</icon_url>
+		</icon_set>
+		<icon_set name="Incredible">
+		<icon_url>http://icons-ecast.wxug.com/i/c/k/chancerain.gif</icon_url>
+		</icon_set>
+		</icons>
+		<title>August 2, 2011</title>
+		<fcttext>Chance of Rain. High 26&amp;deg;C (78&amp;deg;F). Winds 7 kph SSE</fcttext>
+		<pop>30</pop>
+		</forecastday>
+		<forecastday>
+		<period>5</period>
+		<icon>chancetstorms</icon>
+		<icons>
+		<icon_set name="Default">
+		<icon_url>http://icons-ecast.wxug.com/i/c/a/chancetstorms.gif</icon_url>
+		</icon_set>
+		<icon_set name="Smiley">
+		<icon_url>http://icons-ecast.wxug.com/i/c/b/chancetstorms.gif</icon_url>
+		</icon_set>
+		<icon_set name="Generic">
+		<icon_url>http://icons-ecast.wxug.com/i/c/c/chancetstorms.gif</icon_url>
+		</icon_set>
+		<icon_set name="Old School">
+		<icon_url>http://icons-ecast.wxug.com/i/c/d/chancetstorms.gif</icon_url>
+		</icon_set>
+		<icon_set name="Cartoon">
+		<icon_url>http://icons-ecast.wxug.com/i/c/e/chancetstorms.gif</icon_url>
+		</icon_set>
+		<icon_set name="Mobile">
+		<icon_url>http://icons-ecast.wxug.com/i/c/f/chancetstorms.gif</icon_url>
+		</icon_set>
+		<icon_set name="Simple">
+		<icon_url>http://icons-ecast.wxug.com/i/c/g/chancetstorms.gif</icon_url>
+		</icon_set>
+		<icon_set name="Contemporary">
+		<icon_url>http://icons-ecast.wxug.com/i/c/h/chancetstorms.gif</icon_url>
+		</icon_set>
+		<icon_set name="Helen">
+		<icon_url>http://icons-ecast.wxug.com/i/c/i/chancetstorms.gif</icon_url>
+		</icon_set>
+		<icon_set name="Incredible">
+		<icon_url>http://icons-ecast.wxug.com/i/c/k/chancetstorms.gif</icon_url>
+		</icon_set>
+		</icons>
+		<title>August 3, 2011</title>
+		<fcttext>Chance of a Thunderstorm. High 27&amp;deg;C (80&amp;deg;F). Winds 7 kph SE</fcttext>
+		<pop>40</pop>
+		</forecastday>
+	</txt_forecast>
+<simpleforecast>
+  <forecastday>
+  <period>1</period>
+  <date>
+  <epoch>1311940800</epoch>
+  <pretty_short>9:00 PM JST</pretty_short>
+  <pretty>9:00 PM JST on July 29, 2011</pretty>
+  <day>29</day>
+  <month>7</month>
+  <year>2011</year>
+  <yday>209</yday>
+  <hour>21</hour>
+  <min>00</min>
+  <sec>0</sec>
+  <isdst>0</isdst>
+  <monthname>July</monthname>
+  <weekday_short></weekday_short>
+  <weekday>Friday</weekday>
+  <ampm>PM</ampm>
+  <tz_short>JST</tz_short>
+  <tz_long>Asia/Tokyo</tz_long>
+</date>
+            <high>
+              <fahrenheit>73</fahrenheit>
+              <celsius>23</celsius>
+            </high>
+            <low>
+              <fahrenheit>59</fahrenheit>
+              <celsius>15</celsius>
+            </low>
+            <conditions>Chance of a Thunderstorm</conditions>
+            <icon>chancetstorms</icon>
+	        <icons>
+    	        <icon_set name="Default">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/a/chancetstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Smiley">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/b/chancetstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Generic">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/c/chancetstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Old School">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/d/chancetstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Cartoon">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/e/chancetstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Mobile">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/f/chancetstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Simple">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/g/chancetstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Contemporary">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/h/chancetstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Helen">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/i/chancetstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Incredible">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/k/chancetstorms.gif</icon_url>
+	            </icon_set>
+	        </icons>
+            <skyicon>cloudy</skyicon>
+			<pop>50</pop>
+        </forecastday>
+
+
+
+
+
+
+        <forecastday>
+            <period>2</period>
+            <date>
+  <epoch>1312027200</epoch>
+  <pretty_short>9:00 PM JST</pretty_short>
+  <pretty>9:00 PM JST on July 30, 2011</pretty>
+  <day>30</day>
+  <month>7</month>
+  <year>2011</year>
+  <yday>210</yday>
+  <hour>21</hour>
+  <min>00</min>
+  <sec>0</sec>
+  <isdst>0</isdst>
+  <monthname>July</monthname>
+  <weekday_short></weekday_short>
+  <weekday>Saturday</weekday>
+  <ampm>PM</ampm>
+  <tz_short>JST</tz_short>
+  <tz_long>Asia/Tokyo</tz_long>
+</date>
+            <high>
+              <fahrenheit>73</fahrenheit>
+              <celsius>23</celsius>
+            </high>
+            <low>
+              <fahrenheit>59</fahrenheit>
+              <celsius>15</celsius>
+            </low>
+            <conditions>Thunderstorm</conditions>
+            <icon>tstorms</icon>
+	        <icons>
+    	        <icon_set name="Default">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/a/tstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Smiley">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/b/tstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Generic">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/c/tstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Old School">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/d/tstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Cartoon">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/e/tstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Mobile">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/f/tstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Simple">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/g/tstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Contemporary">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/h/tstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Helen">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/i/tstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Incredible">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/k/tstorms.gif</icon_url>
+	            </icon_set>
+	        </icons>
+            <skyicon>cloudy</skyicon>
+			<pop>90</pop>
+        </forecastday>
+
+
+
+
+
+
+        <forecastday>
+            <period>3</period>
+            <date>
+  <epoch>1312113600</epoch>
+  <pretty_short>9:00 PM JST</pretty_short>
+  <pretty>9:00 PM JST on July 31, 2011</pretty>
+  <day>31</day>
+  <month>7</month>
+  <year>2011</year>
+  <yday>211</yday>
+  <hour>21</hour>
+  <min>00</min>
+  <sec>0</sec>
+  <isdst>0</isdst>
+  <monthname>July</monthname>
+  <weekday_short></weekday_short>
+  <weekday>Sunday</weekday>
+  <ampm>PM</ampm>
+  <tz_short>JST</tz_short>
+  <tz_long>Asia/Tokyo</tz_long>
+</date>
+            <high>
+              <fahrenheit>72</fahrenheit>
+              <celsius>22</celsius>
+            </high>
+            <low>
+              <fahrenheit>55</fahrenheit>
+              <celsius>13</celsius>
+            </low>
+            <conditions>Chance of a Thunderstorm</conditions>
+            <icon>chancetstorms</icon>
+	        <icons>
+    	        <icon_set name="Default">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/a/chancetstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Smiley">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/b/chancetstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Generic">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/c/chancetstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Old School">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/d/chancetstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Cartoon">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/e/chancetstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Mobile">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/f/chancetstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Simple">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/g/chancetstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Contemporary">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/h/chancetstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Helen">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/i/chancetstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Incredible">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/k/chancetstorms.gif</icon_url>
+	            </icon_set>
+	        </icons>
+            <skyicon>mostlycloudy</skyicon>
+			<pop>40</pop>
+        </forecastday>
+
+
+
+
+
+
+        <forecastday>
+            <period>4</period>
+            <date>
+  <epoch>1312200000</epoch>
+  <pretty_short>9:00 PM JST</pretty_short>
+  <pretty>9:00 PM JST on August 01, 2011</pretty>
+  <day>1</day>
+  <month>8</month>
+  <year>2011</year>
+  <yday>212</yday>
+  <hour>21</hour>
+  <min>00</min>
+  <sec>0</sec>
+  <isdst>0</isdst>
+  <monthname>August</monthname>
+  <weekday_short></weekday_short>
+  <weekday>Monday</weekday>
+  <ampm>PM</ampm>
+  <tz_short>JST</tz_short>
+  <tz_long>Asia/Tokyo</tz_long>
+</date>
+            <high>
+              <fahrenheit>73</fahrenheit>
+              <celsius>23</celsius>
+            </high>
+            <low>
+              <fahrenheit>59</fahrenheit>
+              <celsius>15</celsius>
+            </low>
+            <conditions>Chance of Rain</conditions>
+            <icon>chancerain</icon>
+	        <icons>
+    	        <icon_set name="Default">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/a/chancerain.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Smiley">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/b/chancerain.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Generic">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/c/chancerain.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Old School">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/d/chancerain.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Cartoon">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/e/chancerain.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Mobile">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/f/chancerain.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Simple">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/g/chancerain.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Contemporary">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/h/chancerain.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Helen">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/i/chancerain.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Incredible">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/k/chancerain.gif</icon_url>
+	            </icon_set>
+	        </icons>
+            <skyicon>mostlycloudy</skyicon>
+			<pop>40</pop>
+        </forecastday>
+
+
+
+
+
+
+        <forecastday>
+            <period>5</period>
+            <date>
+  <epoch>1312286400</epoch>
+  <pretty_short>9:00 PM JST</pretty_short>
+  <pretty>9:00 PM JST on August 02, 2011</pretty>
+  <day>2</day>
+  <month>8</month>
+  <year>2011</year>
+  <yday>213</yday>
+  <hour>21</hour>
+  <min>00</min>
+  <sec>0</sec>
+  <isdst>0</isdst>
+  <monthname>August</monthname>
+  <weekday_short></weekday_short>
+  <weekday>Tuesday</weekday>
+  <ampm>PM</ampm>
+  <tz_short>JST</tz_short>
+  <tz_long>Asia/Tokyo</tz_long>
+</date>
+            <high>
+              <fahrenheit>79</fahrenheit>
+              <celsius>26</celsius>
+            </high>
+            <low>
+              <fahrenheit>59</fahrenheit>
+              <celsius>15</celsius>
+            </low>
+            <conditions>Chance of a Thunderstorm</conditions>
+            <icon>chancetstorms</icon>
+	        <icons>
+    	        <icon_set name="Default">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/a/chancetstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Smiley">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/b/chancetstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Generic">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/c/chancetstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Old School">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/d/chancetstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Cartoon">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/e/chancetstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Mobile">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/f/chancetstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Simple">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/g/chancetstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Contemporary">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/h/chancetstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Helen">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/i/chancetstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Incredible">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/k/chancetstorms.gif</icon_url>
+	            </icon_set>
+	        </icons>
+            <skyicon>cloudy</skyicon>
+			<pop>40</pop>
+        </forecastday>
+
+
+
+
+
+
+        <forecastday>
+            <period>6</period>
+            <date>
+  <epoch>1312372800</epoch>
+  <pretty_short>9:00 PM JST</pretty_short>
+  <pretty>9:00 PM JST on August 03, 2011</pretty>
+  <day>3</day>
+  <month>8</month>
+  <year>2011</year>
+  <yday>214</yday>
+  <hour>21</hour>
+  <min>00</min>
+  <sec>0</sec>
+  <isdst>0</isdst>
+  <monthname>August</monthname>
+  <weekday_short></weekday_short>
+  <weekday>Wednesday</weekday>
+  <ampm>PM</ampm>
+  <tz_short>JST</tz_short>
+  <tz_long>Asia/Tokyo</tz_long>
+</date>
+            <high>
+              <fahrenheit>81</fahrenheit>
+              <celsius>27</celsius>
+            </high>
+            <low>
+              <fahrenheit>61</fahrenheit>
+              <celsius>16</celsius>
+            </low>
+            <conditions>Chance of a Thunderstorm</conditions>
+            <icon>chancetstorms</icon>
+	        <icons>
+    	        <icon_set name="Default">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/a/chancetstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Smiley">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/b/chancetstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Generic">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/c/chancetstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Old School">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/d/chancetstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Cartoon">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/e/chancetstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Mobile">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/f/chancetstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Simple">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/g/chancetstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Contemporary">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/h/chancetstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Helen">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/i/chancetstorms.gif</icon_url>
+	            </icon_set>
+    	        <icon_set name="Incredible">
+	                <icon_url>http://icons-ecast.wxug.com/i/c/k/chancetstorms.gif</icon_url>
+	            </icon_set>
+	        </icons>
+            <skyicon>cloudy</skyicon>
+			<pop>30</pop>
+        </forecastday>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</simpleforecast>
+<moon_phase>
+        <percentIlluminated>3</percentIlluminated>
+        <ageOfMoon>28</ageOfMoon>
+		<current_time>
+			<hour>17</hour>
+			<minute>28</minute>
+		</current_time>
+        <sunset>
+            <hour>18</hour>
+            <minute>56</minute>
+        </sunset>
+        <sunrise>
+            <hour>4</hour>
+            <minute>51</minute>
+        </sunrise>
+</moon_phase>
+</forecast>
+

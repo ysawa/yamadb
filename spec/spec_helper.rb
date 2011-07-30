@@ -35,6 +35,7 @@ RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   # config.fixture_path = "#{::Rails.root}/spec/fixtures"
   config.before(:each) do
+    FakeWeb.allow_net_connect = false
     Mongoid.database.collections.each do |collection|
       unless collection.name =~ /^system\./
         collection.remove
@@ -46,6 +47,7 @@ RSpec.configure do |config|
     # remove all tmp files created by CarrierWave
     tmp_directory = File.join(Rails.root, "public/uploads/tmp")
     FileUtils.rm_rf(tmp_directory) if File.directory?(tmp_directory)
+    FakeWeb.clean_registry
   end
 
   # To test features using authentication

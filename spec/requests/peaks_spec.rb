@@ -1,6 +1,12 @@
 require 'spec_helper'
-#TODO mock Wunderground's response
+include FakeWebHelper
+
 describe "Peaks" do
+  before(:each) do
+    fake_search_twitter
+    fake_wunderground_forecast
+  end
+
   describe "GET /peaks" do
     it 'shows list of peaks' do
       @peak = Fabricate(:peak)
