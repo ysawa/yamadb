@@ -1,4 +1,6 @@
 Yamadb::Application.routes.draw do
+  resources :records
+
   resources :tweets
 
   constraints :protocol => Yamadb::Protocol.secure do

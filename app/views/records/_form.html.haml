@@ -1,0 +1,20 @@
+= form_for(record) do |f|
+  - if record.errors.any?
+    #error_explanation
+      %ul
+        - record.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :content
+    = f.text_field :content
+  .field
+    = f.label :start
+    = f.time_select :start
+  .field
+    = f.label :finish
+    = f.time_select :finish
+  .actions
+    = f.submit

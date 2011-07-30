@@ -6,6 +6,7 @@ ja:
       map: '地形図'
       peak: '日本の山'
       product: '登山用品'
+      record: '参考記録'
       tweet: 'ツイート'
       user: 'ユーザー'
       weather_forecast: '天気予報'
@@ -29,6 +30,11 @@ ja:
         content: '内容'
         href: 'URL'
         name: '名称'
+      record:
+        content: '内容'
+        finish: '終了時刻'
+        name: '名前'
+        start: '開始時刻'
       tweet:
         content: '内容'
         from_user: '送信者'

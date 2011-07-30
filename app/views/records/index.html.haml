@@ -1,0 +1,23 @@
+%h1= t 'operations.listing_models', :model => Record.model_name.human
+
+%table
+  %thead
+    %tr
+      %th= Record.human_attribute_name :name
+      %th= Record.human_attribute_name :content
+      %th= Record.human_attribute_name :start
+      %th= Record.human_attribute_name :finish
+      %th{:colspan => 3}
+
+  %tbody
+    - for record in @records
+      %tr{ :class => cycle(:odd, :even) }
+        %td= record.name
+        %td= record.content
+        %td= record.start
+        %td= record.finish
+        %td.action= link_to t('operations.show'), record
+        %td.action= link_to t('operations.edit'), edit_record_path(record)
+        %td.action= link_to t('operations.destroy'), record, :confirm => t('information.are_you_sure'), :method => :delete
+
+%p= link_to t('operations.new_model', :model => Record.model_name.human), new_record_path

@@ -1,0 +1,6 @@
+%h1= t 'operations.edit_model', :model => Record.model_name.human
+= render 'form', :record => @record
+%p
+  = link_to t('operations.show'), record_path(@record)
+  \|
+  = link_to t('operations.back'), records_path
