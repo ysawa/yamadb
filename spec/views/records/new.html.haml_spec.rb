@@ -13,7 +13,7 @@ describe "records/new.html.haml" do
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select "form", :action => records_path, :method => "post" do
       assert_select "input#record_name", :name => "record[name]"
-      assert_select "input#record_content", :name => "record[content]"
+      assert_select "textarea#record_content", :name => "record[content]"
     end
   end
 end
