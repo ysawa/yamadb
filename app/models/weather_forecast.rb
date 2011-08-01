@@ -23,6 +23,8 @@ class WeatherForecast
         result << create(forecast)
       end
       result
+    rescue
+      []
     end
 
     def icon_url(condition)
