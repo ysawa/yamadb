@@ -40,11 +40,11 @@ class Tweet
     def search(keyword, load_from = 'hybrid')
       case load_from
       when 'db'
-        tweets = criteria.where(:keywords.all => Yamadb::Igo.keywords(keyword)).desc(:tweeted_at).limit(15)
+        tweets = search_from_db(keyword).desc(:tweeted_at).limit(15)
       when 'hybrid'
-        tweets = criteria.where(:keywords.all => Yamadb::Igo.keywords(keyword)).desc(:tweeted_at).limit(15)
+        tweets = search_from_db(keyword).desc(:tweeted_at).limit(15)
         tweets = search_from_twitter(keyword) if tweets.count < 15 || tweets.first.tweeted_at <= Time.now - 6.hours
-      when
+      when 'twitter'
         tweets = search_from_twitter(keyword)
       else
         raise 'invalid load_from: ' + load_from
@@ -52,7 +52,12 @@ class Tweet
       tweets
     end
 
+    def search_from_db(keyword)
+      criteria.where(:keywords.all => Yamadb::Igo.keywords(keyword))
+    end
+
     def search_from_twitter(keyword)
+      tweets = []
       Twitter::Search.new.containing(keyword).each do |tweet_hash|
         tweet = Tweet.find_or_initialize_by(:tweet_id => tweet_hash.id)
         if tweet.new?
