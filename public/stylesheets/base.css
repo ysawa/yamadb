@@ -89,14 +89,12 @@ input[type="radio"] {
   margin: 0; }
 
 textarea {
-  width: 99%;
   font-size: 12px;
   border: 1px solid #e0e0e0; }
 
 select {
   vertical-align: middle;
   height: 22px;
-  border: 1px solid #393939;
   font-size: 12px; }
 
 input[type="submit"] {

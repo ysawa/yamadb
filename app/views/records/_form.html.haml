@@ -9,12 +9,12 @@
     = f.text_field :name
   .field
     = f.label :content
-    = f.text_field :content
+    = f.text_area :content, :cols => 80
   .field
     = f.label :start
-    = f.time_select :start
+    = f.datetime_select :start
   .field
     = f.label :finish
-    = f.time_select :finish
+    = f.datetime_select :finish
   .actions
     = f.submit

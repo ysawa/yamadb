@@ -3,6 +3,9 @@
   #main_container > .inner > h2:first-child {
     margin: 0 0 10px; }
 
+#side_container > .inner p:before {
+  content: "->"; }
+
 #google_map {
   width: 500px;
   height: 500px; }

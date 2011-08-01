@@ -13,11 +13,11 @@
     - for record in @records
       %tr{ :class => cycle(:odd, :even) }
         %td= record.name
-        %td= record.content
-        %td= record.start
-        %td= record.finish
+        %td= truncate(record.content, :length => 30)
+        %td= l record.start
+        %td= l record.finish
         %td.action= link_to t('operations.show'), record
         %td.action= link_to t('operations.edit'), edit_record_path(record)
-        %td.action= link_to t('operations.destroy'), record, :confirm => t('information.are_you_sure'), :method => :delete
+        %td.action= link_to t('operations.destroy'), record, :confirm => translate_question('Are you sure?'), :method => :delete
 
 %p= link_to t('operations.new_model', :model => Record.model_name.human), new_record_path

@@ -3,14 +3,14 @@
   %dt= Record.human_attribute_name :name
   %dd= @record.name
   %dt= Record.human_attribute_name :content
-  %dd= @record.content
+  %dd= htmlify @record.content
   %dt= Record.human_attribute_name :start
   %dd= @record.start
   %dt= Record.human_attribute_name :finish
   %dd= @record.finish
 
 %p
-  = link_to t('edit'), edit_record_path(@record)
+  = link_to t('operations.edit'), edit_record_path(@record)
   \|
-  = link_to t('back'), records_path
+  = link_to t('operations.back'), records_path
 

@@ -1,6 +1,7 @@
 en:
   operations:
     configure_short: 'Config'
+    editing_model: 'Edit %{model}'
     listing_models: 'Listing %{model} items'
     new: 'New'
     new_model: 'New %{model}'
