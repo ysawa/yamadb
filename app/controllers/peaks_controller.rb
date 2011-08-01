@@ -31,7 +31,7 @@ class PeaksController < ApplicationController
   # GET /peaks
   def index
     if params[:query]
-      @peaks = Peak.where(:keywords.all => Yamadb::Igo.keywords(params[:query]))
+      @peaks = Peak.search(params[:query])
     else
       @peaks = Peak.all
     end

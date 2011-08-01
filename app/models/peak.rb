@@ -61,6 +61,12 @@ class Peak
   def update_keywords
     self.keywords = Yamadb::Igo.keywords(self.name)
   end
+
+  class << self
+    def search(keyword)
+      criteria.where(:keywords.all => Yamadb::Igo.keywords(keyword))
+    end
+  end
 private
   def find_map_if_necessary
     if (self.map_id.blank? || self.location_changed?) && self.location?
