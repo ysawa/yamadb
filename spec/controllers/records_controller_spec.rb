@@ -95,6 +95,11 @@ describe RecordsController do
           post :create, :record => valid_attributes
           response.should redirect_to(Record.last)
         end
+
+        it "the created record has created_by" do
+          post :create, :record => valid_attributes
+          Record.last.created_by.should == User.last
+        end
       end
 
       describe "with invalid params" do

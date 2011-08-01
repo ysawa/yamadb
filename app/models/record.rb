@@ -6,6 +6,7 @@ class Record
   field :keywords, :type => Array
   field :name, :type => String
   field :start, :type => Time
+  belongs_to :created_by, :class_name => 'User', :inverse_of => :records_created
   before_save :update_keywords
   validates_with RecordValidator
 

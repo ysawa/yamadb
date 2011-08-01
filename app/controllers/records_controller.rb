@@ -6,6 +6,7 @@ class RecordsController < ApplicationController
   # POST /records
   def create
     @record = Record.new(params[:record])
+    @record.created_by = current_user
     flash[:notice] = "Record successfully created" if @record.save
     respond_with(@record)
   end

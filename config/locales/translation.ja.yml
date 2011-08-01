@@ -32,6 +32,7 @@ ja:
         name: '名称'
       record:
         content: '内容'
+        created_by: '作成者'
         finish: '終了時刻'
         name: '名前'
         start: '開始時刻'

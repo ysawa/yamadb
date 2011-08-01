@@ -8,13 +8,13 @@
     = f.label :name
     = f.text_field :name
   .field
-    = f.label :content
-    = f.text_area :content, :cols => 80
-  .field
     = f.label :start
     = f.datetime_select :start
   .field
     = f.label :finish
     = f.datetime_select :finish
+  .field
+    = f.label :content
+    = f.text_area :content, :cols => 80
   .actions
     = f.submit
