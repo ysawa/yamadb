@@ -1,16 +1,43 @@
-%dl
-  %dt= Record.human_attribute_name :name
-  %dd= record.name
-  %dt= Record.human_attribute_name :peaks
-  %dd
-    - if record.peaks
-      - record.peaks.each do |peak|
-        = link_to peak.name, peak
-  %dt= Record.human_attribute_name :start
-  %dd= l record.start if record.start
-  %dt= Record.human_attribute_name :finish
-  %dd= l record.finish if record.finish
-  %dt= Record.human_attribute_name :content
-  %dd= htmlify record.content
-  %dt= Record.human_attribute_name :created_by
-  %dd= record.created_by.try :name
+- abstract = defined?(abstract) && abstract
+.record
+  .sub
+    .google_map
+      - unless abstract
+        #google_map
+  .main
+    %dl
+      %dt= Record.human_attribute_name :name
+      %dd= record.name
+      %dt= Record.human_attribute_name :peaks
+      %dd
+        - if record.peaks
+          - record.peaks.each do |peak|
+            = link_to peak.name, peak
+      %dt= Record.human_attribute_name :start
+      %dd= l record.start if record.start
+      %dt= Record.human_attribute_name :finish
+      %dd= l record.finish if record.finish
+      %dt= Record.human_attribute_name :content
+      %dd= htmlify record.content
+      %dt= Record.human_attribute_name :created_by
+      %dd= record.created_by.try :name
+- unless abstract
+  = google_map_include_tag
+  - if record.peaks.present?
+    :javascript
+      $(function () {
+          $.each(
+            #{record.peaks.collect { |peak| peak }.to_json},
+            function () {
+              yamadb.google_map.locate_peak(this.name, this.location[0], this.location[1], "/peaks/" + this._id);
+            }
+          )
+          var center = yamadb.google_map.position(
+              #{record.peaks.first.latitude.to_json},
+              #{record.peaks.first.longitude.to_json}
+          )
+          if (center) {
+            yamadb.google_map.map.setCenter(center);
+            yamadb.google_map.map.setZoom(10);
+          }
+      });

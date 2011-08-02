@@ -287,6 +287,68 @@ div.peak .main {
   div.peak .main > .content.abstract {
     height: 131px; }
 
+div.record:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+div.record .sub {
+  margin: 0 10px 0 0;
+  float: left; }
+  div.record .sub .picture, div.record .sub .google_map {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    line-height: 180px;
+    margin: 5px;
+    padding: 4px;
+    vertical-align: middle;
+    text-align: center;
+    border-right: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0; }
+    div.record .sub .picture img, div.record .sub .google_map img {
+      vertical-align: middle; }
+    div.record .sub .picture .number_tag, div.record .sub .google_map .number_tag {
+      position: absolute;
+      line-height: 12px;
+      top: 10px;
+      left: 10px; }
+  div.record .sub .google_map #google_map {
+    line-height: 18px;
+    width: 100%;
+    height: 100%; }
+div.record .main {
+  float: left;
+  width: 700px;
+  border-right: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0; }
+  div.record .main > .name {
+    margin: 24px 0 0 0;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px; }
+  div.record .main > .content {
+    margin: 14px 0 0 0;
+    padding: 0 0 0 10px;
+    overflow: hidden; }
+    div.record .main > .content > h2 {
+      margin: 30px 10px 10px 0;
+      padding: 0 0 2px;
+      border-bottom: 1px solid #f0f0f0; }
+      div.record .main > .content > h2 span.source {
+        font-size: 11px;
+        float: right;
+        font-weight: normal; }
+      div.record .main > .content > h2:first-child {
+        margin: 0 10px 10px 0; }
+    div.record .main > .content.abstract {
+      height: 136px; }
+div.record .main {
+  margin: 5px 0 0 0; }
+  div.record .main > .content.abstract {
+    height: 131px; }
+
 div.tweet {
   margin: 0 0 10px;
   padding: 0 10px 0 0; }
