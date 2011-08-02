@@ -8,10 +8,10 @@
     = select_tag 'record[peak_ids][]', options_for_select(Peak.all.collect { |peak| [peak.name, peak.id] })
   .field
     = f.label :start
-    = f.datetime_select :start
+    = f.text_field :start, :value => record.start.try(:to_s, :db), :class => :datetime
   .field
     = f.label :finish
-    = f.datetime_select :finish
+    = f.text_field :finish, :value => record.finish.try(:to_s, :db), :class => :datetime
   .field
     = f.label :content
     = f.text_area :content, :cols => 80

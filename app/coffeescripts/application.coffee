@@ -61,5 +61,6 @@ $(->
     yamadb.google_map.initialize()
   $(".truncate").truncate()
   yamadb.notice.show_if_necessary()
+  $('input.datetime').datetimepicker()
 )
 

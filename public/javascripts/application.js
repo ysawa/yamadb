@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Thu, 21 Jul 2011 12:18:39 GMT from
+/* DO NOT MODIFY. This file was compiled Tue, 02 Aug 2011 11:10:26 GMT from
  * /home/ysawa/ruby/yamadb/app/coffeescripts/application.coffee
  */
 
@@ -89,5 +89,6 @@ $(function() {
     yamadb.google_map.initialize();
   }
   $(".truncate").truncate();
-  return yamadb.notice.show_if_necessary();
+  yamadb.notice.show_if_necessary();
+  return $('input.datetime').datetimepicker();
 });
