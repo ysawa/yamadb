@@ -60,7 +60,7 @@ div.equipment:after {
 div.equipment .sub {
   margin: 0 10px 0 0;
   float: left; }
-  div.equipment .sub .picture {
+  div.equipment .sub .picture, div.equipment .sub .google_map {
     position: relative;
     width: 180px;
     height: 180px;
@@ -71,37 +71,53 @@ div.equipment .sub {
     text-align: center;
     border-right: 1px solid #e0e0e0;
     border-bottom: 1px solid #e0e0e0; }
-    div.equipment .sub .picture img {
+    div.equipment .sub .picture img, div.equipment .sub .google_map img {
       vertical-align: middle; }
-    div.equipment .sub .picture .number_tag {
+    div.equipment .sub .picture .number_tag, div.equipment .sub .google_map .number_tag {
       position: absolute;
       line-height: 12px;
       top: 10px;
       left: 10px; }
+  div.equipment .sub .google_map #google_map {
+    line-height: 18px;
+    width: 100%;
+    height: 100%; }
 div.equipment .main {
   float: left;
   width: 700px;
   border-right: 1px solid #e0e0e0;
   border-bottom: 1px solid #e0e0e0; }
-  div.equipment .main .name {
+  div.equipment .main > .name {
     margin: 24px 0 0 0;
     font-weight: bold;
     font-size: 14px;
     line-height: 19px; }
-  div.equipment .main .content {
+  div.equipment .main > .content {
     margin: 14px 0 0 0;
     padding: 0 0 0 10px;
-    height: 40px;
-    width: 100%;
     overflow: hidden; }
-  div.equipment .main ol.equipment_items {
-    margin: 14px 0 0 0;
-    padding: 0 0 10px 10px;
-    width: 100%; }
-    div.equipment .main ol.equipment_items li {
-      margin: 0 0 0 30px; }
-    div.equipment .main ol.equipment_items.abstract {
-      height: 72px; }
+    div.equipment .main > .content > h2 {
+      margin: 30px 10px 10px 0;
+      padding: 0 0 2px;
+      border-bottom: 1px solid #f0f0f0; }
+      div.equipment .main > .content > h2 span.source {
+        font-size: 11px;
+        float: right;
+        font-weight: normal; }
+      div.equipment .main > .content > h2:first-child {
+        margin: 0 10px 10px 0; }
+    div.equipment .main > .content.abstract {
+      height: 136px; }
+div.equipment .main > .content {
+  height: 40px; }
+div.equipment .main ol.equipment_items {
+  margin: 14px 0 0 0;
+  padding: 0 0 10px 10px;
+  width: 100%; }
+  div.equipment .main ol.equipment_items li {
+    margin: 0 0 0 30px; }
+  div.equipment .main ol.equipment_items.abstract {
+    height: 72px; }
 
 div.equipment_item:after {
   content: ".";
@@ -112,7 +128,7 @@ div.equipment_item:after {
 div.equipment_item .sub {
   margin: 0 10px 0 0;
   float: left; }
-  div.equipment_item .sub .picture {
+  div.equipment_item .sub .picture, div.equipment_item .sub .google_map {
     position: relative;
     width: 180px;
     height: 180px;
@@ -123,43 +139,59 @@ div.equipment_item .sub {
     text-align: center;
     border-right: 1px solid #e0e0e0;
     border-bottom: 1px solid #e0e0e0; }
-    div.equipment_item .sub .picture img {
+    div.equipment_item .sub .picture img, div.equipment_item .sub .google_map img {
       vertical-align: middle; }
-    div.equipment_item .sub .picture .number_tag {
+    div.equipment_item .sub .picture .number_tag, div.equipment_item .sub .google_map .number_tag {
       position: absolute;
       line-height: 12px;
       top: 10px;
       left: 10px; }
+  div.equipment_item .sub .google_map #google_map {
+    line-height: 18px;
+    width: 100%;
+    height: 100%; }
 div.equipment_item .main {
   float: left;
   width: 700px;
   border-right: 1px solid #e0e0e0;
   border-bottom: 1px solid #e0e0e0; }
-  div.equipment_item .main .stars {
+  div.equipment_item .main > .name {
     margin: 24px 0 0 0;
-    padding: 0 0 0 10px;
-    width: 60px;
-    float: left;
-    line-height: 19px; }
-  div.equipment_item .main .name {
-    margin: 24px 0 0 70px;
     font-weight: bold;
     font-size: 14px;
     line-height: 19px; }
-  div.equipment_item .main .content {
+  div.equipment_item .main > .content {
     margin: 14px 0 0 0;
     padding: 0 0 0 10px;
-    height: 40px;
-    width: 100%;
     overflow: hidden; }
-  div.equipment_item .main ol.products {
-    margin: 14px 0 0 0;
-    padding: 0 0 10px 10px;
-    width: 100%; }
-    div.equipment_item .main ol.products li {
-      margin: 0 0 0 30px; }
-    div.equipment_item .main ol.products.abstract {
-      height: 72px; }
+    div.equipment_item .main > .content > h2 {
+      margin: 30px 10px 10px 0;
+      padding: 0 0 2px;
+      border-bottom: 1px solid #f0f0f0; }
+      div.equipment_item .main > .content > h2 span.source {
+        font-size: 11px;
+        float: right;
+        font-weight: normal; }
+      div.equipment_item .main > .content > h2:first-child {
+        margin: 0 10px 10px 0; }
+    div.equipment_item .main > .content.abstract {
+      height: 136px; }
+div.equipment_item .main > .content {
+  height: 35px; }
+div.equipment_item .main .stars {
+  margin: 24px 0 0 0;
+  padding: 0 0 0 10px;
+  width: 60px;
+  float: left;
+  line-height: 19px; }
+div.equipment_item .main ol.products {
+  margin: 14px 0 0 0;
+  padding: 0 0 10px 10px;
+  width: 100%; }
+  div.equipment_item .main ol.products li {
+    margin: 0 0 0 30px; }
+  div.equipment_item .main ol.products.abstract {
+    height: 77px; }
 
 div.peak:after {
   content: ".";
@@ -170,7 +202,7 @@ div.peak:after {
 div.peak .sub {
   margin: 0 10px 0 0;
   float: left; }
-  div.peak .sub .google_map {
+  div.peak .sub .picture, div.peak .sub .google_map {
     position: relative;
     width: 180px;
     height: 180px;
@@ -181,33 +213,29 @@ div.peak .sub {
     text-align: center;
     border-right: 1px solid #e0e0e0;
     border-bottom: 1px solid #e0e0e0; }
-    div.peak .sub .google_map img {
+    div.peak .sub .picture img, div.peak .sub .google_map img {
       vertical-align: middle; }
-    div.peak .sub .google_map .number_tag {
+    div.peak .sub .picture .number_tag, div.peak .sub .google_map .number_tag {
       position: absolute;
       line-height: 12px;
       top: 10px;
       left: 10px; }
-    div.peak .sub .google_map #google_map {
-      line-height: 18px;
-      width: 100%;
-      height: 100%; }
+  div.peak .sub .google_map #google_map {
+    line-height: 18px;
+    width: 100%;
+    height: 100%; }
 div.peak .main {
-  margin: 5px 0 0 0;
   float: left;
   width: 700px;
   border-right: 1px solid #e0e0e0;
   border-bottom: 1px solid #e0e0e0; }
   div.peak .main > .name {
-    margin: 19px 0 0 10px;
+    margin: 24px 0 0 0;
     font-weight: bold;
     font-size: 14px;
     line-height: 19px; }
-    div.peak .main > .name a#search_peak_again_link {
-      vertical-align: bottom;
-      font-size: 12px; }
   div.peak .main > .content {
-    margin: 14px 10px 0 0;
+    margin: 14px 0 0 0;
     padding: 0 0 0 10px;
     overflow: hidden; }
     div.peak .main > .content > h2 {
@@ -222,39 +250,46 @@ div.peak .main {
         margin: 0 10px 10px 0; }
     div.peak .main > .content.abstract {
       height: 136px; }
-    div.peak .main > .content .weathers {
-      margin: 0 0 10px; }
-      div.peak .main > .content .weathers:after {
-        content: ".";
-        display: block;
-        height: 0;
-        clear: both;
-        visibility: hidden; }
-      div.peak .main > .content .weathers .weather {
-        margin: 0 10px 0 0;
+div.peak .main {
+  margin: 5px 0 0 0; }
+  div.peak .main > .name a#search_peak_again_link {
+    vertical-align: bottom;
+    font-size: 12px; }
+  div.peak .main > .content .weathers {
+    margin: 0 0 10px; }
+    div.peak .main > .content .weathers:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden; }
+    div.peak .main > .content .weathers .weather {
+      margin: 0 10px 0 0;
+      width: 60px;
+      float: left; }
+      div.peak .main > .content .weathers .weather .date {
+        text-align: center;
+        width: 60px; }
+      div.peak .main > .content .weathers .weather .icon {
+        text-align: center;
         width: 60px;
-        float: left; }
-        div.peak .main > .content .weathers .weather .date {
-          text-align: center;
-          width: 60px; }
-        div.peak .main > .content .weathers .weather .icon {
-          text-align: center;
-          width: 60px;
-          height: 50px;
-          font-size: 11px;
-          color: #a0a0a0; }
-          div.peak .main > .content .weathers .weather .icon img {
-            vertical-align: middle; }
-            div.peak .main > .content .weathers .weather .icon img.chance {
-              width: 30px;
-              height: 30px; }
-            div.peak .main > .content .weathers .weather .icon img.normal {
-              width: 50px;
-              height: 50px; }
+        height: 50px;
+        font-size: 11px;
+        color: #a0a0a0; }
+        div.peak .main > .content .weathers .weather .icon img {
+          vertical-align: middle; }
+          div.peak .main > .content .weathers .weather .icon img.chance {
+            width: 30px;
+            height: 30px; }
+          div.peak .main > .content .weathers .weather .icon img.normal {
+            width: 50px;
+            height: 50px; }
+  div.peak .main > .content.abstract {
+    height: 131px; }
 
 div.tweet {
-  width: 100%;
-  margin: 0 0 10px; }
+  margin: 0 0 10px;
+  padding: 0 10px 0 0; }
   div.tweet:after {
     content: ".";
     display: block;
