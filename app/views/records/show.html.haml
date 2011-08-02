@@ -1,4 +1,7 @@
-%h1= Record.model_name.human
+%h1
+  = link_to Record.model_name.human, records_path
+  \>
+  = @record.name
 = render @record
 
 %p
