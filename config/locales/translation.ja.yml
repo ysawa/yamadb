@@ -26,7 +26,7 @@ ja:
         latitude: '緯度'
         location: '位置'
         longitude: '経度'
-        records: '参考記録'
+        records: '山行記録'
       product:
         content: '内容'
         href: 'URL'
@@ -150,6 +150,7 @@ ja:
     model_successfully_created: '%{model}を作成しました。'
     model_successfully_deleted: '%{model}を削除しました。'
     model_successfully_updated: '%{model}を更新しました。'
+    no_model: '%{model}はありません。'
 
   locales:
     en: '英語'

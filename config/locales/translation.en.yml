@@ -42,6 +42,7 @@ en:
 
   notices:
     language_changed: 'Language was changed to %{language}.'
+    no_model: 'No %{model}.'
 
   locales:
     en: 'English'
