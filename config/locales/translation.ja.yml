@@ -26,6 +26,7 @@ ja:
         latitude: '緯度'
         location: '位置'
         longitude: '経度'
+        records: '参考記録'
       product:
         content: '内容'
         href: 'URL'

@@ -8,6 +8,7 @@ class RecordsController < ApplicationController
     @record = Record.new(params[:record])
     @record.created_by = current_user
     if @record.save
+      relate_to_peaks
       flash[:notice] = translate_notice('Model successfully created', :model => Record.model_name.human)
     end
     respond_with(@record)
@@ -48,6 +49,7 @@ class RecordsController < ApplicationController
   # PUT /records/1
   def update
     if @record.update_attributes(params[:record])
+      relate_to_peaks
       flash[:notice] = translate_notice('Model successfully updated', :model => Record.model_name.human)
     end
     respond_with(@record)
@@ -55,5 +57,14 @@ class RecordsController < ApplicationController
 private
   def find_record
     @record = Record.find(params[:id])
+  end
+
+  def relate_to_peaks
+    @record.peaks.each do |peak|
+      peak.record_ids ||= []
+      peak.record_ids << @record.id
+      peak.record_ids.uniq!
+      peak.save
+    end
   end
 end

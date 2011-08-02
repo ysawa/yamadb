@@ -53,6 +53,13 @@
           %strong= Peak.human_attribute_name('near')
           - peak.near.limit(5).each do |near_peak|
             = link_to near_peak.name, near_peak
+        %p
+          %strong= Peak.human_attribute_name('records')
+          - if peak.records.present?
+            - peak.records.each do |record|
+              = link_to record.name, record
+              = l record.start if record.start
+              = record.created_by.try(:name)
         %h2
           = WeatherForecast.model_name.human
           = link_to_source(wunderground_url)
