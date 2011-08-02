@@ -1,12 +1,11 @@
 = form_for(record) do |f|
-  - if record.errors.any?
-    #error_explanation
-      %ul
-        - record.errors.full_messages.each do |msg|
-          %li= msg
+  = error_explanation(record)
   .field
     = f.label :name
     = f.text_field :name
+  .field
+    = f.label :peaks
+    = select_tag 'record[peak_ids][]', options_for_select(Peak.all.collect { |peak| [peak.name, peak.id] })
   .field
     = f.label :start
     = f.datetime_select :start

@@ -2,6 +2,11 @@
 %dl
   %dt= Record.human_attribute_name :name
   %dd= @record.name
+  %dt= Record.human_attribute_name :peaks
+  %dd
+    - if @record.peaks
+      - @record.peaks.each do |peak|
+        = link_to peak.name, peak
   %dt= Record.human_attribute_name :start
   %dd= l @record.start if @record.start
   %dt= Record.human_attribute_name :finish

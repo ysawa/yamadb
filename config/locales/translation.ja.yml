@@ -35,6 +35,7 @@ ja:
         created_by: '作成者'
         finish: '終了時刻'
         name: '名前'
+        peaks: 'ピーク'
         start: '開始時刻'
       tweet:
         content: '内容'
@@ -145,6 +146,9 @@ ja:
 
   notices:
     language_changed: '言語を%{language}に変更しました。'
+    model_successfully_created: '%{model}を作成しました。'
+    model_successfully_deleted: '%{model}を削除しました。'
+    model_successfully_updated: '%{model}を更新しました。'
 
   locales:
     en: '英語'

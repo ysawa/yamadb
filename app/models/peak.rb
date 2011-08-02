@@ -7,8 +7,9 @@ class Peak
   field :keywords, :type => Array
   index [[:location, Mongo::GEO2D]], :min => -180, :max => 180
   GOOGLE_MAPS_API = "http://maps.google.com/maps/api/geocode/json"
-  validates_with PeakValidator
   belongs_to :map
+  has_and_belongs_to_many :records
+  validates_with PeakValidator
   before_save :update_keywords
   before_save :find_map_if_necessary
 

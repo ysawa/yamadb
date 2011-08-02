@@ -7,13 +7,17 @@ class RecordsController < ApplicationController
   def create
     @record = Record.new(params[:record])
     @record.created_by = current_user
-    flash[:notice] = "Record successfully created" if @record.save
+    if @record.save
+      flash[:notice] = translate_notice('Model successfully created', :model => Record.model_name.human)
+    end
     respond_with(@record)
   end
 
   # DELETE /records/1
   def destroy
-    flash[:notice] = "Record successfully destroyed." if @record.destroy
+    if @record.delete
+      flash[:notice] = translate_notice('Model successfully deleted', :model => Record.model_name.human)
+    end
     respond_with(@record, :location => records_url)
   end
 
@@ -31,7 +35,9 @@ class RecordsController < ApplicationController
 
   # GET /records/new
   def new
-    respond_with(@record = Record.new)
+    @record = Record.new
+    @record.attributes = params[:record]
+    respond_with(@record)
   end
 
   # GET /records/1
@@ -41,7 +47,9 @@ class RecordsController < ApplicationController
 
   # PUT /records/1
   def update
-    flash[:notice] = "Record successfully updated." if @record.update_attributes(params[:record])
+    if @record.update_attributes(params[:record])
+      flash[:notice] = translate_notice('Model successfully updated', :model => Record.model_name.human)
+    end
     respond_with(@record)
   end
 private
