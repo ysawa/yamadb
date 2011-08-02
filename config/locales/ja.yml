@@ -23,7 +23,7 @@ ja:
   time:
     formats:
       default: "%Y年%m月%d日 %H:%M"
-      form: "%Y/%m/%d %H:%M:%S"
+      form: "%Y/%m/%d %H:%M"
       hour_minute: "%H:%M"
       long: "%Y年%m月%d日(%a) %H:%M:%S"
       short: "%m月%d日 %H:%M"

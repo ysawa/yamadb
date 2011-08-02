@@ -1,20 +1,5 @@
 %h1= Record.model_name.human
-%dl
-  %dt= Record.human_attribute_name :name
-  %dd= @record.name
-  %dt= Record.human_attribute_name :peaks
-  %dd
-    - if @record.peaks
-      - @record.peaks.each do |peak|
-        = link_to peak.name, peak
-  %dt= Record.human_attribute_name :start
-  %dd= l @record.start if @record.start
-  %dt= Record.human_attribute_name :finish
-  %dd= l @record.finish if @record.finish
-  %dt= Record.human_attribute_name :content
-  %dd= htmlify @record.content
-  %dt= Record.human_attribute_name :created_by
-  %dd= @record.created_by.try :name
+= render @record
 
 %p
   = link_to t('operations.edit'), edit_record_path(@record)
