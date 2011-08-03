@@ -1,3 +1,5 @@
+require 'picture_providers'
+
 class Tweet
   include Mongoid::Document
   include Mongoid::Timestamps
@@ -15,12 +17,18 @@ class Tweet
   field :tweeted_at, :type => Time
   index [[:location, Mongo::GEO2D]], :min => -180, :max => 180
   index :tweet_id, :unique => true
+  has_many :pictures, :as => :album
   validates_with TweetValidator
   validates_uniqueness_of :tweet_id
   before_save :update_keywords
+  after_save :search_and_convert_pictures
 
   def from_user_url
     Tweet.user_url(self.from_user) if self.from_user
+  end
+
+  def search_and_convert_pictures
+    PictureProviders.search_and_convert_all(self.content, self)
   end
 
   def to_user_url

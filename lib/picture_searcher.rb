@@ -1,0 +1,2 @@
+class PictureSearcher
+end
