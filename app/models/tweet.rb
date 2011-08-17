@@ -1,5 +1,3 @@
-require 'picture_providers'
-
 class Tweet
   include Mongoid::Document
   include Mongoid::Timestamps
@@ -21,8 +19,6 @@ class Tweet
   validates_with TweetValidator
   validates_uniqueness_of :tweet_id
   before_save :update_keywords
-  before_save :extract_shorten_urls
-  after_save :search_and_convert_pictures
 
   def extract_shorten_urls
     return if self.content.blank?
