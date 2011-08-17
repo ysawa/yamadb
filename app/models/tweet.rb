@@ -21,7 +21,16 @@ class Tweet
   validates_with TweetValidator
   validates_uniqueness_of :tweet_id
   before_save :update_keywords
+  before_save :extract_shorten_urls
   after_save :search_and_convert_pictures
+
+  def extract_shorten_urls
+    return if self.content.blank?
+    urls = URI.extract(self.content, ['http', 'https'])
+    urls.each do |url|
+      self.content.gsub!(url, extract_shorten_url(url))
+    end
+  end
 
   def from_user_url
     Tweet.user_url(self.from_user) if self.from_user
@@ -88,5 +97,14 @@ class Tweet
     def user_url(user_name)
       "http://twitter.com/#!/#{user_name}"
     end
+  end
+private
+  def extract_shorten_url(url)
+    return url unless url =~ /^http:\/\/(t\.co|bit\.ly|ow\.ly|owl\.li|ht\.ly|htl\.li|goo\.gl|tinyurl\.com)\//
+    response = Net::HTTP.get_response(URI.parse(url))
+    if response.is_a? Net::HTTPRedirection
+      return extract_shorten_url(response['location'])
+    end
+  rescue
   end
 end
