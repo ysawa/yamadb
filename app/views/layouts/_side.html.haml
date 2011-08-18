@@ -1,6 +1,6 @@
 %p
-  = link_to Peak.model_name.human, peaks_path
+  = link_to Peak.model_name.human, peaks_url(:protocol => 'http')
 %p
-  = link_to Record.model_name.human, records_path
+  = link_to Record.model_name.human, records_url(:protocol => 'http')
 %p
-  = link_to Equipment.model_name.human, equipments_path
+  = link_to Equipment.model_name.human, equipments_url(:protocol => 'http')

@@ -26,6 +26,8 @@ gem 'igo-ruby', '~> 0.1.5'
 gem 'omniauth', '~> 0.2.6'
 gem 'devise', '~> 1.4.2'
 
+gem 'bartt-ssl_requirement', :require => 'ssl_requirement'
+
 group :development, :test do
   gem 'fakeweb', '1.3.0'
   gem 'rspec-rails', '2.6.1'

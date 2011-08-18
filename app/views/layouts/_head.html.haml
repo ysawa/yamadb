@@ -1,9 +1,9 @@
 - if controller_name == "main" && action_name == "index"
   %h1
-    = link_to "YamaDB", root_path
+    = link_to "YamaDB", root_url(:protocol => 'http')
 - else
   %h2
-    = link_to "YamaDB", root_path
+    = link_to "YamaDB", root_url(:protocol => 'http')
 %p#abstract
   To trek or climb Japanese mountains more safely,
 #notice>
@@ -12,16 +12,16 @@
   = notice
 #sign_up_or_in
   - if user_signed_in?
-    = link_to t('operations.configure_short'), edit_user_registration_url
+    = link_to t('operations.configure_short'), edit_user_registration_url(:protocol => 'https')
     \|
-    = link_to t('operations.sign_out'), destroy_user_session_url, :method => :delete
+    = link_to t('operations.sign_out'), destroy_user_session_url(:protocol => 'https'), :method => :delete
   - else
-    = link_to t('operations.sign_up'), new_user_registration_url
+    = link_to t('operations.sign_up'), new_user_registration_url(:protocol => 'https')
     \|
-    = link_to t('operations.sign_in'), new_user_session_url
+    = link_to t('operations.sign_in'), new_user_session_url(:protocol => 'https')
 #locales
   - Yamadb::LOCALES.each do |locale|
-    = link_to image_tag("/images/locales/#{locale}.png"), params.merge(:locale => locale)
+    = link_to image_tag("/images/locales/#{locale}.png"), params.merge(:locale => locale, :protocol => 'http')
 #search_form
   = form_tag(peaks_path, :method => :get) do
     = text_field_tag :query, params[:query], :type => :search

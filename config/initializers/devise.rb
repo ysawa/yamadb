@@ -202,3 +202,9 @@ Devise.setup do |config|
   #   manager.default_strategies(:scope => :user).unshift :some_external_strategy
   # end
 end
+
+unless Rails.env.development?
+  Devise::PasswordsController.ssl_required :create, :destroy, :edit, :new, :update
+  Devise::RegistrationsController.ssl_required :create, :destroy, :edit, :new, :update
+  Devise::SessionsController.ssl_required :create, :destroy, :edit, :new, :update
+end
