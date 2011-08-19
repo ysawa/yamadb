@@ -67,6 +67,9 @@ label {
   display: block; }
 
 input[type="text"], input[type="email"], input[type="password"], input[type="search"] {
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
   line-height: 18px;
   font-size: 12px;
   height: 20px;
@@ -89,6 +92,9 @@ input[type="radio"] {
   margin: 0; }
 
 textarea {
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
   font-size: 12px;
   border: 1px solid #e0e0e0; }
 

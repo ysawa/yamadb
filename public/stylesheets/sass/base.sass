@@ -1,6 +1,10 @@
 $font_family: Verdana, Arial, Helvetica, sans-serif
 $color: #393939
 $link_color: #000777
+@mixin border_radius($radius: 5px)
+  border-radius: $radius
+  -moz-border-radius: $radius
+  -webkit-border-radius: $radius
 
 html, body
   background-color: #fff
@@ -70,6 +74,7 @@ label
   display: block
 
 input[type="text"], input[type="email"], input[type="password"], input[type="search"]
+  @include border_radius(3px)
   line-height: 18px
   font-size: 12px
   height: 20px
@@ -88,6 +93,7 @@ input[type="radio"]
   vertical-align: middle
   margin: 0
 textarea
+  @include border_radius(3px)
   font-size: 12px
   border: 1px solid #e0e0e0
 select
