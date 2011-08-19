@@ -6,6 +6,7 @@
       %th= Record.human_attribute_name :name
       %th= Record.human_attribute_name :start
       %th= Record.human_attribute_name :content
+      %th= Record.human_attribute_name :created_by
       %th{:colspan => 3}
 
   %tbody
@@ -14,8 +15,13 @@
         %td= record.name
         %td= l record.start if record.start
         %td= truncate(record.content, :length => 30)
+        %td= record.created_by.name if record.created_by
         %td.action= link_to t('operations.show'), record_url(record, :protocol => 'http')
-        %td.action= link_to t('operations.edit'), edit_record_url(record, :protocol => 'http')
-        %td.action= link_to t('operations.destroy'), record_url(record, :protocol => 'http'), :confirm => translate_question('Are you sure?'), :method => :delete
+        %td.action
+          - if record.created_by == current_user
+            = link_to t('operations.edit'), edit_record_url(record, :protocol => 'http')
+        %td.action
+          - if record.created_by == current_user
+            = link_to t('operations.destroy'), record_url(record, :protocol => 'http'), :confirm => translate_question('Are you sure?'), :method => :delete
 
 %p= link_to t('operations.new_model', :model => Record.model_name.human), new_record_url(:protocol => 'http')
