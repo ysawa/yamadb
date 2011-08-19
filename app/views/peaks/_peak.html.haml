@@ -21,7 +21,7 @@
             - peak_item_name = "#{number}. NO NAME"
           - else
             - peak_item_name = "NO NAME"
-        = link_to peak_item_name, peak
+        = link_to peak_item_name, peak_url(peak, :protocol => 'http')
     %div{ :class => 'content' + (abstract ? ' abstract' : '') }
       - unless abstract
         %h2
@@ -58,7 +58,9 @@
               = l record.start if record.start
               = record.created_by.try(:name)
         - else
-          = translate_notice('No Model', :model => Record.model_name.human)
+          %p= translate_notice('No Model', :model => Record.model_name.human)
+
+        %p= link_to t('operations.new_model', :model => Record.model_name.human), new_record_url(:record => { :peak_ids => [peak.id] }, :protocol => 'http')
         %h2
           = WeatherForecast.model_name.human
           = link_to_source(wunderground_url)
