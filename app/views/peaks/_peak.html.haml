@@ -3,12 +3,9 @@
 .peak
   .sub
     .google_map
-      - if peak.location.present? && peak.location.size == 2
-        - image = image_tag "http://maps.google.com/maps/api/staticmap?center=#{peak.location[0]},#{peak.location[1]}&zoom=10&size=160x160&sensor=false"
-      - else
-        - image = image_tag '/images/common/no_picture.png'
+      - image = google_map_peak_image(peak.location, :secure => request.ssl?)
       - if abstract
-        %a{ :href => peak_path(peak) }= image
+        %a{ :href => peak_url(peak, :protocol => 'http') }= image
       - else
         = image
   .main

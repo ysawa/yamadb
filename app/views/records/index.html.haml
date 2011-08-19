@@ -14,8 +14,8 @@
         %td= record.name
         %td= l record.start if record.start
         %td= truncate(record.content, :length => 30)
-        %td.action= link_to t('operations.show'), record
-        %td.action= link_to t('operations.edit'), edit_record_path(record)
-        %td.action= link_to t('operations.destroy'), record, :confirm => translate_question('Are you sure?'), :method => :delete
+        %td.action= link_to t('operations.show'), record_url(record, :protocol => 'http')
+        %td.action= link_to t('operations.edit'), edit_record_url(record, :protocol => 'http')
+        %td.action= link_to t('operations.destroy'), record_url(record, :protocol => 'http'), :confirm => translate_question('Are you sure?'), :method => :delete
 
-%p= link_to t('operations.new_model', :model => Record.model_name.human), new_record_path
+%p= link_to t('operations.new_model', :model => Record.model_name.human), new_record_url(:protocol => 'http')
