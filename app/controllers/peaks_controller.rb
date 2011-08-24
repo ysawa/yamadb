@@ -1,5 +1,5 @@
 class PeaksController < ApplicationController
-  respond_to :html
+  respond_to :html, :json
   before_filter :authenticate_user!, :only =>[:create, :destroy, :edit, :new, :update]
   before_filter :find_peak, :only => [:destroy, :edit, :show, :update]
 
