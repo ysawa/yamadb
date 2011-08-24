@@ -65,7 +65,7 @@ $(->
   $('#peaks').autocomplete({
       source: (request, response) ->
           $.getJSON('/peaks.json', {
-              query: request.term
+              name: request.term
           }, response)
       minLength: 1,
       select: (event, ui) ->

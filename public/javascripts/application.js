@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Wed, 24 Aug 2011 08:31:20 GMT from
+/* DO NOT MODIFY. This file was compiled Wed, 24 Aug 2011 08:53:29 GMT from
  * /home/ysawa/ruby/yamadb/app/coffeescripts/application.coffee
  */
 
@@ -94,7 +94,7 @@ $(function() {
   return $('#peaks').autocomplete({
     source: function(request, response) {
       return $.getJSON('/peaks.json', {
-        query: request.term
+        name: request.term
       }, response);
     },
     minLength: 1,

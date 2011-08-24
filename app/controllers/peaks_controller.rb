@@ -32,6 +32,8 @@ class PeaksController < ApplicationController
   def index
     if params[:query]
       @peaks = Peak.search(params[:query])
+    elsif params[:name]
+      @peaks = Peak.where(:name => Regexp.new(params[:name]))
     else
       @peaks = Peak.all
     end
