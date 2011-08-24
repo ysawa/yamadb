@@ -32,10 +32,6 @@ class Tweet
     Tweet.user_url(self.from_user) if self.from_user
   end
 
-  def search_and_convert_pictures
-    PictureProviders.search_and_convert_all(self.content, self)
-  end
-
   def to_user_url
     Tweet.user_url(self.to_user) if self.to_user
   end
