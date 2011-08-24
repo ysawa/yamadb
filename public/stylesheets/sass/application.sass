@@ -196,6 +196,7 @@ div.peak
       &.abstract
         height: 131px
 
+/* Record */
 div.record
   @include common_object
   .main
@@ -204,7 +205,19 @@ div.record
     & > .content
       &.abstract
         height: 131px
+div#record_peaks
+  margin: 6px 3px
+  div.record_peak
+    span.ui-button-text
+      font-size: 12px
+      font-weight: normal
+      a
+        display: inline-block
+        &:hover
+          span.ui-icon
+            background-position: -95px -129px
 
+/* Tweet */
 div.tweet
   margin: 0 0 10px
   padding: 0 10px 0 0

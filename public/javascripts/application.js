@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Tue, 02 Aug 2011 11:10:26 GMT from
+/* DO NOT MODIFY. This file was compiled Wed, 24 Aug 2011 08:31:20 GMT from
  * /home/ysawa/ruby/yamadb/app/coffeescripts/application.coffee
  */
 
@@ -90,5 +90,19 @@ $(function() {
   }
   $(".truncate").truncate();
   yamadb.notice.show_if_necessary();
-  return $('input.datetime').datetimepicker();
+  $('input.datetime').datetimepicker();
+  return $('#peaks').autocomplete({
+    source: function(request, response) {
+      return $.getJSON('/peaks.json', {
+        query: request.term
+      }, response);
+    },
+    minLength: 1,
+    select: function(event, ui) {
+      $('div#record_peaks').append("<div class=\"record_peak\">" + ui.item.name + "<a href=\"#\" class=\"ui-dialog-titlebar-close ui-corner-all\" role=\"button\"><span class=\"ui-icon ui-icon-closethick\">close</span></a><input id=\"record_peak_ids_\" name=\"record[peak_ids][]\" type=\"hidden\" value=\"" + ui.item._id + "\"></div>");
+      return $('div.record_peak').button();
+    }
+  }).data('autocomplete')._renderItem = function(ul, item) {
+    return $('<li></li>').data('item.autocomplete', item).append("<a>" + item.name + "</a>").appendTo(ul);
+  };
 });

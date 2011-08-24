@@ -287,6 +287,7 @@ div.peak .main {
   div.peak .main > .content.abstract {
     height: 131px; }
 
+/* Record */
 div.record:after {
   content: ".";
   display: block;
@@ -349,6 +350,17 @@ div.record .main {
   div.record .main > .content.abstract {
     height: 131px; }
 
+div#record_peaks {
+  margin: 6px 3px; }
+  div#record_peaks div.record_peak span.ui-button-text {
+    font-size: 12px;
+    font-weight: normal; }
+    div#record_peaks div.record_peak span.ui-button-text a {
+      display: inline-block; }
+      div#record_peaks div.record_peak span.ui-button-text a:hover span.ui-icon {
+        background-position: -95px -129px; }
+
+/* Tweet */
 div.tweet {
   margin: 0 0 10px;
   padding: 0 10px 0 0; }

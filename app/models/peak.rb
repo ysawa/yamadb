@@ -13,6 +13,10 @@ class Peak
   before_save :update_keywords
   before_save :find_map_if_necessary
 
+  def encode_json(encoder)
+    encoder.encode attributes
+  end
+
   def get_location(peak_name = nil)
     peak_name ||= self.name
     return nil if peak_name.blank?

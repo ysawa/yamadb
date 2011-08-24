@@ -5,7 +5,14 @@
     = f.text_field :name
   .field
     = f.label :peaks
-    = select_tag 'record[peak_ids][]', options_for_select(Peak.all.collect { |peak| [peak.name, peak.id] })
+    = text_field_tag 'peaks', '', :size => 30
+    #record_peaks
+      - record.peaks.each do |peak|
+        .record_peak
+          = peak.name
+          %a{ :href => "#", :class => "ui-dialog-titlebar-close ui-corner-all", :role => "button" }
+            %span{ :class => "ui-icon ui-icon-closethick" } close
+          = hidden_field_tag 'record[peak_ids][]', peak.id
   .field
     = f.label :start
     = f.text_field :start, :value => (record.start ? l(record.start, :format => :form) : nil), :class => :datetime
@@ -17,3 +24,9 @@
     = f.text_area :content, :cols => 80
   .actions
     = f.submit
+:javascript
+  $('div.record_peak').button();
+  $('div.record_peak a').live('click', function () {
+      $(this).parents('div.record_peak').remove();
+      return false;
+  });
