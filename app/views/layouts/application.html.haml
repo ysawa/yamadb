@@ -30,6 +30,11 @@
             #side_container.span2.columns
               = render 'layouts/side'
             #main_container.span14.columns
+              - if notice || flash[:alert]
+                #notice.alert-message.info>
+                  - if flash[:alert].present?
+                    %span.alert= flash[:alert]
+                  = notice
               = yield
       #foot_container.container
         = render 'layouts/foot'

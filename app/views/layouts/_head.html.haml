@@ -1,9 +1,5 @@
 %h3
   = link_to "YamaDB", root_url(:protocol => 'http')
-#notice>
-  - if flash[:alert].present?
-    %span.alert= flash[:alert]
-  = notice
 %ul
   %li= link_to "HOME", root_url(:protocol => 'http')
 %ul#sign_up_or_in.secondary-nav

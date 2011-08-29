@@ -3,15 +3,15 @@
   = devise_error_messages!
   .field
     = f.label :name
-    = f.text_field :name
+    .input= f.text_field :name
   .field
     = f.label :email
-    = f.email_field :email
+    .input= f.email_field :email
   .field
     = f.label :password
-    = f.password_field :password
+    .input= f.password_field :password
   .field
     = f.label :password_confirmation
-    = f.password_field :password_confirmation
-  .actions= f.submit translate_button('Sign up')
+    .input= f.password_field :password_confirmation
+  .actions= f.submit translate_button('Sign up'), :class => [:btn, :primary]
 = render 'devise/shared/links'

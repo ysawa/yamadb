@@ -3,6 +3,6 @@
   = devise_error_messages!
   .field
     = f.label :email
-    = f.email_field :email
-  .actions= f.submit translate_button('Resend unlock instructions')
+    .input= f.email_field :email
+  .actions= f.submit translate_button('Resend unlock instructions'), :class => [:btn, :primary]
 = render 'devise/shared/links'
