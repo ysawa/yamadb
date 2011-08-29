@@ -2055,7 +2055,7 @@
                 html += group;
 
                 // Hour Drop Down
-                html += 'Time <select id="DP_jQuery_Hour_' + dpuuid + '">';
+                html += 'Time <select id="DP_jQuery_Hour_' + dpuuid + '" class="datetime_hour_select">';
                 for (i = 1; i < 13; i++) {
                     html += '<option value="' + i + '"';
 
@@ -2075,7 +2075,7 @@
                 // Minute Drop Down
                 var MinuteHTML;
                 MinuteHTML = '';
-                MinuteHTML += '&nbsp;: <select id="DP_jQuery_Minute_' + dpuuid + '">';
+                MinuteHTML += '&nbsp;: <select id="DP_jQuery_Minute_' + dpuuid + '" class="datetime_min_select">';
 
                 for (i = 0; i < 60; i++) {
 
@@ -2094,7 +2094,7 @@
                 html += MinuteHTML;
 
                 //AM/PM drop Down
-                html += ' <select id="DP_jQuery_AMPM_' + dpuuid + '"><option value="AM"';
+                html += ' <select id="DP_jQuery_AMPM_' + dpuuid + '" class="datetime_ampm_select"><option value="AM"';
                 if (inst.currentAMPM == "AM")
                     html += ' selected ';
                 html += '>AM</option><option value="PM"';

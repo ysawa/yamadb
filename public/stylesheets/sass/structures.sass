@@ -11,65 +11,26 @@ $link_color: #000777
     visibility: hidden
 
 #global_container
-  @include clearfix
-  width: 100%
-  #head_container
-    width: 100%
-    .inner
-      position: relative
-      margin: 10px
-      h1, h2
-        margin: 10px 0 0
-        color: #000
-        font-size: 18px
-        font-family: "Times New Roman", serif
-        a
-          color: #000
-          text-decoration: none
-      #sign_up_or_in
-        position: absolute
-        top: 0px
-        right: 0px
-      #notice
-        position: absolute
-        display: none
-        font-weight: bold
-        font-size: 20px
-        width: 100%
-        text-align: center
-        top: 0px
-        color: #0f0
-        span.alert
-          color: #f00
-      #locales
-        position: absolute
-        top: 24px
-        right: 0px
-      #search_form
-        position: absolute
-        top: 24px
-        right: 90px
-        input[type="submit"]
-          padding: 2px 20px
-      p#abstract
-        margin: 0
-    border-bottom: 1px solid #ccc
-  #main_container
-    float: right
-    width: 80%
-    .inner
-      margin: 10px
-  #side_container
-    float: right
-    width: 20%
-    .inner
-      margin: 10px
-  #foot_container
-    clear: both
-    width: 100%
-    padding: 30px 0 0
-    .inner
-      padding: 20px 0
-      border-top: 1px solid #ccc
-      #credit
-        text-align: center
+  #body_container
+    margin-top: 60px
+
+/* modify bootstrap structures */
+.topbar .fill
+  background-color: #222288
+  background-repeat: repeat-x
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#3333aa), to(#222288))
+  background-image: -moz-linear-gradient(top, #3333aa, #222288)
+  background-image: -ms-linear-gradient(top, #3333aa, #222288)
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3333aa), color-stop(100%, #222288))
+  background-image: -webkit-linear-gradient(top, #3333aa, #222288)
+  background-image: -o-linear-gradient(top, #3333aa, #222288)
+  background-image: linear-gradient(top, #3333aa, #222288)
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1)
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1)
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1)
+
+/* modify jquery extensions */
+select.datetime_hour_select,
+select.datetime_min_select,
+select.datetime_ampm_select
+  width: 60px

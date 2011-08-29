@@ -1,5 +1,4 @@
 %h1= t('operations.listing_models', :model => Peak.model_name.human)
-= paginate @peaks
 - @peaks.each_with_index do |peak, i|
   = render 'peaks/peak', :peak => peak, :abstract => true, :number => i + 1
 = paginate @peaks
@@ -10,4 +9,4 @@
 
 = form_for Peak.new, :url => new_peak_path, :html => { :method => :get } do |f|
   = f.text_field :name, :placeholder => Peak.human_attribute_name(:name)
-  = f.submit t('operations.new')
+  = f.submit t('operations.new'), :class => [:btn, :primary]

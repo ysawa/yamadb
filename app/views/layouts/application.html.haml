@@ -8,7 +8,7 @@
         #{subtitle} | YamaDB
       - else
         YamaDB
-    = stylesheet_link_tag 'base', 'structures', 'application'
+    = stylesheet_link_tag 'bootstrap.min', 'structures', 'application'
     = stylesheet_link_tag 'jquery.rating'
     = stylesheet_link_tag 'jquery-ui'
     = stylesheet_link_tag 'jquery.ui.datetimepicker'
@@ -20,15 +20,16 @@
     = csrf_meta_tag
   %body
     #global_container
-      #head_container
-        .inner
-          = render 'layouts/head'
-      #main_container
-        .inner
-          = yield
-      #side_container
-        .inner
-          = render 'layouts/side'
-      #foot_container
-        .inner
-          = render 'layouts/foot'
+      #head_container.topbar
+        .fill
+          .container
+            = render 'layouts/head'
+      #body_container
+        .container
+          .row
+            #side_container.span2.columns
+              = render 'layouts/side'
+            #main_container.span14.columns
+              = yield
+      #foot_container.container
+        = render 'layouts/foot'

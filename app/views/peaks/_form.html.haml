@@ -7,29 +7,32 @@
         - peak.errors.full_messages.each do |msg|
           %li= msg
 
-  .peak
-    .sub
+  .peak.row
+    .sub.span4.columns
       .google_map
         #google_map
-    .main
-      .name
+    .main.span10.columns
+      .field
         = f.label :name
-        = f.text_field :name, :placeholder => Peak.human_attribute_name(:name)
-        = link_to t('operations.search_peak_again'), '#', :id => 'search_peak_again_link'
-      .content
-        %p
-          = f.label :altitude
+        .input
+          = f.text_field :name, :placeholder => Peak.human_attribute_name(:name)
+          = link_to t('operations.search_peak_again'), '#', :id => 'search_peak_again_link'
+      .field
+        = f.label :altitude
+        .input
           = f.text_field :altitude
           m
-        %p
-          = f.label :latitude
+      .field
+        = f.label :latitude
+        .input
           = text_field_tag "peak[location][]", peak.latitude, :size => 30, :id => 'peak_latitude'
-        %p
-          = f.label :longitude
+      .field
+        = f.label :longitude
+        .input
           = text_field_tag "peak[location][]", peak.longitude, :size => 30, :id => 'peak_longitude'
 
   .actions
-    = f.submit
+    = f.submit nil, :class => [:btn, :primary]
 :javascript
   $(function () {
       $('#peak_latitude, #peak_longitude').change(function () {

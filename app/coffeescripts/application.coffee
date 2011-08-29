@@ -62,19 +62,19 @@ $(->
   $(".truncate").truncate()
   yamadb.notice.show_if_necessary()
   $('input.datetime').datetimepicker()
-  $('#peaks').autocomplete({
-      source: (request, response) ->
-          $.getJSON('/peaks.json', {
-              name: request.term
-          }, response)
-      minLength: 1,
-      select: (event, ui) ->
-        $('div#record_peaks').append("<div class=\"record_peak\">#{ui.item.name}<a href=\"#\" class=\"ui-dialog-titlebar-close ui-corner-all\" role=\"button\"><span class=\"ui-icon ui-icon-closethick\">close</span></a><input id=\"record_peak_ids_\" name=\"record[peak_ids][]\" type=\"hidden\" value=\"#{ui.item._id}\"></div>")
-        $('div.record_peak').button()
-  }).data('autocomplete')._renderItem = ( ul, item ) ->
-      return $('<li></li>')
-        .data('item.autocomplete', item)
-        .append( "<a>" + item.name + "</a>" )
-        .appendTo(ul);
+  if $('input#peaks').size()
+    $('input#peaks').autocomplete({
+        source: (request, response) ->
+            $.getJSON('/peaks.json', {
+                name: request.term
+            }, response)
+        minLength: 1,
+        select: (event, ui) ->
+          $('div#record_peaks').append("<div class=\"record_peak\">#{ui.item.name}<a href=\"#\" class=\"ui-dialog-titlebar-close ui-corner-all\" role=\"button\"><span class=\"ui-icon ui-icon-closethick\">close</span></a><input id=\"record_peak_ids_\" name=\"record[peak_ids][]\" type=\"hidden\" value=\"#{ui.item._id}\"></div>")
+          $('div.record_peak').button()
+    }).data('autocomplete')._renderItem = ( ul, item ) ->
+        return $('<li></li>')
+          .data('item.autocomplete', item)
+          .append( "<a>" + item.name + "</a>" )
+          .appendTo(ul);
 )
-

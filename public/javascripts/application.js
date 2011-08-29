@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Wed, 24 Aug 2011 08:53:29 GMT from
+/* DO NOT MODIFY. This file was compiled Mon, 29 Aug 2011 13:14:28 GMT from
  * /home/ysawa/ruby/yamadb/app/coffeescripts/application.coffee
  */
 
@@ -91,18 +91,20 @@ $(function() {
   $(".truncate").truncate();
   yamadb.notice.show_if_necessary();
   $('input.datetime').datetimepicker();
-  return $('#peaks').autocomplete({
-    source: function(request, response) {
-      return $.getJSON('/peaks.json', {
-        name: request.term
-      }, response);
-    },
-    minLength: 1,
-    select: function(event, ui) {
-      $('div#record_peaks').append("<div class=\"record_peak\">" + ui.item.name + "<a href=\"#\" class=\"ui-dialog-titlebar-close ui-corner-all\" role=\"button\"><span class=\"ui-icon ui-icon-closethick\">close</span></a><input id=\"record_peak_ids_\" name=\"record[peak_ids][]\" type=\"hidden\" value=\"" + ui.item._id + "\"></div>");
-      return $('div.record_peak').button();
-    }
-  }).data('autocomplete')._renderItem = function(ul, item) {
-    return $('<li></li>').data('item.autocomplete', item).append("<a>" + item.name + "</a>").appendTo(ul);
-  };
+  if ($('input#peaks').size()) {
+    return $('input#peaks').autocomplete({
+      source: function(request, response) {
+        return $.getJSON('/peaks.json', {
+          name: request.term
+        }, response);
+      },
+      minLength: 1,
+      select: function(event, ui) {
+        $('div#record_peaks').append("<div class=\"record_peak\">" + ui.item.name + "<a href=\"#\" class=\"ui-dialog-titlebar-close ui-corner-all\" role=\"button\"><span class=\"ui-icon ui-icon-closethick\">close</span></a><input id=\"record_peak_ids_\" name=\"record[peak_ids][]\" type=\"hidden\" value=\"" + ui.item._id + "\"></div>");
+        return $('div.record_peak').button();
+      }
+    }).data('autocomplete')._renderItem = function(ul, item) {
+      return $('<li></li>').data('item.autocomplete', item).append("<a>" + item.name + "</a>").appendTo(ul);
+    };
+  }
 });

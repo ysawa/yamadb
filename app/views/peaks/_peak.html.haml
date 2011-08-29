@@ -1,14 +1,14 @@
 - abstract = defined?(abstract) && abstract
 - number = defined?(number) && number
-.peak
-  .sub
+.peak.row
+  .sub.span4.columns
     .google_map
       - image = google_map_peak_image(peak.location, :secure => request.ssl?)
       - if abstract
         %a{ :href => peak_url(peak, :protocol => 'http') }= image
       - else
         = image
-  .main
+  .main.span10.columns
     - if abstract
       .name
         - if peak.name.present?

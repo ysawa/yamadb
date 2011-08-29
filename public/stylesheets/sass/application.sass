@@ -17,8 +17,6 @@ $link_color: #000777
 @mixin common_object
   @include clearfix
   .sub
-    margin: 0 10px 0 0
-    float: left
     .picture, .google_map
       position: relative
       width: 180px
@@ -28,9 +26,6 @@ $link_color: #000777
       padding: 4px
       vertical-align: middle
       text-align: center
-      border:
-        right: 1px solid #e0e0e0
-        bottom: 1px solid #e0e0e0
       img
         vertical-align: middle
       .number_tag
@@ -44,11 +39,6 @@ $link_color: #000777
         width: 100%
         height: 100%
   .main
-    float: left
-    width: 700px
-    border:
-      right: 1px solid #e0e0e0
-      bottom: 1px solid #e0e0e0
     & > .name
       margin: 24px 0 0 0
       font-weight: bold
@@ -61,7 +51,6 @@ $link_color: #000777
       & > h2
         margin: 30px 10px 10px 0
         padding: 0 0 2px
-        border-bottom: 1px solid #f0f0f0
         span.source
           font-size: 11px
           float: right
@@ -206,7 +195,7 @@ div.record
       &.abstract
         height: 131px
 div#record_peaks
-  margin: 6px 3px
+  margin: 6px 3px 6px 150px
   div.record_peak
     span.ui-button-text
       font-size: 12px

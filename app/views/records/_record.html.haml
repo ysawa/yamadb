@@ -1,10 +1,10 @@
 - abstract = defined?(abstract) && abstract
-.record
-  .sub
+.record.row
+  .sub.span4.columns
     .google_map
       - unless abstract
         #google_map
-  .main
+  .main.span10.columns
     %dl
       %dt= Record.human_attribute_name :name
       %dd= record.name

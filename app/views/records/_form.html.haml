@@ -2,10 +2,10 @@
   = error_explanation(record)
   .field
     = f.label :name
-    = f.text_field :name
+    .input= f.text_field :name
   .field
     = f.label :peaks
-    = text_field_tag 'peaks', '', :size => 30
+    .input= text_field_tag 'peaks', '', :size => 30
     #record_peaks
       - record.peaks.each do |peak|
         .record_peak
@@ -15,15 +15,15 @@
           = hidden_field_tag 'record[peak_ids][]', peak.id
   .field
     = f.label :start
-    = f.text_field :start, :value => (record.start ? l(record.start, :format => :form) : nil), :class => :datetime
+    .input= f.text_field :start, :value => (record.start ? l(record.start, :format => :form) : nil), :class => :datetime
   .field
     = f.label :finish
-    = f.text_field :finish, :value => (record.finish ? l(record.finish, :format => :form) : nil), :class => :datetime
+    .input= f.text_field :finish, :value => (record.finish ? l(record.finish, :format => :form) : nil), :class => :datetime
   .field
     = f.label :content
-    = f.text_area :content, :cols => 80
+    .input= f.text_area :content, :cols => 80, :class => :xxlarge
   .actions
-    = f.submit
+    = f.submit nil, :class => [:btn, :primary]
 :javascript
   $('div.record_peak').button();
   $('div.record_peak a').live('click', function () {
