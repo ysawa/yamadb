@@ -19,6 +19,7 @@ class Tweet
   validates_with TweetValidator
   validates_uniqueness_of :tweet_id
   before_save :update_keywords
+  before_save :extract_shorten_urls
 
   def extract_shorten_urls
     return if self.content.blank?

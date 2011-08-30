@@ -4,11 +4,11 @@
   %li= link_to "HOME", root_url(:protocol => 'http')
 %ul#sign_up_or_in.secondary-nav
   - if user_signed_in?
-    %li= link_to t('operations.configure_short'), edit_user_registration_url(:protocol => 'https')
-    %li= link_to t('operations.sign_out'), destroy_user_session_url(:protocol => 'https'), :method => :delete
+    %li= link_to t('operations.configure_short'), edit_user_registration_url
+    %li= link_to t('operations.sign_out'), destroy_user_session_url, :method => :delete
   - else
-    %li= link_to t('operations.sign_up'), new_user_registration_url(:protocol => 'https')
-    %li= link_to t('operations.sign_in'), new_user_session_url(:protocol => 'https')
+    %li= link_to t('operations.sign_up'), new_user_registration_url
+    %li= link_to t('operations.sign_in'), new_user_session_url
 %ul#locales.secondary-nav
   - Yamadb::LOCALES.each do |locale|
     %li= link_to image_tag("/images/locales/#{locale}.png"), params.merge(:locale => locale, :protocol => 'http')

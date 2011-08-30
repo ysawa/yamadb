@@ -7,7 +7,7 @@ class PeaksController < ApplicationController
   def create
     @peak = Peak.new(params[:peak])
     if @peak.save
-      flash[:notice] = "Peak successfully created"
+      flash[:notice] = translate_notice('Model successfully created', :model => Peak.model_name.human)
       respond_with(@peak, :location => peaks_url)
     else
       respond_with(@peak)
@@ -16,7 +16,9 @@ class PeaksController < ApplicationController
 
   # DELETE /peaks/1
   def destroy
-    flash[:notice] = "Peak successfully destroyed." if @peak.destroy
+    if @peak.destroy
+      flash[:notice] = translate_notice('Model successfully deleted', :model => Peak.model_name.human)
+    end
     respond_with(@peak, :location => peaks_url)
   end
 
@@ -55,7 +57,9 @@ class PeaksController < ApplicationController
 
   # PUT /peaks/1
   def update
-    flash[:notice] = "Peak successfully updated." if @peak.update_attributes(params[:peak])
+    if @peak.update_attributes(params[:peak])
+      flash[:notice] = translate_notice('Model successfully updated', :model => Peak.model_name.human)
+    end
     respond_with(@peak, :location => peaks_path)
   end
 private
