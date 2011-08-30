@@ -221,42 +221,40 @@ div.peak .main > .content {
       margin: 0 10px 10px 0; }
   div.peak .main > .content.abstract {
     height: 136px; }
-div.peak .main {
-  margin: 5px 0 0 0; }
-  div.peak .main > .name a#search_peak_again_link {
-    vertical-align: bottom;
-    font-size: 12px; }
-  div.peak .main > .content .weathers {
-    margin: 0 0 10px; }
-    div.peak .main > .content .weathers:after {
-      content: ".";
-      display: block;
-      height: 0;
-      clear: both;
-      visibility: hidden; }
-    div.peak .main > .content .weathers .weather {
-      margin: 0 10px 0 0;
+div.peak .main > .name a#search_peak_again_link {
+  vertical-align: bottom;
+  font-size: 12px; }
+div.peak .main > .content .weathers {
+  margin: 0 0 10px; }
+  div.peak .main > .content .weathers:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  div.peak .main > .content .weathers .weather {
+    margin: 0 10px 0 0;
+    width: 60px;
+    float: left; }
+    div.peak .main > .content .weathers .weather .date {
+      text-align: center;
+      width: 60px; }
+    div.peak .main > .content .weathers .weather .icon {
+      text-align: center;
       width: 60px;
-      float: left; }
-      div.peak .main > .content .weathers .weather .date {
-        text-align: center;
-        width: 60px; }
-      div.peak .main > .content .weathers .weather .icon {
-        text-align: center;
-        width: 60px;
-        height: 50px;
-        font-size: 11px;
-        color: #a0a0a0; }
-        div.peak .main > .content .weathers .weather .icon img {
-          vertical-align: middle; }
-          div.peak .main > .content .weathers .weather .icon img.chance {
-            width: 30px;
-            height: 30px; }
-          div.peak .main > .content .weathers .weather .icon img.normal {
-            width: 50px;
-            height: 50px; }
-  div.peak .main > .content.abstract {
-    height: 131px; }
+      height: 50px;
+      font-size: 11px;
+      color: #a0a0a0; }
+      div.peak .main > .content .weathers .weather .icon img {
+        vertical-align: middle; }
+        div.peak .main > .content .weathers .weather .icon img.chance {
+          width: 30px;
+          height: 30px; }
+        div.peak .main > .content .weathers .weather .icon img.normal {
+          width: 50px;
+          height: 50px; }
+div.peak .main > .content.abstract {
+  height: 131px; }
 
 /* Record */
 div.record:after {
