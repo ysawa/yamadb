@@ -1,4 +1,15 @@
-%h1= Peak.model_name.human
+.alert-message.block-message.info
+  %h1 YamaDB
+  %p
+    = translate_notice('check information before mountaineering')
+  .alert-actions
+    - if current_user
+      = link_to translate_operation('new model', :model => Peak.model_name.human), new_peak_path, :class => [:btn, :small]
+      = link_to translate_operation('new model', :model => Record.model_name.human), new_record_path, :class => [:btn, :small]
+    - else
+      = link_to translate_operation('sign up'), new_registration_path('user'), :class => [:btn, :small]
+      = link_to translate_operation('sign in'), new_session_path('user'), :class => [:btn, :small]
+-
 - @peaks.each_with_index do |peak, i|
   = render peak, :abstract => true, :number => i + 1
 

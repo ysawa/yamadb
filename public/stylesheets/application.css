@@ -10,6 +10,11 @@
   width: 500px;
   height: 500px; }
 
+.block-message h1 {
+  margin: 0; }
+.block-message h2 {
+  margin: 0; }
+
 /* Form Parts */
 body div#error_explanation h2, body div#error_explanation ul {
   color: #ff2222;
@@ -66,8 +71,7 @@ div.equipment .sub .picture, div.equipment .sub .google_map {
   width: 180px;
   height: 180px;
   line-height: 180px;
-  margin: 5px;
-  padding: 4px;
+  margin: 0 9px 0 0;
   vertical-align: middle;
   text-align: center; }
   div.equipment .sub .picture img, div.equipment .sub .google_map img {
@@ -82,17 +86,19 @@ div.equipment .sub .google_map #google_map {
   width: 100%;
   height: 100%; }
 div.equipment .main > .name {
-  margin: 24px 0 0 0;
+  margin: 12px 0 0 0;
   font-weight: bold;
   font-size: 14px;
   line-height: 19px; }
 div.equipment .main > .content {
-  margin: 14px 0 0 0;
+  margin: 10px 0 0 0;
   padding: 0 0 0 10px;
   overflow: hidden; }
   div.equipment .main > .content > h2 {
     margin: 30px 10px 10px 0;
-    padding: 0 0 2px; }
+    padding: 0 0 2px;
+    font-size: 20px;
+    line-height: 20px; }
     div.equipment .main > .content > h2 span.source {
       font-size: 11px;
       float: right;
@@ -123,8 +129,7 @@ div.equipment_item .sub .picture, div.equipment_item .sub .google_map {
   width: 180px;
   height: 180px;
   line-height: 180px;
-  margin: 5px;
-  padding: 4px;
+  margin: 0 9px 0 0;
   vertical-align: middle;
   text-align: center; }
   div.equipment_item .sub .picture img, div.equipment_item .sub .google_map img {
@@ -139,17 +144,19 @@ div.equipment_item .sub .google_map #google_map {
   width: 100%;
   height: 100%; }
 div.equipment_item .main > .name {
-  margin: 24px 0 0 0;
+  margin: 12px 0 0 0;
   font-weight: bold;
   font-size: 14px;
   line-height: 19px; }
 div.equipment_item .main > .content {
-  margin: 14px 0 0 0;
+  margin: 10px 0 0 0;
   padding: 0 0 0 10px;
   overflow: hidden; }
   div.equipment_item .main > .content > h2 {
     margin: 30px 10px 10px 0;
-    padding: 0 0 2px; }
+    padding: 0 0 2px;
+    font-size: 20px;
+    line-height: 20px; }
     div.equipment_item .main > .content > h2 span.source {
       font-size: 11px;
       float: right;
@@ -186,8 +193,7 @@ div.peak .sub .picture, div.peak .sub .google_map {
   width: 180px;
   height: 180px;
   line-height: 180px;
-  margin: 5px;
-  padding: 4px;
+  margin: 0 9px 0 0;
   vertical-align: middle;
   text-align: center; }
   div.peak .sub .picture img, div.peak .sub .google_map img {
@@ -202,17 +208,19 @@ div.peak .sub .google_map #google_map {
   width: 100%;
   height: 100%; }
 div.peak .main > .name {
-  margin: 24px 0 0 0;
+  margin: 12px 0 0 0;
   font-weight: bold;
   font-size: 14px;
   line-height: 19px; }
 div.peak .main > .content {
-  margin: 14px 0 0 0;
+  margin: 10px 0 0 0;
   padding: 0 0 0 10px;
   overflow: hidden; }
   div.peak .main > .content > h2 {
     margin: 30px 10px 10px 0;
-    padding: 0 0 2px; }
+    padding: 0 0 2px;
+    font-size: 20px;
+    line-height: 20px; }
     div.peak .main > .content > h2 span.source {
       font-size: 11px;
       float: right;
@@ -224,37 +232,35 @@ div.peak .main > .content {
 div.peak .main > .name a#search_peak_again_link {
   vertical-align: bottom;
   font-size: 12px; }
-div.peak .main > .content .weathers {
-  margin: 0 0 10px; }
-  div.peak .main > .content .weathers:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden; }
-  div.peak .main > .content .weathers .weather {
-    margin: 0 10px 0 0;
+div.peak .main > .content .weathers:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+div.peak .main > .content .weathers .weather {
+  margin: 0 10px 0 0;
+  width: 60px;
+  float: left; }
+  div.peak .main > .content .weathers .weather .date {
+    text-align: center;
+    width: 60px; }
+  div.peak .main > .content .weathers .weather .icon {
+    text-align: center;
     width: 60px;
-    float: left; }
-    div.peak .main > .content .weathers .weather .date {
-      text-align: center;
-      width: 60px; }
-    div.peak .main > .content .weathers .weather .icon {
-      text-align: center;
-      width: 60px;
-      height: 50px;
-      font-size: 11px;
-      color: #a0a0a0; }
-      div.peak .main > .content .weathers .weather .icon img {
-        vertical-align: middle; }
-        div.peak .main > .content .weathers .weather .icon img.chance {
-          width: 30px;
-          height: 30px; }
-        div.peak .main > .content .weathers .weather .icon img.normal {
-          width: 50px;
-          height: 50px; }
+    height: 50px;
+    font-size: 11px;
+    color: #a0a0a0; }
+    div.peak .main > .content .weathers .weather .icon img {
+      vertical-align: middle; }
+      div.peak .main > .content .weathers .weather .icon img.chance {
+        width: 30px;
+        height: 30px; }
+      div.peak .main > .content .weathers .weather .icon img.normal {
+        width: 50px;
+        height: 50px; }
 div.peak .main > .content.abstract {
-  height: 131px; }
+  height: 124px; }
 
 /* Record */
 div.record:after {
@@ -268,8 +274,7 @@ div.record .sub .picture, div.record .sub .google_map {
   width: 180px;
   height: 180px;
   line-height: 180px;
-  margin: 5px;
-  padding: 4px;
+  margin: 0 9px 0 0;
   vertical-align: middle;
   text-align: center; }
   div.record .sub .picture img, div.record .sub .google_map img {
@@ -284,17 +289,19 @@ div.record .sub .google_map #google_map {
   width: 100%;
   height: 100%; }
 div.record .main > .name {
-  margin: 24px 0 0 0;
+  margin: 12px 0 0 0;
   font-weight: bold;
   font-size: 14px;
   line-height: 19px; }
 div.record .main > .content {
-  margin: 14px 0 0 0;
+  margin: 10px 0 0 0;
   padding: 0 0 0 10px;
   overflow: hidden; }
   div.record .main > .content > h2 {
     margin: 30px 10px 10px 0;
-    padding: 0 0 2px; }
+    padding: 0 0 2px;
+    font-size: 20px;
+    line-height: 20px; }
     div.record .main > .content > h2 span.source {
       font-size: 11px;
       float: right;

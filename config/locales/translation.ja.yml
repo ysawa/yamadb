@@ -4,7 +4,7 @@ ja:
       equipment: '装備'
       equipment_item: '装備品'
       map: '地形図'
-      peak: '日本の山'
+      peak: 'ピーク'
       product: '登山用品'
       record: '山行記録'
       tweet: 'ツイート'
@@ -146,6 +146,7 @@ ja:
       truncate: '&hellip;'
 
   notices:
+    check_information_before_mountaineering: '登山の前に情報をチェックしよう。'
     language_changed: '言語を%{language}に変更しました。'
     model_successfully_created: '%{model}を作成しました。'
     model_successfully_deleted: '%{model}を削除しました。'

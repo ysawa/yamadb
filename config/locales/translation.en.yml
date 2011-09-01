@@ -41,6 +41,7 @@ en:
     forgot_your_password_: 'Forgot your password?'
 
   notices:
+    check_information_before_mountaineering: 'Check infromation before mountaineering!'
     language_changed: 'Language was changed to %{language}.'
     no_model: 'No %{model}.'
 

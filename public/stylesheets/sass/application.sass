@@ -22,8 +22,7 @@ $link_color: #000777
       width: 180px
       height: 180px
       line-height: 180px
-      margin: 5px
-      padding: 4px
+      margin: 0 9px 0 0
       vertical-align: middle
       text-align: center
       img
@@ -40,17 +39,19 @@ $link_color: #000777
         height: 100%
   .main
     & > .name
-      margin: 24px 0 0 0
+      margin: 12px 0 0 0
       font-weight: bold
       font-size: 14px
       line-height: 19px
     & > .content
-      margin: 14px 0 0 0
+      margin: 10px 0 0 0
       padding: 0 0 0 10px
       overflow: hidden
       & > h2
         margin: 30px 10px 10px 0
         padding: 0 0 2px
+        font-size: 20px
+        line-height: 20px
         span.source
           font-size: 11px
           float: right
@@ -74,6 +75,12 @@ $link_color: #000777
 #google_map
   width: 500px
   height: 500px
+
+.block-message
+  h1
+    margin: 0
+  h2
+    margin: 0
 
 /* Form Parts */
 body div#error_explanation
@@ -162,7 +169,6 @@ div.peak
         font-size: 12px
     & > .content
       .weathers
-        margin: 0 0 10px
         @include clearfix
         .weather
           margin: 0 10px 0 0
@@ -186,7 +192,7 @@ div.peak
                 width: 50px
                 height: 50px
       &.abstract
-        height: 131px
+        height: 124px
 
 /* Record */
 div.record
