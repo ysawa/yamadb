@@ -146,7 +146,7 @@ ja:
       truncate: '&hellip;'
 
   notices:
-    check_information_before_mountaineering: '登山の前に情報をチェックしよう。'
+    check_information_before_mountaineering: '登山の前に情報をチェック。安全登山を心がけましょう。'
     language_changed: '言語を%{language}に変更しました。'
     model_successfully_created: '%{model}を作成しました。'
     model_successfully_deleted: '%{model}を削除しました。'
